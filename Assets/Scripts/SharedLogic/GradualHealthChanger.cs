@@ -15,6 +15,7 @@ namespace Assets.Scripts.SharedLogic
         {
             _maxHealth = maxHealth;
             _currentTargetHealth = maxHealth;
+            _healthBar.value = 1.0f;
         }
 
         public void SetTargetHealth(float targetHealth)
