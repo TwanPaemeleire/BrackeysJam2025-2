@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -400, y: 0}
+  m_AnchoredPosition: {x: -923.6, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102706127
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COOL IMAGE?
+  m_text: Cool image of gods together?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 199932808}
   - component: {fileID: 199932807}
   - component: {fileID: 199932806}
+  - component: {fileID: 199932812}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -360,6 +361,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!222 &199932812
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199932805}
+  m_CullTransparentMesh: 1
 --- !u!1 &260137300
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,56 +507,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260137300}
   m_CullTransparentMesh: 1
---- !u!1 &312584682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 312584684}
-  - component: {fileID: 312584683}
-  m_Layer: 0
-  m_Name: SceneSwitchHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &312584683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312584682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48c1efb9be1b87d4c9764e3706e01ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitchHandler
-  _transitionAnimator: {fileID: 0}
-  _transitionDuration: 1
-  _hasBeginAnimation: 0
-  OnSceneSwitchBegin:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &312584684
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312584682}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480452136
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +957,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986328503}
   m_CullTransparentMesh: 1
+--- !u!114 &1123056909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6919091551372000614, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+  m_PrefabInstance: {fileID: 1971248889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c1efb9be1b87d4c9764e3706e01ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitchHandler
 --- !u!1 &1881160886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,16 +1051,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 312584683}
-        m_TargetAssemblyTypeName: SceneSwitchHandler, Assembly-CSharp
+      - m_Target: {fileID: 1123056909}
+        m_TargetAssemblyTypeName: Assets.Scripts.General.SceneSwitchHandler, Assembly-CSharp
         m_MethodName: RequestSceneTransition
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: DecisionScene
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1881160889
@@ -1223,6 +1193,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1971248889
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6919091551372000614, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: _hasBeginAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7443335455990624556, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_Name
+      value: SceneSwitchHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
 --- !u!1 &2009790289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,5 +1340,5 @@ SceneRoots:
   - {fileID: 1896403176}
   - {fileID: 199932809}
   - {fileID: 2009790292}
-  - {fileID: 312584684}
   - {fileID: 480452138}
+  - {fileID: 1971248889}
