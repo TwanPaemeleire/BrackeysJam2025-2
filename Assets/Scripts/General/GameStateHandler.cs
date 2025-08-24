@@ -1,0 +1,33 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace Assets.Scripts.General
+{
+    public class GameStateHandler : MonoBehaviour
+    {
+        [SerializeField] private PlayerInput _playerInput;
+
+        public void PauseGame()
+        {
+            Time.timeScale = 0f;
+            _playerInput.SwitchCurrentActionMap("UI");
+        }
+
+        public void ResumeGame()
+        {
+            Time.timeScale = 1f;
+            _playerInput.SwitchCurrentActionMap("Gameplay");
+        }
+
+        public void QuitGame()
+        {
+#if (UNITY_EDITOR)
+            UnityEditor.EditorApplication.isPlaying = false;
+#elif (UNITY_STANDALONE) 
+            Application.Quit();
+#elif (UNITY_WEBGL)
+            Application.OpenURL(Application.absoluteURL);
+#endif
+        }
+    }
+}
