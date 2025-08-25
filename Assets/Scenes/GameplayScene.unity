@@ -777,6 +777,7 @@ MonoBehaviour:
   _movementSpeed: 5
   _jumpForce: 5
   _doubleJumpForce: 2.5
+  _rollCooldown: 1
   _rollTime: 0.5
   _rollSpeed: 2
   _groundLayerMask:

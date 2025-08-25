@@ -27,6 +27,7 @@ namespace Assets.Scripts.Player
         private bool _canRoll = true;
         private bool _isRolling;
         private Animator _animator;
+        private PlayerHealth _playerHealth;
 
         public bool IsGrounded { get { return _isGrounded; } }
         public bool IsRolling { get { return _isRolling; } }
@@ -121,6 +122,7 @@ namespace Assets.Scripts.Player
             if (!_canMove) return;
             if (context.started && !_isRolling && _isGrounded && _canRoll)
             {
+                _playerHealth.IsInvincible = true;
                 _isRolling = true;
                 _canMove = false;
                 _canRoll = false;
@@ -136,6 +138,7 @@ namespace Assets.Scripts.Player
             if(_inputMoveDirection != Vector2.zero) CheckSpriteOrientation();
             _isRolling = false;
             _canMove = true;
+            _playerHealth.IsInvincible = false;
             if (_inputMoveDirection.x != 0.0f)
             {
                 _animator.SetTrigger("Moving");

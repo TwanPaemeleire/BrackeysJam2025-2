@@ -25,6 +25,8 @@ namespace Assets.Scripts.Player
         private Coroutine _invincibilityCoroutine;
         private Coroutine _flashCoroutine;
 
+        public bool IsInvincible { set { _isInvincible = value; } }
+
         public UnityEvent OnHit = new UnityEvent();
         public UnityEvent OnDeath = new UnityEvent();
         public UnityEvent OnHeal = new UnityEvent();
