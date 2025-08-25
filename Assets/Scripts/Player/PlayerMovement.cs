@@ -21,6 +21,7 @@ namespace Assets.Scripts.Player
         private bool _isFalling;
         private bool _canMove = true;
         private bool _isRolling;
+        private Animator _animator;
 
         public bool IsGrounded { get { return _isGrounded; } }
         public bool IsRolling { get { return _isRolling; } }
@@ -34,10 +35,15 @@ namespace Assets.Scripts.Player
         public UnityEvent OnDoubleJumpBegin = new UnityEvent();
         public UnityEvent OnFallBegin = new UnityEvent();
 
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
+            _animator.SetTrigger("GoIdle");
+        }
         private void FixedUpdate()
         {
             _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
-            _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.5f, _groundLayerMask);
+            _isGrounded = Physics2D.Raycast(transform.position, -transform.up, 1.1f, _groundLayerMask);
 
             if (_isJumping && _rigidbody.linearVelocityY <= 0.0f)
             {
@@ -60,6 +66,8 @@ namespace Assets.Scripts.Player
             if (context.canceled)
             {
                 _inputMoveDirection = Vector2.zero;
+                _animator.SetTrigger("GoIdle");
+                _animator.SetBool("IsMoving", false);
                 OnMovementEnd?.Invoke();
             }
             else
@@ -74,7 +82,11 @@ namespace Assets.Scripts.Player
                     _spriteRenderer.flipX = false;
                 }
 
-                if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f) OnMovementBegin?.Invoke();
+                if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f)
+                {
+                    _animator.SetBool("IsMoving", true);
+                    OnMovementBegin?.Invoke();
+                }
             }
         }
 
