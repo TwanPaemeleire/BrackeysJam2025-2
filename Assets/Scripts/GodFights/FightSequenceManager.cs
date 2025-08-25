@@ -7,10 +7,10 @@ namespace Assets.Scripts.GodFights
 {
     public class FightSequenceManager : MonoSingleton<FightSequenceManager>
     {
-        private List<GameObject> _allGods = new List<GameObject>(); // Change this to be god base script later on
-        public GodType _lover;
+        [SerializeField] private List<GenericGodFight> _allGods = new List<GenericGodFight>(); // Change this to be god base script later on
+        [SerializeField] private GodType _lover;
         private List<int> _godsLeftToDefeat = new List<int>();
-        private GameObject _currentFightGod;
+        private GenericGodFight _currentFightGod;
 
         public UnityEvent OnCurrentGodDefeated = new UnityEvent();
         public UnityEvent OnCurrentGodFightStarted = new UnityEvent();
@@ -22,10 +22,10 @@ namespace Assets.Scripts.GodFights
             Destroy(loverSelectionStorer.gameObject);
             for(int bossIndex = 0; bossIndex < _allGods.Count; ++bossIndex)
             {
-                //if(_allGods[bossIndex].GetComponent<BaseGod>().GodType == _lover)
-                //{
-                //    continue;
-                //}
+                if(_allGods[bossIndex].GetComponent<GenericGodFight>().GodType == _lover)
+                {
+                    continue;
+                }
                 _godsLeftToDefeat.Add(bossIndex);
             }
         }
