@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -8,9 +9,12 @@ namespace Assets.Scripts.Player
     {
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private SpriteRenderer _spriteRenderer;
-        [SerializeField] private float _movementSpeed = 5f;
-        [SerializeField] private float _jumpForce = 5f;
+        [SerializeField] private float _movementSpeed = 5.0f;
+        [SerializeField] private float _jumpForce = 5.0f;
         [SerializeField] private float _doubleJumpForce = 2.5f;
+        [SerializeField] private float _rollCooldown = 1.0f;
+        [SerializeField] private float _rollTime = 0.5f;
+        [SerializeField] private float _rollSpeed = 5.0f;
         [SerializeField] private LayerMask _groundLayerMask;
 
         private Vector2 _inputMoveDirection;
@@ -20,6 +24,7 @@ namespace Assets.Scripts.Player
         private bool _isJumping;
         private bool _isFalling;
         private bool _canMove = true;
+        private bool _canRoll = true;
         private bool _isRolling;
         private Animator _animator;
 
@@ -42,7 +47,10 @@ namespace Assets.Scripts.Player
         }
         private void FixedUpdate()
         {
-            _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
+            if(!_isRolling) 
+            {
+                _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
+            }
             _isGrounded = Physics2D.Raycast(transform.position, -transform.up, 1.1f, _groundLayerMask);
 
             if (_isJumping && _rigidbody.linearVelocityY <= 0.0f)
@@ -61,30 +69,23 @@ namespace Assets.Scripts.Player
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            if (!_canMove) return;
             _previousInputMoveDirection = _inputMoveDirection;
+            _inputMoveDirection = context.ReadValue<Vector2>();
+            if (!_canMove) return;
             if (context.canceled)
             {
                 _inputMoveDirection = Vector2.zero;
                 _animator.SetTrigger("GoIdle");
-                _animator.SetBool("IsMoving", false);
                 OnMovementEnd?.Invoke();
             }
             else
             {
                 _inputMoveDirection = context.ReadValue<Vector2>();
-                if (_inputMoveDirection.x < 0.0f)
-                {
-                    _spriteRenderer.flipX = true;
-                }
-                else
-                {
-                    _spriteRenderer.flipX = false;
-                }
+                CheckSpriteOrientation();
 
                 if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f)
                 {
-                    _animator.SetBool("IsMoving", true);
+                    _animator.SetTrigger("Moving");
                     OnMovementBegin?.Invoke();
                 }
             }
@@ -115,6 +116,50 @@ namespace Assets.Scripts.Player
             }
         }
 
+        public void OnRoll(InputAction.CallbackContext context)
+        {
+            if (!_canMove) return;
+            if (context.started && !_isRolling && _isGrounded && _canRoll)
+            {
+                _isRolling = true;
+                _canMove = false;
+                _canRoll = false;
+                float rollDirection = _spriteRenderer.flipX ? -1f : 1f;
+                _rigidbody.linearVelocityX = rollDirection * _rollSpeed;
+                _animator.SetTrigger("Roll");
+                StartCoroutine(RollCoroutine(rollDirection));
+            }
+        }
+
+        public void EndRoll()
+        {
+            if(_inputMoveDirection != Vector2.zero) CheckSpriteOrientation();
+            _isRolling = false;
+            _canMove = true;
+            if (_inputMoveDirection.x != 0.0f)
+            {
+                _animator.SetTrigger("Moving");
+            }
+            else
+            {
+                _animator.SetTrigger("GoIdle");
+            }
+        }
+
+        private IEnumerator RollCoroutine(float rollDirectionMultiplier)
+        {
+            float elapsed = 0f;
+            while (elapsed < _rollTime)
+            {
+                _rigidbody.linearVelocityX = rollDirectionMultiplier * _rollSpeed;
+                elapsed += Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
+            }
+            EndRoll();
+            yield return new WaitForSeconds(_rollCooldown);
+            _canRoll = true;
+        }
+
         public void StartGoingDown()
         {
             if (_isGrounded || _isFalling) return;
@@ -134,6 +179,18 @@ namespace Assets.Scripts.Player
         public void ReEnableMovement()
         {
             _canMove = true;
+        }
+
+        public void CheckSpriteOrientation()
+        {
+            if (_inputMoveDirection.x < 0.0f)
+            {
+                _spriteRenderer.flipX = true;
+            }
+            else
+            {
+                _spriteRenderer.flipX = false;
+            }
         }
     }
 }

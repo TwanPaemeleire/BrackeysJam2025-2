@@ -777,6 +777,8 @@ MonoBehaviour:
   _movementSpeed: 5
   _jumpForce: 5
   _doubleJumpForce: 2.5
+  _rollTime: 0.5
+  _rollSpeed: 2
   _groundLayerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -965,13 +967,13 @@ MonoBehaviour:
     m_ActionName: 'Player/Parry[/Mouse/rightButton,/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1498985797}
+        m_TargetAssemblyTypeName: Assets.Scripts.Player.PlayerMovement, Assembly-CSharp
+        m_MethodName: OnRoll
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
