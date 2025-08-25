@@ -167,6 +167,9 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &469163933
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498985798}
   - component: {fileID: 1498985797}
+  - component: {fileID: 1498985801}
   - component: {fileID: 1498985799}
   - component: {fileID: 1498985796}
   - component: {fileID: 1498985795}
@@ -805,7 +809,8 @@ Transform:
   m_LocalPosition: {x: -2.23, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1955956532}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1498985799
@@ -925,6 +930,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d29b9243-32f1-40c0-9fa0-fb3e37cea687
     m_ActionName: 'Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498985801}
+        m_TargetAssemblyTypeName: Assets.Scripts.Player.PlayerSword, Assembly-CSharp
+        m_MethodName: AttemptAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4db19810-23dd-4e84-b178-fbe2ce0084a6
+    m_ActionName: 'Player/Attack[/Mouse/leftButton,/XInputControllerWindows/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498985801}
+        m_TargetAssemblyTypeName: Assets.Scripts.Player.PlayerSword, Assembly-CSharp
+        m_MethodName: AttemptParry
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: df7263c6-965f-428d-8ed3-2f8e1c36fca0
+    m_ActionName: 'Player/Parry[/Mouse/rightButton,/XInputControllerWindows/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1ac4c655-7ccd-442b-9e91-f61c5a3cc4b4
+    m_ActionName: 'Player/Roll[/Keyboard/leftShift,/XInputControllerWindows/buttonEast]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -976,6 +1029,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1498985801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498985794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43481eb00495964f916a85c39a3ca96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Player.PlayerSword
+  _hitScanObject: {fileID: 1955956533}
+  _damage: 2
+  _attackDelay: 0.5
+  _parryDelay: 1
+  _parryWindow: 0.3
+  _moveDelayAfterParry: 0.1
+  OnParryStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSuccesfullParry:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1537770635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,6 +1168,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1955956531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1955956532}
+  - component: {fileID: 1955956533}
+  m_Layer: 0
+  m_Name: HitScanObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1955956532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955956531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1498985798}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1955956533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955956531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdcaed014a6e904ea8bf0429811a1ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.SharedLogic.HitScanObject
+  _range: 0.2
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

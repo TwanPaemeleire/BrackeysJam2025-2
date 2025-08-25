@@ -2,103 +2,126 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+namespace Assets.Scripts.Player
 {
-    [SerializeField] private Rigidbody2D _rigidbody;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private float _movementSpeed = 5f;
-    [SerializeField] private float _jumpForce = 5f;
-    [SerializeField] private float _doubleJumpForce = 2.5f;
-    [SerializeField] private LayerMask _groundLayerMask;
-
-    private Vector2 _inputMoveDirection;
-    private Vector2 _previousInputMoveDirection;
-    private bool _isGrounded = true;
-    private bool _canDoubleJump;
-    private bool _isJumping;
-    private bool _isFalling;
-
-    public UnityEvent OnMovementBegin = new UnityEvent();
-    public UnityEvent OnMovementEnd = new UnityEvent();
-
-    public UnityEvent OnJumpBegin = new UnityEvent();
-    public UnityEvent OnJumpEnd = new UnityEvent();
-
-    public UnityEvent OnDoubleJumpBegin = new UnityEvent();
-    public UnityEvent OnFallBegin = new UnityEvent();
-
-    private void FixedUpdate()
+    public class PlayerMovement : MonoBehaviour
     {
-        _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
-        _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.5f, _groundLayerMask);
+        [SerializeField] private Rigidbody2D _rigidbody;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private float _movementSpeed = 5f;
+        [SerializeField] private float _jumpForce = 5f;
+        [SerializeField] private float _doubleJumpForce = 2.5f;
+        [SerializeField] private LayerMask _groundLayerMask;
 
-        if(_isJumping && _rigidbody.linearVelocityY <= 0.0f)
+        private Vector2 _inputMoveDirection;
+        private Vector2 _previousInputMoveDirection;
+        private bool _isGrounded = true;
+        private bool _canDoubleJump;
+        private bool _isJumping;
+        private bool _isFalling;
+        private bool _canMove = true;
+        private bool _isRolling;
+
+        public bool IsGrounded { get { return _isGrounded; } }
+        public bool IsRolling { get { return _isRolling; } }
+
+        public UnityEvent OnMovementBegin = new UnityEvent();
+        public UnityEvent OnMovementEnd = new UnityEvent();
+
+        public UnityEvent OnJumpBegin = new UnityEvent();
+        public UnityEvent OnJumpEnd = new UnityEvent();
+
+        public UnityEvent OnDoubleJumpBegin = new UnityEvent();
+        public UnityEvent OnFallBegin = new UnityEvent();
+
+        private void FixedUpdate()
         {
-            if(_isGrounded) // Ground hit
+            _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
+            _isGrounded = Physics2D.Raycast(transform.position, Vector2.down, 0.5f, _groundLayerMask);
+
+            if (_isJumping && _rigidbody.linearVelocityY <= 0.0f)
             {
-                _isJumping = false;
-                OnJumpEnd?.Invoke();
-            }
-            else // Start going down in air
-            {
-                StartGoingDown();
+                if (_isGrounded) // Ground hit
+                {
+                    _isJumping = false;
+                    OnJumpEnd?.Invoke();
+                }
+                else // Start going down in air
+                {
+                    StartGoingDown();
+                }
             }
         }
-    }
 
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        _previousInputMoveDirection = _inputMoveDirection;
-        if (context.canceled)
+        public void OnMove(InputAction.CallbackContext context)
         {
-            _inputMoveDirection = Vector2.zero;
-            OnMovementEnd?.Invoke();
-        }
-        else
-        {
-            _inputMoveDirection = context.ReadValue<Vector2>();
-            if (_inputMoveDirection.x < 0.0f)
+            if (!_canMove) return;
+            _previousInputMoveDirection = _inputMoveDirection;
+            if (context.canceled)
             {
-                _spriteRenderer.flipX = true;
+                _inputMoveDirection = Vector2.zero;
+                OnMovementEnd?.Invoke();
             }
             else
             {
-                _spriteRenderer.flipX = false;
+                _inputMoveDirection = context.ReadValue<Vector2>();
+                if (_inputMoveDirection.x < 0.0f)
+                {
+                    _spriteRenderer.flipX = true;
+                }
+                else
+                {
+                    _spriteRenderer.flipX = false;
+                }
+
+                if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f) OnMovementBegin?.Invoke();
             }
-
-            if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f) OnMovementBegin?.Invoke();
         }
-    }
 
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        if (context.started)
+        public void OnJump(InputAction.CallbackContext context)
         {
-            if (_isGrounded)
+            if (!_canMove) return;
+            if (context.started)
             {
-                _rigidbody.linearVelocityY = 0.0f;
-                _rigidbody.AddForce(transform.up * _jumpForce, ForceMode2D.Impulse);
-                _canDoubleJump = true;
-                _isJumping = true;
-                _isFalling = false;
-                OnJumpBegin?.Invoke();
-            }
-            else if (_canDoubleJump)
-            {
-                _rigidbody.linearVelocityY = 0.0f;
-                _rigidbody.AddForce(transform.up * _doubleJumpForce, ForceMode2D.Impulse);
-                _canDoubleJump = false;
-                _isFalling = false;
-                OnDoubleJumpBegin?.Invoke();
+                if (_isGrounded)
+                {
+                    _rigidbody.linearVelocityY = 0.0f;
+                    _rigidbody.AddForce(transform.up * _jumpForce, ForceMode2D.Impulse);
+                    _canDoubleJump = true;
+                    _isJumping = true;
+                    _isFalling = false;
+                    OnJumpBegin?.Invoke();
+                }
+                else if (_canDoubleJump)
+                {
+                    _rigidbody.linearVelocityY = 0.0f;
+                    _rigidbody.AddForce(transform.up * _doubleJumpForce, ForceMode2D.Impulse);
+                    _canDoubleJump = false;
+                    _isFalling = false;
+                    OnDoubleJumpBegin?.Invoke();
+                }
             }
         }
-    }
 
-    public void StartGoingDown()
-    {
-        if (_isGrounded || _isFalling) return;
-        _rigidbody.linearVelocityY = 0.0f;
-        _isFalling = true;
-        OnFallBegin.Invoke();
+        public void StartGoingDown()
+        {
+            if (_isGrounded || _isFalling) return;
+            _rigidbody.linearVelocityY = 0.0f;
+            _isFalling = true;
+            OnFallBegin.Invoke();
+        }
+
+        public void DisableMovement()
+        {
+            _canMove = false;
+            _inputMoveDirection = Vector2.zero;
+            _rigidbody.linearVelocityX = 0.0f;
+            OnMovementEnd?.Invoke();
+        }
+
+        public void ReEnableMovement()
+        {
+            _canMove = true;
+        }
     }
 }

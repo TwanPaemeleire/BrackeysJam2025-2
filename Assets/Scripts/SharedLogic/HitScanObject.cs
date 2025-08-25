@@ -1,6 +1,7 @@
 using Assets.Scripts.GodFights;
 using Assets.Scripts.Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.SharedLogic
 {
@@ -8,6 +9,8 @@ namespace Assets.Scripts.SharedLogic
     {
         [SerializeField] private float _range = 0.2f;
         [SerializeField] private LayerMask _layerMask;
+
+        public UnityEvent OnHit = new UnityEvent();
         public void ExecuteHitScan(float damage)
         {
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, _range, _layerMask);
@@ -15,11 +18,19 @@ namespace Assets.Scripts.SharedLogic
             {
                 if (hit.TryGetComponent<PlayerHealth>(out PlayerHealth playerHealth))
                 {
+                    PlayerSword sword = hit.GetComponent<PlayerSword>();
+                    if(sword.IsParrying)
+                    {
+                        sword.OnSuccesfullParryExecuted();
+                        continue;
+                    }
                     playerHealth.TakeDamage(damage);
+                    OnHit.Invoke();
                 }
                 else if (hit.TryGetComponent<GodHealth>(out GodHealth godHealth))
                 {
                     godHealth.TakeDamage(damage);
+                    OnHit.Invoke();
                 }
             }
         }

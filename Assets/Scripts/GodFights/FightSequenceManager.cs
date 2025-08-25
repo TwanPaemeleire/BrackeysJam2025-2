@@ -7,7 +7,7 @@ namespace Assets.Scripts.GodFights
 {
     public class FightSequenceManager : MonoSingleton<FightSequenceManager>
     {
-        [SerializeField] private List<GenericGodFight> _allGods = new List<GenericGodFight>(); // Change this to be god base script later on
+        [SerializeField] private List<GenericGodFight> _allGods = new List<GenericGodFight>();
         [SerializeField] private GodType _lover;
         private List<int> _godsLeftToDefeat = new List<int>();
         private GenericGodFight _currentFightGod;
