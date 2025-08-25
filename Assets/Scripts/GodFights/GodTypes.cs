@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Scripts.BossFights
+namespace Assets.Scripts.GodFights
 {
     public enum GodType
     {

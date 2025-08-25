@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts.General;
 using UnityEngine.Events;
 
-namespace Assets.Scripts.BossFights
+namespace Assets.Scripts.GodFights
 {
     public class FightSequenceManager : MonoSingleton<FightSequenceManager>
     {

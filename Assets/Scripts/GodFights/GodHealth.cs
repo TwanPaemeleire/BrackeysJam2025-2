@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using Assets.Scripts.SharedLogic;
 
-namespace Assets.Scripts.BossFights
+namespace Assets.Scripts.GodFights
 {
     public class GodHealth : MonoBehaviour
     {

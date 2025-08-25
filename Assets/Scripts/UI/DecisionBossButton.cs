@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Assets.Scripts.BossFights;
+using Assets.Scripts.GodFights;
 
 namespace Assets.Scripts.UI
 {

@@ -1,7 +1,7 @@
 using Assets.Scripts.UI;
 using UnityEngine;
 
-namespace Assets.Scripts.BossFights
+namespace Assets.Scripts.GodFights
 {
     public class LoverSelectionStorer : MonoBehaviour
     {
