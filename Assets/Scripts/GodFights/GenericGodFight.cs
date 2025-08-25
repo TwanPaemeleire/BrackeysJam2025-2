@@ -38,10 +38,18 @@ namespace Assets.Scripts.GodFights
         void Start()
         {
             _health.OnDeath.AddListener(OnDeathInternal);
+            StartBossFight();
         }
 
         public void StartBossFight()
         {
+            foreach (var phaseAttacks in _phasesData)
+            {
+                foreach (var weightedAttack in phaseAttacks.Attacks)
+                {
+                    weightedAttack.Attack.InitializeAttack();
+                }
+            }
             CalculateWeights();
             Invoke(nameof(StartNextAttack), _delayBeforeFirstAttack);
         }
@@ -123,6 +131,21 @@ namespace Assets.Scripts.GodFights
                 }
             }
             return -1;
+        }
+
+        public void OnAnimationEvent(string nameOfMethodToExecute)
+        {
+            if(_currentAttack != null)
+            {
+                if(!_currentAttack.TryExecuteAction(nameOfMethodToExecute))
+                {
+                    Debug.LogWarning($"No action registered for animation event {nameOfMethodToExecute} in attack {_currentAttack.name}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"No current attack to execute animation event {nameOfMethodToExecute} in");
+            }
         }
     }
 }
