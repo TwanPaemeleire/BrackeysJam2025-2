@@ -74,9 +74,9 @@ namespace Assets.Scripts.UI
 
         public void OnSelect(BaseEventData eventData)
         {
+            _nameText.color = _hoveredNameColor;
             if (_isSelected) return;
             StartScaleCoroutine(_maxScale);
-            _nameText.color = _hoveredNameColor;
         }
 
         public void OnDeselect(BaseEventData eventData)
