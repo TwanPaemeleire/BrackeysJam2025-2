@@ -107,7 +107,7 @@ namespace Assets.Scripts.Player
 
                 if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f)
                 {
-                    if(_isGrounded) _animator.SetTrigger("Moving");
+                    if(!_isJumping && _isGrounded) _animator.SetTrigger("Moving");
                     OnMovementBegin?.Invoke();
                 }
             }
