@@ -28,6 +28,8 @@ namespace Assets.Scripts.Player
         private bool _isRolling;
         private Animator _animator;
         private PlayerHealth _playerHealth;
+        private BoxCollider2D _boxCollider2D;
+        private float _boxBottomDistanceFromTransform;
 
         public bool IsGrounded { get { return _isGrounded; } }
         public bool IsRolling { get { return _isRolling; } }
@@ -46,6 +48,8 @@ namespace Assets.Scripts.Player
             _animator = GetComponent<Animator>();
             _animator.SetTrigger("GoIdle");
             _playerHealth = GetComponent<PlayerHealth>();
+            _boxCollider2D = GetComponent<BoxCollider2D>();
+            _boxBottomDistanceFromTransform = transform.position.y - _boxCollider2D.bounds.min.y;
         }
         private void FixedUpdate()
         {
@@ -53,14 +57,30 @@ namespace Assets.Scripts.Player
             {
                 _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
             }
-            _isGrounded = Physics2D.Raycast(transform.position, -transform.up, 1.1f, _groundLayerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 2.0f, _groundLayerMask);
+            
+            if(hit.collider == null)
+            {
+                _isGrounded = false;
+            }
+            else if(hit.distance < _boxBottomDistanceFromTransform + 0.1f) // Distance is grounded
+            {
+                _isGrounded = true;
+            }
+            else if(_isFalling && hit.distance < _boxBottomDistanceFromTransform + 1.0f) // Distance is not grounded, but enough to start falling anim
+            {
+                _animator.speed = 2.5f;
+                _isGrounded = false;
+            }
 
             if (_isJumping && _rigidbody.linearVelocityY <= 0.0f)
             {
                 if (_isGrounded) // Ground hit
                 {
+                    _animator.speed = 1.0f;
                     _isJumping = false;
                     OnJumpEnd?.Invoke();
+                    SetAnimationAfterExecutingAttack();
                 }
                 else // Start going down in air
                 {
@@ -77,7 +97,7 @@ namespace Assets.Scripts.Player
             if (context.canceled)
             {
                 _inputMoveDirection = Vector2.zero;
-                _animator.SetTrigger("GoIdle");
+                if(_isGrounded) _animator.SetTrigger("GoIdle");
                 OnMovementEnd?.Invoke();
             }
             else
@@ -87,7 +107,7 @@ namespace Assets.Scripts.Player
 
                 if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f)
                 {
-                    _animator.SetTrigger("Moving");
+                    if(_isGrounded) _animator.SetTrigger("Moving");
                     OnMovementBegin?.Invoke();
                 }
             }
@@ -105,6 +125,7 @@ namespace Assets.Scripts.Player
                     _canDoubleJump = true;
                     _isJumping = true;
                     _isFalling = false;
+                    _animator.SetTrigger("Jump");
                     OnJumpBegin?.Invoke();
                 }
                 else if (_canDoubleJump)
@@ -113,6 +134,7 @@ namespace Assets.Scripts.Player
                     _rigidbody.AddForce(transform.up * _doubleJumpForce, ForceMode2D.Impulse);
                     _canDoubleJump = false;
                     _isFalling = false;
+                    _animator.SetTrigger("Jump");
                     OnDoubleJumpBegin?.Invoke();
                 }
             }
@@ -167,6 +189,7 @@ namespace Assets.Scripts.Player
         public void StartGoingDown()
         {
             if (_isGrounded || _isFalling) return;
+            _animator.speed = 1.0f;
             _rigidbody.linearVelocityY = 0.0f;
             _isFalling = true;
             OnFallBegin.Invoke();
@@ -208,6 +231,11 @@ namespace Assets.Scripts.Player
             {
                 _animator.SetTrigger("GoIdle");
             }
+        }
+
+        public void OnAnimationEventJumpUpReached()
+        {
+            _animator.speed = 0.0f;
         }
     }
 }
