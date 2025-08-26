@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Assets.Scripts.GodFights;
+using TMPro;
 
 namespace Assets.Scripts.UI
 {
@@ -11,6 +12,8 @@ namespace Assets.Scripts.UI
         [SerializeField] private GodType _godType;
         [SerializeField] private Vector3 _maxScale = new Vector3(1.2f, 1.2f, 1.2f);
         [SerializeField] private float _timeToReachTargetScale = 0.5f;
+        [SerializeField] private Color _hoveredNameColor;
+        [SerializeField] private TextMeshProUGUI _nameText;
 
         private Coroutine _scaleCoroutine;
         private bool _isSelected = false;
@@ -28,12 +31,15 @@ namespace Assets.Scripts.UI
         {
             if(_isSelected) return;
             StartScaleCoroutine(_maxScale);
+            EventSystem.current.SetSelectedGameObject(gameObject);
+            _nameText.color = _hoveredNameColor;
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             if(_isSelected) return;
             StartScaleCoroutine(Vector3.one);
+            _nameText.color = Color.white;
         }
 
         void StartScaleCoroutine(Vector3 targetScale)
@@ -70,12 +76,14 @@ namespace Assets.Scripts.UI
         {
             if (_isSelected) return;
             StartScaleCoroutine(_maxScale);
+            _nameText.color = _hoveredNameColor;
         }
 
         public void OnDeselect(BaseEventData eventData)
         {
             if (_isSelected) return;
             StartScaleCoroutine(Vector3.one);
+            _nameText.color = Color.white;
         }
 
         public void OnSubmit(BaseEventData eventData)

@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 639050257}
   - component: {fileID: 639050256}
   - component: {fileID: 639050255}
+  - component: {fileID: 639050258}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -667,8 +668,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -685,6 +686,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639050253}
   m_CullTransparentMesh: 1
+--- !u!114 &639050258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639050253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b8fe253698dbf49aa475f296aab8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisualInteractionButton
+  _maxScale: {x: 1.2, y: 1.2, z: 1.2}
+  _timeToReachTargetScale: 1
+  _default: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  _hovered: {fileID: -7427724726082570653, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  _pressed: {fileID: 6567917769350235451, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
 --- !u!1 &759759589
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +998,7 @@ GameObject:
   - component: {fileID: 1881160890}
   - component: {fileID: 1881160889}
   - component: {fileID: 1881160888}
+  - component: {fileID: 1881160891}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -1083,8 +1102,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1101,6 +1120,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881160886}
   m_CullTransparentMesh: 1
+--- !u!114 &1881160891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881160886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b8fe253698dbf49aa475f296aab8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisualInteractionButton
+  _maxScale: {x: 1.2, y: 1.2, z: 1.2}
+  _timeToReachTargetScale: 1
+  _default: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  _hovered: {fileID: -7427724726082570653, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  _pressed: {fileID: 6567917769350235451, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
 --- !u!1 &1896403173
 GameObject:
   m_ObjectHideFlags: 0

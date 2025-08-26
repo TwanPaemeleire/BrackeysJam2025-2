@@ -705,6 +705,8 @@ MonoBehaviour:
   _godType: 0
   _maxScale: {x: 1.2, y: 1.2, z: 1.2}
   _timeToReachTargetScale: 0.5
+  _hoveredNameColor: {r: 0.5943396, g: 0.44580474, b: 0.14297791, a: 1}
+  _nameText: {fileID: 861204998}
 --- !u!114 &973779160 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6919091551372000614, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
@@ -1002,6 +1004,8 @@ MonoBehaviour:
   _godType: 1
   _maxScale: {x: 1.2, y: 1.2, z: 1.2}
   _timeToReachTargetScale: 0.5
+  _hoveredNameColor: {r: 0.59607846, g: 0.44705883, b: 0.14117648, a: 1}
+  _nameText: {fileID: 1246922292}
 --- !u!1 &1246922290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1156,7 @@ GameObject:
   - component: {fileID: 1290729976}
   - component: {fileID: 1290729975}
   - component: {fileID: 1290729974}
+  - component: {fileID: 1290729977}
   m_Layer: 5
   m_Name: DoneButton
   m_TagString: Untagged
@@ -1273,6 +1278,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290729972}
   m_CullTransparentMesh: 1
+--- !u!114 &1290729977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290729972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b8fe253698dbf49aa475f296aab8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VisualInteractionButton
+  _maxScale: {x: 1.2, y: 1.2, z: 1.2}
+  _timeToReachTargetScale: 1
+  _default: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  _hovered: {fileID: -7427724726082570653, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+  _pressed: {fileID: 6567917769350235451, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
 --- !u!1 &1561959931
 GameObject:
   m_ObjectHideFlags: 0
