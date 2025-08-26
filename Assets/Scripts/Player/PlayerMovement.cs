@@ -28,6 +28,8 @@ namespace Assets.Scripts.Player
         private bool _isRolling;
         private Animator _animator;
         private PlayerHealth _playerHealth;
+        private BoxCollider2D _boxCollider2D;
+        private float _boxBottomDistanceFromTransform;
 
         public bool IsGrounded { get { return _isGrounded; } }
         public bool IsRolling { get { return _isRolling; } }
@@ -46,6 +48,8 @@ namespace Assets.Scripts.Player
             _animator = GetComponent<Animator>();
             _animator.SetTrigger("GoIdle");
             _playerHealth = GetComponent<PlayerHealth>();
+            _boxCollider2D = GetComponent<BoxCollider2D>();
+            _boxBottomDistanceFromTransform = transform.position.y - _boxCollider2D.bounds.min.y;
         }
         private void FixedUpdate()
         {
@@ -53,12 +57,26 @@ namespace Assets.Scripts.Player
             {
                 _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
             }
-            _isGrounded = Physics2D.Raycast(transform.position, -transform.up, 1.1f, _groundLayerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 2.0f, _groundLayerMask);
+            
+            if(hit.collider == null)
+            {
+                _isGrounded = false;
+            }
+            else if(hit.distance < _boxBottomDistanceFromTransform + 0.1f) // Distance is grounded
+            {
+                _isGrounded = true;
+            }
+            else if(_isFalling && hit.distance < _boxBottomDistanceFromTransform + 1.0f) // Distance is not grounded, but enough to start falling anim
+            {
+                _animator.speed = 2.5f;
+                _isGrounded = false;
+            }
 
             if (_isJumping && _rigidbody.linearVelocityY <= 0.0f)
             {
                 if (_isGrounded) // Ground hit
-                { 
+                {
                     _animator.speed = 1.0f;
                     _isJumping = false;
                     OnJumpEnd?.Invoke();
