@@ -5,7 +5,7 @@ using Assets.Scripts.GodFights;
 
 namespace Assets.Scripts.UI
 {
-    public class DecisionBossButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+    public class DecisionBossButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, ISelectHandler, IDeselectHandler, ISubmitHandler
     {
         [SerializeField] private LoverSelectionStorer _loverSelectionStorer;
         [SerializeField] private GodType _godType;
@@ -64,6 +64,25 @@ namespace Assets.Scripts.UI
                 yield return null;
             }
             transform.localScale = targetScale;
+        }
+
+        public void OnSelect(BaseEventData eventData)
+        {
+            if (_isSelected) return;
+            StartScaleCoroutine(_maxScale);
+        }
+
+        public void OnDeselect(BaseEventData eventData)
+        {
+            if (_isSelected) return;
+            StartScaleCoroutine(Vector3.one);
+        }
+
+        public void OnSubmit(BaseEventData eventData)
+        {
+            if (_isSelected) return;
+            _isSelected = true;
+            _loverSelectionStorer.SelectNewLover(this);
         }
     }
 }
