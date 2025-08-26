@@ -74,6 +74,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "6224f94a-7b3f-486d-bb27-a2f88956322f",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "2D Vector",
                     "id": "e7492f8b-2920-4b72-8937-9181c1b1a992",
                     "path": "2DVector",
