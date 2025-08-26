@@ -15,6 +15,7 @@ namespace Assets.Scripts.GodFights
         public UnityEvent OnCurrentGodDefeated = new UnityEvent();
         public UnityEvent OnCurrentGodFightStarted = new UnityEvent();
         public UnityEvent OnAllGodsDefeated = new UnityEvent();
+
         protected override void Init()
         {
             LoverSelectionStorer loverSelectionStorer = FindFirstObjectByType<LoverSelectionStorer>();
