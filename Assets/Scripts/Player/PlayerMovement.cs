@@ -66,7 +66,6 @@ namespace Assets.Scripts.Player
                 }
                 else // Start going down in air
                 {
-                    _animator.speed = 1.0f;
                     StartGoingDown();
                 }
             }
@@ -172,6 +171,7 @@ namespace Assets.Scripts.Player
         public void StartGoingDown()
         {
             if (_isGrounded || _isFalling) return;
+            _animator.speed = 1.0f;
             _rigidbody.linearVelocityY = 0.0f;
             _isFalling = true;
             OnFallBegin.Invoke();
