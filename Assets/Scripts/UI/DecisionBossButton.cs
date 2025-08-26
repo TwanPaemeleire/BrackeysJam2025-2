@@ -81,9 +81,9 @@ namespace Assets.Scripts.UI
 
         public void OnDeselect(BaseEventData eventData)
         {
+            _nameText.color = Color.white;
             if (_isSelected) return;
             StartScaleCoroutine(Vector3.one);
-            _nameText.color = Color.white;
         }
 
         public void OnSubmit(BaseEventData eventData)

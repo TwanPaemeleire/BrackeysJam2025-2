@@ -234,24 +234,84 @@
             "id": "8b1c072f-5d3f-4e65-970e-6e010855d5b9",
             "actions": [
                 {
-                    "name": "UnPause",
+                    "name": "Navigate",
+                    "type": "PassThrough",
+                    "id": "9b570285-f628-4f3c-99ea-95fdde4ae5e2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Submit",
                     "type": "Button",
-                    "id": "607b5944-7174-4e4d-8c6c-ad4d547e3276",
+                    "id": "345a5c96-f35c-44b4-89e8-9ab1bc946bb2",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Point",
+                    "type": "PassThrough",
+                    "id": "86318df4-4414-43c8-a0a5-4227dfd1c438",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Click",
+                    "type": "PassThrough",
+                    "id": "a0ca822a-9f23-40f3-840a-f15bf5a6672f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "a56c0f64-9ffe-4cad-9179-6d3f8f3eac8d",
-                    "path": "<Keyboard>/escape",
+                    "id": "8fe6d889-65a7-414f-9bac-064d4f94ef08",
+                    "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "UnPause",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9224d5a9-5b4e-4a1c-852d-c85034e61ba6",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7dbca7d4-9f2c-460c-9150-f260d5445d9f",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df14394a-8363-4b3e-8b63-e679301eaa15",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
