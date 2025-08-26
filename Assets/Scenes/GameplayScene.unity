@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Player.PlayerSword
   _hitScanObject: {fileID: 1955956533}
   _damage: 2
-  _attackDelay: 0.5
+  _attackDelay: 0.02
   _parryDelay: 1
   _parryWindow: 0.3
   _moveDelayAfterParry: 0.1

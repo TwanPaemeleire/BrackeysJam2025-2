@@ -13,6 +13,7 @@ namespace Assets.Scripts.SharedLogic
         public UnityEvent OnHit = new UnityEvent();
         public void ExecuteHitScan(float damage)
         {
+            Debug.Log("Executing hitscan");
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, _range, _layerMask);
             foreach (var hit in hits)
             {

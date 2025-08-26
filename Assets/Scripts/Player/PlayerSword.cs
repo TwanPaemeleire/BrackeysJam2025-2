@@ -20,7 +20,9 @@ namespace Assets.Scripts.Player
         private Coroutine _parryCoroutine;
 
         private bool _canAttack = true;
+        private bool _isAttacking = false;
         private Coroutine _attackCoroutine;
+        private bool _nextAttackBuffered = false;
         private bool _canDoNewMove = true;
 
         private PlayerMovement _playerMovement;
@@ -62,17 +64,41 @@ namespace Assets.Scripts.Player
                 _playerMovement.DisableMovement();
                 _canAttack = false;
                 _canDoNewMove = false;
+                _isAttacking = true;
+                _animator.SetTrigger("Attack");
                 OnAttackStart.Invoke();
-                _hitScanObject.ExecuteHitScan(_damage);   
+            }
+            else if(_isAttacking && context.started)
+            {
+                _nextAttackBuffered = true;
             }
         }
 
-        public void OnAttackAnimationFinished() // Call from animation event
+        public void DoHitScan() // Call from animation event
         {
+            _hitScanObject.ExecuteHitScan(_damage);
+        }
+
+        public void OnAttackPartComplete()
+        {
+            if(_isAttacking &&  _nextAttackBuffered) // Follow up attack, animation can just keep going
+            {
+                _nextAttackBuffered = false;
+            }
+            else // Attack done, return to normal state
+            {
+                OnAttackFinished();
+            }
+        }
+
+        private void OnAttackFinished()
+        {
+            _canDoNewMove = true;
+            _isAttacking = false;
             _playerMovement.ReEnableMovement();
+            _playerMovement.SetAnimationAfterExecutingAttack();
             _attackCoroutine = StartCoroutine(AttackCoroutine());
             OnAttackEnd.Invoke();
-            _canDoNewMove = true;
         }
 
         public void OnSuccesfullParryExecuted()
