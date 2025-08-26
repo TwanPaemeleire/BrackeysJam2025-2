@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 namespace Assets.Scripts.General
 {
@@ -7,18 +8,22 @@ namespace Assets.Scripts.General
     {
         [SerializeField] private PlayerInput _playerInput;
         [SerializeField] private GameObject _pauseMenuUI;
+        [SerializeField] private GameObject _blurObject;
+
 
         public void PauseGame()
         {
             Time.timeScale = 0f;
             _playerInput.SwitchCurrentActionMap("UI");
             _pauseMenuUI.SetActive(true);
+            _blurObject.SetActive(true);
         }
 
         public void ResumeGame()
         {
             Time.timeScale = 1f;
             _pauseMenuUI.SetActive(false);
+            _blurObject.SetActive(false);
             _playerInput.SwitchCurrentActionMap("Gameplay");
         }
 
