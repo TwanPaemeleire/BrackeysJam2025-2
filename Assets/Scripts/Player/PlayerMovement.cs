@@ -45,10 +45,11 @@ namespace Assets.Scripts.Player
         {
             _animator = GetComponent<Animator>();
             _animator.SetTrigger("GoIdle");
+            _playerHealth = GetComponent<PlayerHealth>();
         }
         private void FixedUpdate()
         {
-            if(!_isRolling) 
+            if(!_isRolling && _canMove)
             {
                 _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
             }
@@ -174,7 +175,7 @@ namespace Assets.Scripts.Player
         public void DisableMovement()
         {
             _canMove = false;
-            _inputMoveDirection = Vector2.zero;
+            //_inputMoveDirection = Vector2.zero;
             _rigidbody.linearVelocityX = 0.0f;
             OnMovementEnd?.Invoke();
         }
@@ -193,6 +194,19 @@ namespace Assets.Scripts.Player
             else
             {
                 _spriteRenderer.flipX = false;
+            }
+        }
+
+        public void SetAnimationAfterExecutingAttack()
+        {
+            if (_inputMoveDirection.x != 0.0f)
+            {
+                _animator.SetTrigger("Moving");
+                CheckSpriteOrientation();
+            }
+            else
+            {
+                _animator.SetTrigger("GoIdle");
             }
         }
     }

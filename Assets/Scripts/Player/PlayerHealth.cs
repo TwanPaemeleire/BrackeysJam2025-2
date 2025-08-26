@@ -15,7 +15,6 @@ namespace Assets.Scripts.Player
         [SerializeField] private Color _damageFlashColor = Color.red;
         [SerializeField] private Color _healFlashColor = Color.limeGreen;
         [SerializeField] private float _invincibleTimeAfterHit = 0.3f;
-        [SerializeField] private Slider _healthBar;
 
         private float _currentHealth;
         private Color _originalColor;

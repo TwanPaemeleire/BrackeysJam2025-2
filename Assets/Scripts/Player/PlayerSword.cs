@@ -24,6 +24,7 @@ namespace Assets.Scripts.Player
         private bool _canDoNewMove = true;
 
         private PlayerMovement _playerMovement;
+        private Animator _animator;
 
         public bool IsParrying { get { return _isParrying; } }
 
@@ -36,6 +37,7 @@ namespace Assets.Scripts.Player
         private void Awake()
         {
             _playerMovement = GetComponent<PlayerMovement>();
+            _animator = GetComponent<Animator>();
         }
 
         public void AttemptParry(InputAction.CallbackContext context)
@@ -48,6 +50,7 @@ namespace Assets.Scripts.Player
                 _isParrying = true;
                 _canDoNewMove = false;
                 OnParryStart.Invoke();
+                _animator.SetTrigger("Parry");
                 _parryCoroutine = StartCoroutine(ParryCoroutine());
             }
         }
@@ -85,6 +88,7 @@ namespace Assets.Scripts.Player
             yield return new WaitForSeconds(_parryWindow);
             _isParrying = false;
             _playerMovement.ReEnableMovement();
+            _playerMovement.SetAnimationAfterExecutingAttack();
             _canDoNewMove = true;
             yield return new WaitForSeconds(_parryDelay);
             _canParry = true;
