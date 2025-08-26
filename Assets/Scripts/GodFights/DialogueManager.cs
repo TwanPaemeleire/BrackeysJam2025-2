@@ -1,19 +1,25 @@
-using System.Collections.Generic;
 using Assets.Dialogues;
+using Assets.Scripts.General;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.GodFights
 {
-    public class DialogueManager : MonoBehaviour
+    public class DialogueManager : MonoSingleton<DialogueManager>
     {
         // Place for canvas variables
         [SerializeField] private GameObject _dialogueAssetParent;
         [SerializeField] private Image _portrait;
         [SerializeField] private TextMeshProUGUI _characterName;
         [SerializeField] private TextMeshProUGUI _mainText;
+
+        
+        [SerializeField] private InputActionReference _advanceAction;
+        [SerializeField] private PlayerInput _playerInput;
 
         private Dictionary<string, DialogueData> _dialogueMap;
 
@@ -24,13 +30,39 @@ namespace Assets.Scripts.GodFights
 
         private void Awake()
         {
-            _dialogueMap.Clear();
-
             _dialogueMap = new();
             foreach (var d in Resources.LoadAll<DialogueData>("Dialogues"))
             {
                 _dialogueMap[d.DialogueID] = d;
             }
+
+            //StartDialogue("Test");
+        }
+
+        //private void Start()
+        //{
+        //    _playerInput.SwitchCurrentActionMap("Dialogue");
+        //}
+
+        private void OnEnable()
+        {
+            if (_advanceAction != null)
+            {
+                _advanceAction.action.performed += OnAdvance;
+            }
+        }
+
+        private void OnDisable()
+        {
+            if (_advanceAction != null)
+            {
+                _advanceAction.action.performed -= OnAdvance;
+            }
+        }
+
+        private void OnAdvance(InputAction.CallbackContext ctx)
+        {
+            AdvanceDialogue();
         }
 
         private void StartDialogue(string dialogueId)
@@ -58,6 +90,7 @@ namespace Assets.Scripts.GodFights
         private void FinishDialogue()
         {
             _dialogueAssetParent.SetActive(false);
+            //_playerInput.SwitchCurrentActionMap("Gameplay");
             DialogueEndedEvent?.Invoke();
         }
 

@@ -17,3 +17,9 @@ MonoBehaviour:
   - characterPortrait: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
     characterName: Caramba AI
     text: 'I am testing this incredible testing text. '
+  - characterPortrait: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+    characterName: Caramba AI
+    text: Wow!
+  - characterPortrait: {fileID: -7503402373696077091, guid: 28b938c06124d334b84b2ce9c6478840, type: 3}
+    characterName: Caramba AI
+    text: Lol
