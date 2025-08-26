@@ -58,12 +58,15 @@ namespace Assets.Scripts.Player
             if (_isJumping && _rigidbody.linearVelocityY <= 0.0f)
             {
                 if (_isGrounded) // Ground hit
-                {
+                { 
+                    _animator.speed = 1.0f;
                     _isJumping = false;
                     OnJumpEnd?.Invoke();
+                    SetAnimationAfterExecutingAttack();
                 }
                 else // Start going down in air
                 {
+                    _animator.speed = 1.0f;
                     StartGoingDown();
                 }
             }
@@ -77,7 +80,7 @@ namespace Assets.Scripts.Player
             if (context.canceled)
             {
                 _inputMoveDirection = Vector2.zero;
-                _animator.SetTrigger("GoIdle");
+                if(_isGrounded) _animator.SetTrigger("GoIdle");
                 OnMovementEnd?.Invoke();
             }
             else
@@ -87,7 +90,7 @@ namespace Assets.Scripts.Player
 
                 if (_previousInputMoveDirection.x == 0.0f && _inputMoveDirection.x != 0.0f)
                 {
-                    _animator.SetTrigger("Moving");
+                    if(_isGrounded) _animator.SetTrigger("Moving");
                     OnMovementBegin?.Invoke();
                 }
             }
@@ -105,6 +108,7 @@ namespace Assets.Scripts.Player
                     _canDoubleJump = true;
                     _isJumping = true;
                     _isFalling = false;
+                    _animator.SetTrigger("Jump");
                     OnJumpBegin?.Invoke();
                 }
                 else if (_canDoubleJump)
@@ -113,6 +117,7 @@ namespace Assets.Scripts.Player
                     _rigidbody.AddForce(transform.up * _doubleJumpForce, ForceMode2D.Impulse);
                     _canDoubleJump = false;
                     _isFalling = false;
+                    _animator.SetTrigger("Jump");
                     OnDoubleJumpBegin?.Invoke();
                 }
             }
@@ -208,6 +213,11 @@ namespace Assets.Scripts.Player
             {
                 _animator.SetTrigger("GoIdle");
             }
+        }
+
+        public void OnAnimationEventJumpUpReached()
+        {
+            _animator.speed = 0.0f;
         }
     }
 }
