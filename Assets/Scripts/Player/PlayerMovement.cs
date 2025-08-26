@@ -69,7 +69,8 @@ namespace Assets.Scripts.Player
             }
             else if(_isFalling && hit.distance < _boxBottomDistanceFromTransform + 1.0f) // Distance is not grounded, but enough to start falling anim
             {
-                _animator.speed = 2.5f;
+                
+                _animator.SetTrigger("JumpGroundReached");
                 _isGrounded = false;
             }
 
@@ -77,7 +78,6 @@ namespace Assets.Scripts.Player
             {
                 if (_isGrounded) // Ground hit
                 {
-                    _animator.speed = 1.0f;
                     _isJumping = false;
                     OnJumpEnd?.Invoke();
                     SetAnimationAfterExecutingAttack();
@@ -125,7 +125,7 @@ namespace Assets.Scripts.Player
                     _canDoubleJump = true;
                     _isJumping = true;
                     _isFalling = false;
-                    _animator.SetTrigger("Jump");
+                    _animator.SetTrigger("JumpUp");
                     OnJumpBegin?.Invoke();
                 }
                 else if (_canDoubleJump)
@@ -134,7 +134,7 @@ namespace Assets.Scripts.Player
                     _rigidbody.AddForce(transform.up * _doubleJumpForce, ForceMode2D.Impulse);
                     _canDoubleJump = false;
                     _isFalling = false;
-                    _animator.SetTrigger("Jump");
+                    _animator.SetTrigger("JumpUp");
                     OnDoubleJumpBegin?.Invoke();
                 }
             }
@@ -189,7 +189,7 @@ namespace Assets.Scripts.Player
         public void StartGoingDown()
         {
             if (_isGrounded || _isFalling) return;
-            _animator.speed = 1.0f;
+            _animator.SetTrigger("JumpFalling");
             _rigidbody.linearVelocityY = 0.0f;
             _isFalling = true;
             OnFallBegin.Invoke();
@@ -231,11 +231,6 @@ namespace Assets.Scripts.Player
             {
                 _animator.SetTrigger("GoIdle");
             }
-        }
-
-        public void OnAnimationEventJumpUpReached()
-        {
-            _animator.speed = 0.0f;
         }
     }
 }

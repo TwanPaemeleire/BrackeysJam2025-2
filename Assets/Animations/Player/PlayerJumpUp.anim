@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerJump
+  m_Name: PlayerJumpUp
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -28,14 +28,6 @@ AnimationClip:
       value: {fileID: 496497603323687001, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
     - time: 0.25
       value: {fileID: 8691810124558177054, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - time: 0.33333334
-      value: {fileID: -2098300212452292270, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - time: 0.41666666
-      value: {fileID: -2178818368794951686, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - time: 0.5
-      value: {fileID: 8744439205818513450, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - time: 0.5833333
-      value: {fileID: -1831677882150188195, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -62,16 +54,12 @@ AnimationClip:
     - {fileID: -7941400250425145444, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
     - {fileID: 496497603323687001, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
     - {fileID: 8691810124558177054, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - {fileID: -2098300212452292270, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - {fileID: -2178818368794951686, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - {fileID: 8744439205818513450, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
-    - {fileID: -1831677882150188195, guid: 0d374a8c49e88e44fb13949115299c61, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666666
+    m_StopTime: 0.33333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -90,18 +78,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.25
-    functionName: OnAnimationEventJumpUpReached
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.33333334
-    functionName: OnAnimationEventJumpUpReached
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []
