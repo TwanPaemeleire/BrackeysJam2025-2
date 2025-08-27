@@ -6,7 +6,7 @@ namespace Assets.Scripts.SharedLogic
 {
     public class GradualHealthChanger : MonoBehaviour
     {
-        [SerializeField] private Slider _healthBar;
+        [SerializeField] private Image _healthBar;
         [SerializeField] private float _timeToReachTargetHealth = 1f;
         private float _currentTargetHealth;
         private float _maxHealth;
@@ -15,7 +15,7 @@ namespace Assets.Scripts.SharedLogic
         {
             _maxHealth = maxHealth;
             _currentTargetHealth = maxHealth;
-            _healthBar.value = 1.0f;
+            _healthBar.fillAmount = 1.0f;
         }
 
         public void SetTargetHealth(float targetHealth)
@@ -27,15 +27,16 @@ namespace Assets.Scripts.SharedLogic
 
         private IEnumerator GraduallyUpdateHealth()
         {
-            float initialHealth = _healthBar.value;
+            float initialHealth = _healthBar.fillAmount;
             float elapsedTime = 0f;
+            float targetFill = _currentTargetHealth / _maxHealth;
             while (elapsedTime < _timeToReachTargetHealth)
             {
                 elapsedTime += Time.deltaTime;
-                _healthBar.value = Mathf.SmoothStep(initialHealth, _currentTargetHealth, elapsedTime / _timeToReachTargetHealth);
+                _healthBar.fillAmount = Mathf.SmoothStep(initialHealth, targetFill, elapsedTime / _timeToReachTargetHealth);
                 yield return null;
             }
-            _healthBar.value = _currentTargetHealth;
+            _healthBar.fillAmount = targetFill;
         }
     }
 }

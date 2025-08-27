@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrownScythe
   _scytheSpeed: 6
-  _scytheDamage: 0
+  _scytheDamage: 2
   _maxTravelDistance: 5
   OnScytheReachedEndPoint:
     m_PersistentCalls:

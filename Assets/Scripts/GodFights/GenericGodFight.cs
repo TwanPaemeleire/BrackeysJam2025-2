@@ -186,22 +186,23 @@ namespace Assets.Scripts.GodFights
             else
             {
                 _animator.SetTrigger("Move");
+                bool startedNextAttackEarly = false;
                 while (elapsedTime < _minimumTimeToTrackPlayer)
                 {
                     distanceToPlayer = FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x;
                     if (Mathf.Abs(distanceToPlayer) < 0.5f)
                     {
                         StartNextAttack();
+                        startedNextAttackEarly = true;
                         break;
                     }
                     Vector3 directionToPlayer = (FightSequenceManager.Instance.PlayerObject.transform.position - transform.position).normalized;
                     directionToPlayer.y = 0;
-                    directionToPlayer.Normalize();
                     transform.position += directionToPlayer * _speedToTrackPlayer * Time.deltaTime;
                     elapsedTime += Time.deltaTime;
                     yield return null;
                 }
-                StartNextAttack();
+                if(!startedNextAttackEarly) StartNextAttack();
             }
             _trackingCoroutine = null;
         }
