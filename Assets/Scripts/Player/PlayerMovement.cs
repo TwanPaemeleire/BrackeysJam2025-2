@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +13,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _movementSpeed = 5.0f;
         [SerializeField] private float _jumpForce = 5.0f;
         [SerializeField] private float _doubleJumpForce = 2.5f;
+        [SerializeField] private AudioClip _rollSound;
         [SerializeField] private float _rollCooldown = 1.0f;
         [SerializeField] private float _rollTime = 0.5f;
         [SerializeField] private float _rollSpeed = 5.0f;
@@ -150,6 +152,7 @@ namespace Assets.Scripts.Player
                 _isRolling = true;
                 _canMove = false;
                 _canRoll = false;
+                SoundManager.Instance.PlaySFX(_rollSound, 0.25f);
                 float rollDirection = _spriteRenderer.flipX ? -1f : 1f;
                 _rigidbody.linearVelocityX = rollDirection * _rollSpeed;
                 _animator.SetTrigger("Roll");

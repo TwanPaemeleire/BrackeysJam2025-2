@@ -1514,6 +1514,9 @@ MonoBehaviour:
   _maxHealth: 50
   _phaseTriggerPercentages: []
   _healthBarUI: {fileID: 1620623107}
+  _flashDuration: 0.1
+  _damageFlashColor: {r: 1, g: 0, b: 0, a: 1}
+  _spriteRenderer: {fileID: 879593392}
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -1990,6 +1993,9 @@ MonoBehaviour:
   _maxHealth: 50
   _phaseTriggerPercentages: []
   _healthBarUI: {fileID: 1620623107}
+  _flashDuration: 0.1
+  _damageFlashColor: {r: 1, g: 0, b: 0, a: 1}
+  _spriteRenderer: {fileID: 912160851}
   OnDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -3028,6 +3034,7 @@ MonoBehaviour:
   _movementSpeed: 5
   _jumpForce: 5
   _doubleJumpForce: 2.5
+  _rollSound: {fileID: 8300000, guid: 2bd6828a087c8064a9fe93055f613bb7, type: 3}
   _rollCooldown: 1
   _rollTime: 0.5
   _rollSpeed: 5

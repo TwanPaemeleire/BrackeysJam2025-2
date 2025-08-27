@@ -1,7 +1,8 @@
-using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Events;
 using Assets.Scripts.SharedLogic;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.GodFights
 {
@@ -10,6 +11,9 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private float _maxHealth = 50.0f;
         [SerializeField] private List<float> _phaseTriggerPercentages = new List<float>();
         [SerializeField] private GradualHealthChanger _healthBarUI;
+        [SerializeField] private float _flashDuration = 0.1f;
+        [SerializeField] private Color _damageFlashColor = Color.red;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
 
         private float _currentHealth;
         private int _currentPhase = 0;
@@ -17,12 +21,16 @@ namespace Assets.Scripts.GodFights
         private bool _isInFinalPhase = false;
         private bool _isDead = false;
 
+        private Color _originalColor;
+        private Coroutine _flashCoroutine;
+
         public UnityEvent OnDamageTaken = new UnityEvent();
         public UnityEvent OnPhaseChange = new UnityEvent();
         public UnityEvent OnDeath = new UnityEvent();
 
         public void Initialize()
         {
+            _originalColor = _spriteRenderer.color;
             _currentHealth = _maxHealth;
             _healthBarUI.Initialize(_maxHealth);
 
@@ -40,6 +48,7 @@ namespace Assets.Scripts.GodFights
         {
             if(_isDead) return;
             _currentHealth -= damage;
+            FlashSprite(_damageFlashColor);
             if (_currentHealth <= 0) // God has died
             {
                 _healthBarUI.SnapToAmount(_currentHealth);
@@ -69,5 +78,22 @@ namespace Assets.Scripts.GodFights
             _currentHealth = Mathf.Min(_currentHealth + amount, _maxHealth);
             _healthBarUI.SetTargetHealth(_currentHealth);
         }
+
+        private void FlashSprite(Color flashColor)
+        {
+            if (_flashCoroutine != null)
+            {
+                StopCoroutine(_flashCoroutine);
+                _spriteRenderer.color = _originalColor;
+            }
+            _flashCoroutine = StartCoroutine(FlashCoroutine(flashColor));
+        }
+        private IEnumerator FlashCoroutine(Color flashColor)
+        {
+            _spriteRenderer.color = flashColor;
+            yield return new WaitForSeconds(_flashDuration);
+            _spriteRenderer.color = _originalColor;
+        }
+
     }
 }
