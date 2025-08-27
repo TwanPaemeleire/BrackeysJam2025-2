@@ -33,6 +33,7 @@ namespace Assets.Scripts.Player
 
         public bool IsGrounded { get { return _isGrounded; } }
         public bool IsRolling { get { return _isRolling; } }
+        public bool IsJumping { get { return _isJumping; } }
 
         public UnityEvent OnMovementBegin = new UnityEvent();
         public UnityEvent OnMovementEnd = new UnityEvent();

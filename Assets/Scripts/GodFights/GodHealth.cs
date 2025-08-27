@@ -21,7 +21,7 @@ namespace Assets.Scripts.GodFights
         public UnityEvent OnPhaseChange = new UnityEvent();
         public UnityEvent OnDeath = new UnityEvent();
 
-        private void Awake()
+        public void Initialize()
         {
             _currentHealth = _maxHealth;
             _healthBarUI.Initialize(_maxHealth);
@@ -42,7 +42,9 @@ namespace Assets.Scripts.GodFights
             _currentHealth -= damage;
             if (_currentHealth <= 0) // God has died
             {
+                _healthBarUI.SnapToAmount(_currentHealth);
                 _currentHealth = 0;
+                _isDead = true;
                 OnDeath.Invoke();
             }
             else if (!_isInFinalPhase && _currentHealth <= _healthToTriggerNextPhase) // If the god has more than one phase and has taken enough damage
@@ -58,7 +60,7 @@ namespace Assets.Scripts.GodFights
                 }
                 OnPhaseChange.Invoke();
             }
-            _healthBarUI.SetTargetHealth(_currentHealth);
+            if(!_isDead) _healthBarUI.SetTargetHealth(_currentHealth);
         }
 
         public void Heal(float amount)

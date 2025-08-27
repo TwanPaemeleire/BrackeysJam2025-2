@@ -23,8 +23,9 @@ namespace Assets.Scripts.GodFights
     }
 
     public class GenericGodFight : MonoBehaviour
-    {
+    { 
         [SerializeField] private GodType _godType;
+        [SerializeField] private AudioClip _soundtrack;
         [SerializeField] private List<PhaseData> _phasesData;
         [SerializeField] private float _idleTimeAfterAttack = 1.0f;
         [SerializeField] private float _speedToTrackPlayer = 1.0f;
@@ -44,16 +45,12 @@ namespace Assets.Scripts.GodFights
 
         public UnityEvent OnDeath = new UnityEvent();
 
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
+        public void StartBossFight()
         {
             _animator = GetComponent<Animator>();
             _health.OnDeath.AddListener(OnDeathInternal);
-            StartBossFight();
-        }
+            _health.Initialize();
 
-        public void StartBossFight()
-        {
             foreach (var phaseAttacks in _phasesData)
             {
                 foreach (var weightedAttack in phaseAttacks.Attacks)
@@ -62,6 +59,7 @@ namespace Assets.Scripts.GodFights
                     weightedAttack.Attack.God = this;
                 }
             }
+            // Set boss track to start playing
             CalculateWeights();
             _animator.SetTrigger("Idle");
             _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());

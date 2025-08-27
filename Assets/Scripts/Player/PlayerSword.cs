@@ -48,7 +48,7 @@ namespace Assets.Scripts.Player
 
         public void AttemptParry(InputAction.CallbackContext context)
         {
-            if(_playerMovement.IsRolling || !_playerMovement.IsGrounded) return; // Return if player is rolling or in air
+            if(_playerMovement.IsRolling || _playerMovement.IsJumping) return; // Return if player is rolling or in air
             if (_canParry && context.started && _canDoNewMove)
             {
                 _playerMovement.DisableMovement();
@@ -62,7 +62,7 @@ namespace Assets.Scripts.Player
         }
         public void AttemptAttack(InputAction.CallbackContext context)
         {
-            if (_playerMovement.IsRolling || !_playerMovement.IsGrounded) return; // Return if player is rolling or in air
+            if (_playerMovement.IsRolling || _playerMovement.IsJumping) return; // Return if player is rolling or in air
             if (_canAttack && context.started && _canDoNewMove)
             {
                 _playerMovement.DisableMovement();

@@ -15,7 +15,7 @@ namespace Assets.Scripts.SharedLogic
         {
             _maxHealth = maxHealth;
             _currentTargetHealth = maxHealth;
-            _healthBar.fillAmount = 1.0f;
+            SetTargetHealth(maxHealth);
         }
 
         public void SetTargetHealth(float targetHealth)
@@ -23,6 +23,12 @@ namespace Assets.Scripts.SharedLogic
             StopAllCoroutines();
             _currentTargetHealth = Mathf.Clamp(targetHealth, 0, _maxHealth);
             StartCoroutine(GraduallyUpdateHealth());
+        }
+
+        public void SnapToAmount(float amount)
+        {
+            StopAllCoroutines();
+            _healthBar.fillAmount = amount;
         }
 
         private IEnumerator GraduallyUpdateHealth()
