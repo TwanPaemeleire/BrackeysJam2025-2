@@ -1,0 +1,42 @@
+using Assets.Scripts.GodFights;
+using UnityEngine;
+
+namespace Assets.Scripts.GodFights.Attacks.SunGod
+{
+    public class ThrowScytheAttack : BaseGodAttack
+    {
+        [SerializeField] private GameObject _scythePrefab;
+        [SerializeField] private Transform _scytheSpawnPoint;
+        private GameObject _scythe;
+
+        public override void InitializeAttack()
+        {
+            RegisterAction(nameof(ThrowScythe), ThrowScythe);
+        }
+
+        private void ThrowScythe()
+        {
+            _scythe = Instantiate(_scythePrefab, _scytheSpawnPoint);
+            ThrownScythe thrownScythe = _scythe.GetComponent<ThrownScythe>();
+            thrownScythe.PositionToArriveAt = _scytheSpawnPoint.position;
+            thrownScythe.OnScytheReachedEndPoint.AddListener(OnScytheReachedEndPoint);
+            thrownScythe.DirectionMultiplier = God.CurrentDirectionMultiplier;
+        }
+
+        public override void StartAttack()
+        {
+            God.Animator.SetTrigger("ThrowScythe");
+        }
+
+        private void OnScytheReachedEndPoint()
+        {
+            Destroy(_scythe);
+            OnAttackFinished.Invoke();
+        }
+
+        public override void StopAttack()
+        {
+
+        }
+    }
+}

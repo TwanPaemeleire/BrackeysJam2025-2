@@ -36,8 +36,11 @@ namespace Assets.Scripts.GodFights
         private int _currentPhaseIndex = 0;
         private Animator _animator;
         private Coroutine _trackingCoroutine;
+        private float _currentDirectionMultiplier = 1.0f;
 
+        public float CurrentDirectionMultiplier { get { return _currentDirectionMultiplier; } }
         public GodType GodType { get { return _godType; } }
+        public Animator Animator { get { return _animator; } }
 
         public UnityEvent OnDeath = new UnityEvent();
 
@@ -56,6 +59,7 @@ namespace Assets.Scripts.GodFights
                 foreach (var weightedAttack in phaseAttacks.Attacks)
                 {
                     weightedAttack.Attack.InitializeAttack();
+                    weightedAttack.Attack.God = this;
                 }
             }
             CalculateWeights();
@@ -172,6 +176,8 @@ namespace Assets.Scripts.GodFights
             float elapsedTime = 0f;
             Vector3 initialForward = transform.forward;
             float distanceToPlayer = FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x;
+            _currentDirectionMultiplier = ((distanceToPlayer > 0.0f) ? 1.0f : -1.0f);
+            transform.localScale = new Vector3(_currentDirectionMultiplier, 1.0f, 1.0f);
             if (Mathf.Abs(distanceToPlayer) < 0.5f)
             {
                 StartNextAttack();
@@ -183,7 +189,6 @@ namespace Assets.Scripts.GodFights
                 while (elapsedTime < _minimumTimeToTrackPlayer)
                 {
                     distanceToPlayer = FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x;
-                    //distanceToPlayer = Vector3.Distance(FightSequenceManager.Instance.PlayerObject.transform.position, transform.position);
                     if (Mathf.Abs(distanceToPlayer) < 0.5f)
                     {
                         StartNextAttack();
@@ -191,6 +196,7 @@ namespace Assets.Scripts.GodFights
                     }
                     Vector3 directionToPlayer = (FightSequenceManager.Instance.PlayerObject.transform.position - transform.position).normalized;
                     directionToPlayer.y = 0;
+                    directionToPlayer.Normalize();
                     transform.position += directionToPlayer * _speedToTrackPlayer * Time.deltaTime;
                     elapsedTime += Time.deltaTime;
                     yield return null;

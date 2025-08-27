@@ -1075,6 +1075,7 @@ Transform:
   m_Children:
   - {fileID: 1537770636}
   - {fileID: 805395490}
+  - {fileID: 1689289112}
   m_Father: {fileID: 879593389}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793292017
@@ -1196,7 +1197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6828172dc3d7ea42b5f9abb1591e87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.Attacks.InPlaceHitScanAnimation
-  _canExecuteConsecutive: 0
   OnAttackFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -1281,14 +1281,10 @@ MonoBehaviour:
   _godType: 0
   _phasesData:
   - Attacks:
-    - Attack: {fileID: 1537770637}
+    - Attack: {fileID: 1689289113}
       Weight: 20
       MinDistanceToExecute: 0
-      MaxDistanceToExecute: 1
-    - Attack: {fileID: 805395491}
-      Weight: 5
-      MinDistanceToExecute: 0
-      MaxDistanceToExecute: 0
+      MaxDistanceToExecute: 4
     WeightSum: 0
   _idleTimeAfterAttack: 1
   _speedToTrackPlayer: 1
@@ -2609,7 +2605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6828172dc3d7ea42b5f9abb1591e87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.Attacks.InPlaceHitScanAnimation
-  _canExecuteConsecutive: 0
   OnAttackFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -2617,6 +2612,87 @@ MonoBehaviour:
   _damage: 1
   _animator: {fileID: 879593393}
   _hitScanObject: {fileID: 467347970}
+--- !u!1 &1664325471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664325472}
+  m_Layer: 7
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664325472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664325471}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.38, y: -0.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1689289112}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1689289111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689289112}
+  - component: {fileID: 1689289113}
+  m_Layer: 7
+  m_Name: ScytheThrowingAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689289112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689289111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1664325472}
+  m_Father: {fileID: 776478089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689289113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689289111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b364106d97dbab6428746be4fd70ea1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowScytheAttack
+  OnAttackFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  _scythePrefab: {fileID: 8125413163627049971, guid: 1a4970b77aa6ed940a8e90fc3115084c, type: 3}
+  _scytheSpawnPoint: {fileID: 1664325472}
 --- !u!1 &1840764646
 GameObject:
   m_ObjectHideFlags: 0
