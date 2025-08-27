@@ -1,6 +1,7 @@
-using Assets.Scripts.GodFights;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.Events;
 
 namespace Assets.Scripts.GodFights
@@ -17,18 +18,24 @@ namespace Assets.Scripts.GodFights
     {
         public BaseGodAttack Attack;
         public int Weight;
+        public float MinDistanceToExecute;
+        public float MaxDistanceToExecute;
     }
 
     public class GenericGodFight : MonoBehaviour
     {
         [SerializeField] private GodType _godType;
         [SerializeField] private List<PhaseData> _phasesData;
-        [SerializeField] private float _delayBeforeFirstAttack = 2.0f;
+        [SerializeField] private float _idleTimeAfterAttack = 1.0f;
+        [SerializeField] private float _speedToTrackPlayer = 1.0f;
+        [SerializeField] private float _minimumTimeToTrackPlayer = 1.0f;
         [SerializeField] private GodHealth _health;
 
         private BaseGodAttack _currentAttack;
         private int _currentAttackIndex = -1;
         private int _currentPhaseIndex = 0;
+        private Animator _animator;
+        private Coroutine _trackingCoroutine;
 
         public GodType GodType { get { return _godType; } }
 
@@ -37,6 +44,7 @@ namespace Assets.Scripts.GodFights
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            _animator = GetComponent<Animator>();
             _health.OnDeath.AddListener(OnDeathInternal);
             StartBossFight();
         }
@@ -51,31 +59,33 @@ namespace Assets.Scripts.GodFights
                 }
             }
             CalculateWeights();
-            Invoke(nameof(StartNextAttack), _delayBeforeFirstAttack);
+            _animator.SetTrigger("Idle");
+            _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
         }
 
         private void StartNextAttack()
         {
-            // If there's a guaranteed next attack, use that one
-            if (_currentAttack != null && _currentAttack.NextGuaranteedAttack != null)
+            // Look for new random attack, based on the weights
+            List<WeightedAttack> viableAttacks = GetAllViableAttacks();
+            if(viableAttacks.Count == 0)
             {
-                _currentAttack = _currentAttack.NextGuaranteedAttack;
-                _currentAttackIndex = GetIndexOfAttackInPhaseAttacks(_currentAttack);
-                _currentAttack.OnAttackFinished.AddListener(OnCurrentAttackFinished);
-                _currentAttack.StartAttack();
-                Debug.Log($"Starting guaranteed attack: {_currentAttack.name}");
+                _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
                 return;
             }
-
-            // Look for new random attack, based on the weights
-            int randomNumberInWeightRange = Random.Range(0, _phasesData[_currentPhaseIndex].WeightSum);
-            int currentWeightSum = 0;
-            for (int i = 0; i < _phasesData[_currentPhaseIndex].Attacks.Count; ++i)
+            int weightSum = 0;
+            foreach(var attack in viableAttacks)
             {
-                var weightedAttack = _phasesData[_currentPhaseIndex].Attacks[i];
+                weightSum += attack.Weight;
+            }
+
+            int randomNumberInWeightRange = Random.Range(0, weightSum);
+            int currentWeightSum = 0;
+            for (int i = 0; i < viableAttacks.Count; ++i)
+            {
+                var weightedAttack = viableAttacks[i];
                 currentWeightSum += weightedAttack.Weight;
 
-                if (randomNumberInWeightRange < currentWeightSum && (_currentAttack == null || i != _currentAttackIndex || _currentAttack.CanExecuteConsecutive))
+                if (randomNumberInWeightRange < currentWeightSum)
                 {
                     _currentAttack = weightedAttack.Attack;
                     _currentAttackIndex = i;
@@ -94,7 +104,7 @@ namespace Assets.Scripts.GodFights
                 _currentAttack.OnAttackFinished.RemoveListener(OnCurrentAttackFinished);
                 _currentAttack.StopAttack();
             }
-            Invoke(nameof(StartNextAttack), _currentAttack.DelayAfterAttack);
+            StartCoroutine(AfterAttackCoroutine());
         }
 
         private void OnDeathInternal()
@@ -105,6 +115,7 @@ namespace Assets.Scripts.GodFights
                 _currentAttack.OnAttackFinished.RemoveListener(OnCurrentAttackFinished);
                 _currentAttack = null;
             }
+            StopAllCoroutines();
             OnDeath.Invoke();
         }
 
@@ -120,17 +131,18 @@ namespace Assets.Scripts.GodFights
             }
         }
 
-        private int GetIndexOfAttackInPhaseAttacks(BaseGodAttack attack)
+        private List<WeightedAttack> GetAllViableAttacks()
         {
-            int amountOfPhaseAttacks = _phasesData[_currentPhaseIndex].Attacks.Count;
-            for (int attackIdx = 0; attackIdx < amountOfPhaseAttacks; ++attackIdx)
+            List<WeightedAttack> viableAttacks = new List<WeightedAttack>();
+            float distanceToPlayer = Mathf.Abs(FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x);
+            foreach (var weightedAttack in _phasesData[_currentPhaseIndex].Attacks)
             {
-                if (_phasesData[_currentPhaseIndex].Attacks[attackIdx].Attack == attack)
+                if (distanceToPlayer >= weightedAttack.MinDistanceToExecute && distanceToPlayer <= weightedAttack.MaxDistanceToExecute)
                 {
-                    return attackIdx;
+                    viableAttacks.Add(weightedAttack);
                 }
             }
-            return -1;
+            return viableAttacks;
         }
 
         public void OnAnimationEvent(string nameOfMethodToExecute)
@@ -146,6 +158,46 @@ namespace Assets.Scripts.GodFights
             {
                 Debug.LogWarning($"No current attack to execute animation event {nameOfMethodToExecute} in");
             }
+        }
+
+        private IEnumerator AfterAttackCoroutine()
+        {
+            _animator.SetTrigger("Idle");
+            yield return new WaitForSeconds(_idleTimeAfterAttack);
+            _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
+        }
+
+        private IEnumerator TrackPlayerCoroutine()
+        {             
+            float elapsedTime = 0f;
+            Vector3 initialForward = transform.forward;
+            float distanceToPlayer = FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x;
+            if (Mathf.Abs(distanceToPlayer) < 0.5f)
+            {
+                StartNextAttack();
+                _trackingCoroutine = null;
+            }
+            else
+            {
+                _animator.SetTrigger("Move");
+                while (elapsedTime < _minimumTimeToTrackPlayer)
+                {
+                    distanceToPlayer = FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x;
+                    //distanceToPlayer = Vector3.Distance(FightSequenceManager.Instance.PlayerObject.transform.position, transform.position);
+                    if (Mathf.Abs(distanceToPlayer) < 0.5f)
+                    {
+                        StartNextAttack();
+                        break;
+                    }
+                    Vector3 directionToPlayer = (FightSequenceManager.Instance.PlayerObject.transform.position - transform.position).normalized;
+                    directionToPlayer.y = 0;
+                    transform.position += directionToPlayer * _speedToTrackPlayer * Time.deltaTime;
+                    elapsedTime += Time.deltaTime;
+                    yield return null;
+                }
+                StartNextAttack();
+            }
+            _trackingCoroutine = null;
         }
     }
 }

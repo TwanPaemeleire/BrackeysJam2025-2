@@ -9,8 +9,11 @@ namespace Assets.Scripts.GodFights
     {
         [SerializeField] private List<GenericGodFight> _allGods = new List<GenericGodFight>();
         [SerializeField] private GodType _lover;
+        [SerializeField] private GameObject _playerObject;
         private List<int> _godsLeftToDefeat = new List<int>();
         private GenericGodFight _currentFightGod;
+
+        public GameObject PlayerObject { get { return _playerObject; } }
 
         public UnityEvent OnCurrentGodDefeated = new UnityEvent();
         public UnityEvent OnCurrentGodFightStarted = new UnityEvent();
@@ -19,8 +22,8 @@ namespace Assets.Scripts.GodFights
         protected override void Init()
         {
             LoverSelectionStorer loverSelectionStorer = FindFirstObjectByType<LoverSelectionStorer>();
-            _lover = loverSelectionStorer.SelectedLover;
-            Destroy(loverSelectionStorer.gameObject);
+            //_lover = loverSelectionStorer.SelectedLover; // enable later
+            //Destroy(loverSelectionStorer.gameObject);
             for(int bossIndex = 0; bossIndex < _allGods.Count; ++bossIndex)
             {
                 if(_allGods[bossIndex].GetComponent<GenericGodFight>().GodType == _lover)
