@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using Assets.Scripts.SharedLogic;
 using System.Collections;
 using UnityEngine;
@@ -14,6 +15,9 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _parryDelay = 1.0f;
         [SerializeField] private float _parryWindow = 0.3f;
         [SerializeField] private float _moveDelayAfterParry = 0.1f;
+
+        [Header("SFX")]
+        [SerializeField] private AudioClip _parrySound;
 
         private bool _canParry = true;
         private bool _isParrying = false;
@@ -103,6 +107,7 @@ namespace Assets.Scripts.Player
 
         public void OnSuccesfullParryExecuted()
         {
+            SoundManager.Instance.PlaySFX(_parrySound, 0.25f);
             StopCoroutine(_parryCoroutine);
             _parryCoroutine = null;
             OnSuccesfullParry.Invoke();

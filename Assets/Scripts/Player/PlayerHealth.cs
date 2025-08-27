@@ -39,6 +39,7 @@ namespace Assets.Scripts.Player
 
         public void TakeDamage(float damage)
         {
+            Debug.Log("player damaged");
             if(_hasDied) return;
             if(_isInvincible) return;
             _currentHealth -= damage;

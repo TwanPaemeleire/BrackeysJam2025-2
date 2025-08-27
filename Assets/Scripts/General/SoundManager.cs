@@ -20,7 +20,7 @@ namespace Assets.Scripts.General
         private List<SFXEntry> _sfxEntries = new List<SFXEntry>();
         private Dictionary<string, AudioClip> _sfxLibrary = new Dictionary<string, AudioClip>();
 
-        private void Awake()
+        protected override void Init()
         {
             if (_sfxSource == null)
             {
@@ -29,6 +29,16 @@ namespace Assets.Scripts.General
                 _sfxSource.playOnAwake = false;
             }
         }
+
+        //private void Awake()
+        //{
+        //    if (_sfxSource == null)
+        //    {
+        //        _sfxSource = gameObject.AddComponent<AudioSource>();
+        //        _sfxSource.loop = false;
+        //        _sfxSource.playOnAwake = false;
+        //    }
+        //}
 
         public void PlaySFX(AudioClip clip, float volume = 1f)
         {

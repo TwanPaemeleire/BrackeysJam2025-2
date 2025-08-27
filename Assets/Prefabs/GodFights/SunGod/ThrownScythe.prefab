@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5675478532279624167}
   - component: {fileID: 4452422321280190066}
   - component: {fileID: 6900528800977332261}
+  - component: {fileID: 2046672373030008545}
   m_Layer: 0
   m_Name: ThrownScythe
   m_TagString: Untagged
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThrownScythe
   _scytheSpeed: 6
   _scytheDamage: 0
-  _maxTravelDistance: 2
+  _maxTravelDistance: 5
   OnScytheReachedEndPoint:
     m_PersistentCalls:
       m_Calls: []
@@ -132,3 +133,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &2046672373030008545
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125413163627049971}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.31, y: -0.06}
+  m_Radius: 1

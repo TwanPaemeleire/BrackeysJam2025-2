@@ -10,6 +10,7 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
         [SerializeField] private float _scytheSpeed;
         [SerializeField] private float _scytheDamage;
         [SerializeField] private float _maxTravelDistance;
+        private bool _isReturning = false;
         private Vector3 _positionToArriveAt;
         private Vector3 _startPosition;
         private float _directionMultiplier = 1.0f;
@@ -37,8 +38,11 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
                 {
                     sword.OnSuccesfullParryExecuted();
                 }
-                StopAllCoroutines();
-                StartCoroutine(ReturnToOwner());
+                if(!_isReturning)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(ReturnToOwner());
+                }
             }
         }
 
@@ -56,6 +60,7 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
 
         private IEnumerator ReturnToOwner()
         {
+            _isReturning = true;
             while (Vector3.Distance(transform.position, _positionToArriveAt) > 0.1f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, _positionToArriveAt, _scytheSpeed * Time.deltaTime);
