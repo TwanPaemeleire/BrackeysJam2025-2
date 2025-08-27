@@ -111,6 +111,7 @@ namespace Assets.Scripts.Player
             StopCoroutine(_parryCoroutine);
             _parryCoroutine = null;
             OnSuccesfullParry.Invoke();
+            _isParrying = false;
             StartCoroutine(ReEnableMovementAfterDelay(_moveDelayAfterParry));
         }
 
@@ -129,6 +130,7 @@ namespace Assets.Scripts.Player
         {
             yield return new WaitForSeconds(delay);
             _playerMovement.ReEnableMovement();
+            _playerMovement.SetAnimationAfterExecutingAttack();
             _canParry = true;
             _canDoNewMove = true;
         }

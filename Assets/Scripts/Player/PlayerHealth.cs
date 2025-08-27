@@ -37,11 +37,10 @@ namespace Assets.Scripts.Player
             _gradualHealthChanger.Initialize(_maxHealth);
         }
 
-        public void TakeDamage(float damage)
+        public bool TakeDamage(float damage)
         {
-            Debug.Log("player damaged");
-            if(_hasDied) return;
-            if(_isInvincible) return;
+            if(_hasDied) return false;
+            if(_isInvincible) return false;
             _currentHealth -= damage;
             _gradualHealthChanger.SetTargetHealth(_currentHealth);
 
@@ -57,6 +56,7 @@ namespace Assets.Scripts.Player
                 StartInvincibilityTime();
                 OnHit?.Invoke();
             }
+            return true;
         }
 
         public void Heal(float healAmount)

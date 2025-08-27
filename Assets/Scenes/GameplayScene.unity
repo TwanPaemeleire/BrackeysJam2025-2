@@ -2147,7 +2147,7 @@ MonoBehaviour:
   _doubleJumpForce: 2.5
   _rollCooldown: 1
   _rollTime: 0.5
-  _rollSpeed: 2
+  _rollSpeed: 5
   _groundLayerMask:
     serializedVersion: 2
     m_Bits: 256
