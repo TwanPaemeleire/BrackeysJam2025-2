@@ -35,14 +35,7 @@ namespace Assets.Scripts.GodFights
             {
                 _dialogueMap[d.DialogueID] = d;
             }
-
-            //StartDialogue("Test");
         }
-
-        //private void Start()
-        //{
-        //    _playerInput.SwitchCurrentActionMap("Dialogue");
-        //}
 
         private void OnEnable()
         {
@@ -65,10 +58,12 @@ namespace Assets.Scripts.GodFights
             AdvanceDialogue();
         }
 
-        private void StartDialogue(string dialogueId)
+        public void StartDialogue(string dialogueId)
         {
-            _dialogueAssetParent.SetActive(true);
+            Time.timeScale = 0f;
 
+            _playerInput.SwitchCurrentActionMap("Dialogue");
+            _dialogueAssetParent.SetActive(true);
             _currentDialogue = _dialogueMap[dialogueId];
 
             SetDialogueLineData();
@@ -89,8 +84,10 @@ namespace Assets.Scripts.GodFights
 
         private void FinishDialogue()
         {
+            Time.timeScale = 1f;
+
             _dialogueAssetParent.SetActive(false);
-            //_playerInput.SwitchCurrentActionMap("Gameplay");
+            _playerInput.SwitchCurrentActionMap("Gameplay");
             DialogueEndedEvent?.Invoke();
         }
 

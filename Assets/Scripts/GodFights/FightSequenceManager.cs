@@ -44,6 +44,23 @@ namespace Assets.Scripts.GodFights
             RandomizeGodOrder();
         }
 
+        private void OnEnable()
+        {
+            DialogueManager.Instance.DialogueEndedEvent.AddListener(OnDialogueFinished);
+        }
+
+        private void OnDisable()
+        {
+            DialogueManager.Instance.DialogueEndedEvent.RemoveListener(OnDialogueFinished);
+        }
+
+
+        public void StartCurrentFightGodDialogue()
+        {
+            DialogueManager.Instance.StartDialogue($"{_allGods[_currentGodFightIdx].Fight.GodType.ToString() + "FightIntro"}");
+        }
+        
+
         public void OnDialogueFinished()
         {
             if(_currentGodFightIdx >= _allGods.Count)

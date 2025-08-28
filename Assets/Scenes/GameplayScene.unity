@@ -904,7 +904,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1954731977}
         m_TargetAssemblyTypeName: Assets.Scripts.GodFights.FightSequenceManager,
           Assembly-CSharp
-        m_MethodName: OnDialogueFinished
+        m_MethodName: StartCurrentFightGodDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
