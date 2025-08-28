@@ -58,6 +58,20 @@ namespace Assets.Scripts.Player
             _boxCollider2D = GetComponent<BoxCollider2D>();
             _boxBottomDistanceFromTransform = transform.position.y - _boxCollider2D.bounds.min.y;
         }
+
+        public void ResetMovement()
+        {
+            StopAllCoroutines();
+            _isJumping = false;
+            _isRolling = false;
+            _isGrounded = false;
+            _canDoubleJump = false;
+            _canMove = true;
+            _canRoll = true;
+            _isFalling = false;
+            _animator.SetTrigger("GoIdle");
+        }
+
         private void FixedUpdate()
         {
             if(!_isRolling && _canMove)

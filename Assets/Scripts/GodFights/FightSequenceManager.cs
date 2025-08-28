@@ -20,6 +20,7 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private List<GodInfo> _allGods = new List<GodInfo>();
         [SerializeField] private GodType _lover;
         [SerializeField] private GameObject _playerObject;
+        [SerializeField] private Transform _playerRespawnPoint;
         [SerializeField] private GameObject _defeatedUI;
         [SerializeField] private GameObject _blurObject;
         private GenericGodFight _currentFightGod;
@@ -126,7 +127,21 @@ namespace Assets.Scripts.GodFights
 
         public void RetryBossFight()
         {
+            // Reset player
+            _playerObject.transform.position = _playerRespawnPoint.position;
+            _playerObject.GetComponent<PlayerHealth>().ResetHealth();
+            _playerObject.GetComponent<PlayerSword>().ResetSword();
+            _playerObject.GetComponent<PlayerMovement>().ResetMovement();
+            _playerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("Gameplay");
 
+            // Reset boss
+            Vector3 godSpawnPos = _currentFightGod.transform.position;
+            godSpawnPos.x = _godFightSpawnPoint.position.x;
+            _currentFightGod.transform.position = godSpawnPos;
+            _currentFightGod.RestartBossFight();
+
+            _blurObject.SetActive(false);
+            _defeatedUI.SetActive(false);
         }
     }
 }

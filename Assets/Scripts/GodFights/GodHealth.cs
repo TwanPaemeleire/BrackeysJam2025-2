@@ -44,6 +44,13 @@ namespace Assets.Scripts.GodFights
             }
         }
 
+        public void ResetHealth()
+        {
+            _flashCoroutine = null;
+            StopAllCoroutines();
+            _healthBarUI.SetTargetHealth(_maxHealth);
+        }
+
         public void TakeDamage(float damage)
         {
             if(_isDead) return;

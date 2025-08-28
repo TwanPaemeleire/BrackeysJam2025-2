@@ -37,6 +37,18 @@ namespace Assets.Scripts.Player
             _gradualHealthChanger.Initialize(_maxHealth);
         }
 
+        public void ResetHealth()
+        {
+            _hasDied = false;
+            _isInvincible = false;
+
+            _currentHealth = _maxHealth;
+            _gradualHealthChanger.SetTargetHealth(_maxHealth);
+            StopAllCoroutines();
+            _invincibilityCoroutine = null;
+            _flashCoroutine = null;
+        }
+
         public bool TakeDamage(float damage)
         {
             if(_hasDied) return false;

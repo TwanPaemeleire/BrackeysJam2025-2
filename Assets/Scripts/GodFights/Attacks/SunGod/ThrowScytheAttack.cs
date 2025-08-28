@@ -31,12 +31,16 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
         private void OnScytheReachedEndPoint()
         {
             Destroy(_scythe);
+            _scythe = null;
             OnAttackFinished.Invoke();
         }
 
         public override void StopAttack()
         {
-
+            if (_scythe)
+            {
+                Destroy(_scythe); 
+            }
         }
     }
 }

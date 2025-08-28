@@ -46,6 +46,19 @@ namespace Assets.Scripts.Player
             _animator = GetComponent<Animator>();
         }
 
+        public void ResetSword()
+        {
+            StopAllCoroutines();
+            _parryCoroutine = null;
+            _attackCoroutine = null;
+            _canParry = true;
+            _canAttack = true;
+            _isAttacking = false;
+            _isParrying = false;
+            _nextAttackBuffered = false;
+            _canDoNewMove = true;
+        }
+
         public void AttemptParry(InputAction.CallbackContext context)
         {
             if(_playerMovement.IsRolling || _playerMovement.IsJumping) return; // Return if player is rolling or in air

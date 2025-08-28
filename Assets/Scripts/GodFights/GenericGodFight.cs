@@ -65,6 +65,22 @@ namespace Assets.Scripts.GodFights
             _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
         }
 
+        public void RestartBossFight()
+        {
+            StopAllCoroutines();
+            if (_currentAttack != null)
+            {
+                _currentAttack.StopAttack();
+                _currentAttack.OnAttackFinished.RemoveListener(OnCurrentAttackFinished);
+            }
+            _currentAttack = null;
+            _currentAttackIndex = -1;
+            _currentPhaseIndex = 0;
+            _health.ResetHealth();
+            _animator.SetTrigger("Idle");
+            _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
+        }
+
         private void StartNextAttack()
         {
             // Look for new random attack, based on the weights
