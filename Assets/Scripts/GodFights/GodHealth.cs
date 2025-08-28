@@ -48,6 +48,7 @@ namespace Assets.Scripts.GodFights
         {
             _flashCoroutine = null;
             StopAllCoroutines();
+            _currentHealth = _maxHealth;
             _healthBarUI.SetTargetHealth(_maxHealth);
         }
 

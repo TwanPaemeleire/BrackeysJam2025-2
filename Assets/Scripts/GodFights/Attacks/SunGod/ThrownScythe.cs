@@ -30,20 +30,19 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
         {
             if (collision.TryGetComponent<PlayerSword>(out PlayerSword sword))
             {
-                bool shouldReturn = false;
                 if (!sword.IsParrying)
                 {
-                    shouldReturn = collision.GetComponent<PlayerHealth>().TakeDamage(_scytheDamage);
+                    collision.GetComponent<PlayerHealth>().TakeDamage(_scytheDamage);
                 }
                 else
                 {
-                    shouldReturn = true;
                     sword.OnSuccesfullParryExecuted();
-                }
-                if(!_isReturning && shouldReturn)
-                {
-                    StopAllCoroutines();
-                    StartCoroutine(ReturnToOwner());
+                    if(!_isReturning)
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(ReturnToOwner());
+                        _isReturning=true;
+                    }
                 }
             }
         }
