@@ -44,6 +44,11 @@ namespace Assets.Scripts.GodFights
             }
         }
 
+        private void OnDisable()
+        {
+            _spriteRenderer.color = _originalColor;
+        }
+
         public void ResetHealth()
         {
             _flashCoroutine = null;

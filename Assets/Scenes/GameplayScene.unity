@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a3140bb5839c54c8a771f81cb133c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.GodHealth
-  _maxHealth: 50
+  _maxHealth: 5
   _phaseTriggerPercentages: []
   _healthBarUI: {fileID: 1620623107}
   _flashDuration: 0.1
@@ -3031,7 +3031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a3140bb5839c54c8a771f81cb133c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.GodHealth
-  _maxHealth: 50
+  _maxHealth: 5
   _phaseTriggerPercentages: []
   _healthBarUI: {fileID: 1620623107}
   _flashDuration: 0.1
@@ -3235,6 +3235,56 @@ Transform:
   - {fileID: 912160855}
   - {fileID: 566337288}
   m_Father: {fileID: 916620243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &977674220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977674222}
+  - component: {fileID: 977674221}
+  m_Layer: 0
+  m_Name: FinalSequenceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &977674221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977674220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded58620bd8374745a3c95d29daaab78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalSequenceController
+  _walkSpeed: 1
+  _startPos: {fileID: 977674222}
+  _offsetBetweenPlayerAndLover: 0.2
+  OnFinalSequenceFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &977674222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977674220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.04, y: 0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088569750
 GameObject:
@@ -5138,7 +5188,19 @@ MonoBehaviour:
       m_Calls: []
   OnAllGodsDefeated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 977674221}
+        m_TargetAssemblyTypeName: FinalSequenceController, Assembly-CSharp
+        m_MethodName: StartFinalSequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1954731978
 Transform:
   m_ObjectHideFlags: 0
@@ -5670,3 +5732,4 @@ SceneRoots:
   - {fileID: 78262766}
   - {fileID: 830731799}
   - {fileID: 916620243}
+  - {fileID: 977674222}

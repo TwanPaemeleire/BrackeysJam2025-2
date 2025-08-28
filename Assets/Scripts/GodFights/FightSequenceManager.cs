@@ -143,5 +143,17 @@ namespace Assets.Scripts.GodFights
             _blurObject.SetActive(false);
             _defeatedUI.SetActive(false);
         }
+
+        public GameObject GetLoverObject()
+        {
+            foreach(var god in _allGods)
+            {
+                if(god.Fight.GodType == _lover)
+                {
+                    return god.Fight.gameObject;
+                }
+            }
+            return null;
+        }
     }
 }
