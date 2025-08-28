@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.General
 {
@@ -14,7 +15,6 @@ namespace Assets.Scripts.General
             public AudioClip clip;
         }
 
-        [SerializeField]
         private AudioSource _sfxSource;
 
         [SerializeField]
@@ -55,6 +55,38 @@ namespace Assets.Scripts.General
             }
         }
 
+        private void OnEnable()// TEMP
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        private void OnDisable()// TEMP
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode) // TEMP
+        {
+            var sceneName = scene.name;
+
+            if (sceneName == "GameplayScene")
+            {
+                return;
+            }
+
+            var clip = Resources.Load<AudioClip>($"Music/{sceneName + "Theme"}");
+
+            if (clip != null)
+            {
+                Instance.PlayMusic(clip);
+            }
+            else
+            {
+                Debug.LogWarning($"There is no music for scene '{sceneName + "Theme"}' in Resources/Music/");
+                Instance.StopMusic();
+            }
+        }
+
         public void PlayMusic(AudioClip clip)
         {
             if (clip == null)
@@ -69,6 +101,31 @@ namespace Assets.Scripts.General
             }
 
             StartCoroutine(CrossFadeMusic(clip));
+        }
+
+        public void PlayMusic(string musicName)
+        {
+            if (musicName == null)
+            {
+                return;
+            }
+
+            AudioSource current = _musicSources[_activeMusicSource];
+            if (current.clip.name == musicName && current.isPlaying)
+            {
+                return;
+            }
+
+            var clip = Resources.Load<AudioClip>($"Music/{musicName}");
+
+            if (clip != null)
+            {
+                StartCoroutine(CrossFadeMusic(clip));
+            }
+            else
+            {
+                Debug.LogWarning($"There is no music titled '{musicName}' in Resources/Music/");
+            }
         }
 
         private IEnumerator CrossFadeMusic(AudioClip newClip)

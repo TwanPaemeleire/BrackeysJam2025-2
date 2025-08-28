@@ -59,6 +59,9 @@ namespace Assets.Scripts.GodFights
             godSpawnPos.x = _godFightSpawnPoint.position.x;
             _currentFightGod.transform.position = godSpawnPos;
             _allGods[_currentGodFightIdx].ThroneObject.SetActive(false);
+
+            SoundManager.Instance.PlayMusic(_currentFightGod.GodType.ToString() + "Theme");
+
             _currentFightGod.StartBossFight();
             OnCurrentGodFightStarted.Invoke();
         }
