@@ -3268,9 +3268,22 @@ MonoBehaviour:
   _walkSpeed: 1
   _startPos: {fileID: 977674222}
   _offsetBetweenPlayerAndLover: 0.2
+  _distanceFromEdgeToTriggerFade: 0.2
   OnFinalSequenceFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1814432837}
+        m_TargetAssemblyTypeName: Assets.Scripts.General.SceneSwitchHandler, Assembly-CSharp
+        m_MethodName: RequestSceneTransition
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &977674222
 Transform:
   m_ObjectHideFlags: 0
@@ -5051,6 +5064,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.SharedLogic.GradualHealthChanger
   _healthBar: {fileID: 1743811486}
   _timeToReachTargetHealth: 0.5
+--- !u!1001 &1814432836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7443335455990624556, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_Name
+      value: SceneSwitchHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 141.10574
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.36256
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478720175852473987, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+--- !u!114 &1814432837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6919091551372000614, guid: b60b7990d2f88984fa3b7ac9ed9235f7, type: 3}
+  m_PrefabInstance: {fileID: 1814432836}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c1efb9be1b87d4c9764e3706e01ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitchHandler
 --- !u!1 &1828813814
 GameObject:
   m_ObjectHideFlags: 0
@@ -5733,3 +5814,4 @@ SceneRoots:
   - {fileID: 830731799}
   - {fileID: 916620243}
   - {fileID: 977674222}
+  - {fileID: 1814432836}
