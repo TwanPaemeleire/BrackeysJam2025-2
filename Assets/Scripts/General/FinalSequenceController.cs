@@ -23,6 +23,7 @@ public class FinalSequenceController : MonoBehaviour
     }
     public void StartFinalSequence()
     {
+        _player.transform.localScale = Vector3.one;
         _player.GetComponent<PlayerInput>().DeactivateInput();
         _player.GetComponent<Animator>().SetTrigger("Moving");
         _player.transform.position = _startPos.position;
@@ -30,8 +31,9 @@ public class FinalSequenceController : MonoBehaviour
         loverPos.x += _offsetBetweenPlayerAndLover;
         loverPos.y = _lover.transform.position.y;
         _lover.transform.position = loverPos;
-        _lover.GetComponent<Animator>().SetTrigger("Move");
+        _lover.transform.localScale = Vector3.one;
         _lover.SetActive(true);
+        _lover.GetComponent<Animator>().SetTrigger("Move");
         StartCoroutine(WalkAway());
     }
 

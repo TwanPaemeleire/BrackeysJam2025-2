@@ -171,7 +171,7 @@ namespace Assets.Scripts.Player
                 _canMove = false;
                 _canRoll = false;
                 SoundManager.Instance.PlaySFX(_rollSound, 0.25f);
-                float rollDirection = _spriteRenderer.flipX ? -1f : 1f;
+                float rollDirection = transform.localScale.x < 0.0f ? -1f : 1f;
                 _rigidbody.linearVelocityX = rollDirection * _rollSpeed;
                 _animator.SetTrigger("Roll");
                 StartCoroutine(RollCoroutine(rollDirection));
@@ -234,11 +234,11 @@ namespace Assets.Scripts.Player
         {
             if (_inputMoveDirection.x < 0.0f)
             {
-                _spriteRenderer.flipX = true;
+                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
             }
             else
             {
-                _spriteRenderer.flipX = false;
+                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             }
         }
 
