@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using Assets.Scripts.General;
 using UnityEngine.Events;
+using Assets.Scripts.Player;
+using UnityEngine.InputSystem;
 
 namespace Assets.Scripts.GodFights
 {
@@ -18,6 +20,8 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private List<GodInfo> _allGods = new List<GodInfo>();
         [SerializeField] private GodType _lover;
         [SerializeField] private GameObject _playerObject;
+        [SerializeField] private GameObject _defeatedUI;
+        [SerializeField] private GameObject _blurObject;
         private GenericGodFight _currentFightGod;
         int _currentGodFightIdx = 0;
 
@@ -29,6 +33,7 @@ namespace Assets.Scripts.GodFights
 
         protected override void Init()
         {
+            _playerObject.GetComponent<PlayerHealth>().OnDeath.AddListener(OnPlayerDeathInternal);
             LoverSelectionStorer loverSelectionStorer = FindFirstObjectByType<LoverSelectionStorer>();
             if (loverSelectionStorer)
             {
@@ -38,10 +43,6 @@ namespace Assets.Scripts.GodFights
 
             RandomizeGodOrder();
         }
-        //private void Start() // TEMP
-        //{
-        //    OnDialogueFinished();
-        //}
 
         public void OnDialogueFinished()
         {
@@ -74,7 +75,7 @@ namespace Assets.Scripts.GodFights
 
         private void RandomizeGodOrder()
         {
-            // put gods in random order, with lover at the end
+            // Put gods in random order, with lover at the end
             GodInfo loverGod = new GodInfo();
             for (int bossIndex = 0; bossIndex < _allGods.Count; ++bossIndex)
             {
@@ -94,6 +95,18 @@ namespace Assets.Scripts.GodFights
                 _allGods[randIndex] = temp;
             }
             _allGods.Add(loverGod);
+        }
+
+        private void OnPlayerDeathInternal()
+        {
+            _blurObject.SetActive(true);
+            _playerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
+            _defeatedUI.SetActive(true);
+        }
+
+        public void RetryBossFight()
+        {
+
         }
     }
 }
