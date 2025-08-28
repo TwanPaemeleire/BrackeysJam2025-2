@@ -38,10 +38,10 @@ namespace Assets.Scripts.GodFights
 
             RandomizeGodOrder();
         }
-        private void Start() // TEMP
-        {
-            OnDialogueFinished();
-        }
+        //private void Start() // TEMP
+        //{
+        //    OnDialogueFinished();
+        //}
 
         public void OnDialogueFinished()
         {
