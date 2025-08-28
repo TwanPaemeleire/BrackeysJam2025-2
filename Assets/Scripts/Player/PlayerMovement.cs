@@ -1,6 +1,7 @@
 using Assets.Scripts.General;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -13,11 +14,14 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _movementSpeed = 5.0f;
         [SerializeField] private float _jumpForce = 5.0f;
         [SerializeField] private float _doubleJumpForce = 2.5f;
-        [SerializeField] private AudioClip _rollSound;
         [SerializeField] private float _rollCooldown = 1.0f;
         [SerializeField] private float _rollTime = 0.5f;
         [SerializeField] private float _rollSpeed = 5.0f;
         [SerializeField] private LayerMask _groundLayerMask;
+
+        [Header("Sounds")]
+        [SerializeField] private AudioClip _rollSound;
+        [SerializeField] private AudioSource _footStepAudioSource;
 
         private Vector2 _inputMoveDirection;
         private Vector2 _previousInputMoveDirection;
@@ -235,6 +239,11 @@ namespace Assets.Scripts.Player
             {
                 _animator.SetTrigger("GoIdle");
             }
+        }
+
+        public void OnFootStepEvent()
+        {
+            _footStepAudioSource.Play();
         }
     }
 }
