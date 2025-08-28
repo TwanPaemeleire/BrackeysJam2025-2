@@ -1,27 +1,30 @@
 using System.Collections;
 using UnityEngine;
 
-public class CameraToArenaMover : MonoBehaviour
+namespace Assets.Scripts.General
 {
-    [SerializeField] private Transform _targetTransform;
-    [SerializeField] private float _timeToReachTarget;
-    public void MoveCameraToArena()
+    public class CameraToArenaMover : MonoBehaviour
     {
-        StopAllCoroutines();
-        StartCoroutine(MoveToArena());
-    }
-
-    private IEnumerator MoveToArena()
-    {
-        Vector3 startPos = transform.position;
-        Vector3 targetPos = _targetTransform.position;
-        float elapsedTime = 0.0f;
-        while(elapsedTime < _timeToReachTarget)
+        [SerializeField] private Transform _targetTransform;
+        [SerializeField] private float _timeToReachTarget;
+        public void MoveCameraToArena()
         {
-            elapsedTime += Time.deltaTime;
-            float newX = Mathf.SmoothStep(startPos.x, targetPos.x, elapsedTime / _timeToReachTarget);
-            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
-            yield return null;
+            StopAllCoroutines();
+            StartCoroutine(MoveToArena());
+        }
+
+        private IEnumerator MoveToArena()
+        {
+            Vector3 startPos = transform.position;
+            Vector3 targetPos = _targetTransform.position;
+            float elapsedTime = 0.0f;
+            while(elapsedTime < _timeToReachTarget)
+            {
+                elapsedTime += Time.deltaTime;
+                float newX = Mathf.SmoothStep(startPos.x, targetPos.x, elapsedTime / _timeToReachTarget);
+                transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+                yield return null;
+            }
         }
     }
 }
