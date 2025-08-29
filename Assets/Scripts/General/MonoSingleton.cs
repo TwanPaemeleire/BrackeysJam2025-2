@@ -39,6 +39,16 @@ namespace Assets.Scripts.General
                 Instance.Init();
             }
         }
+
+        private void OnDestroy()
+        {
+            if (_instance == this)
+            {
+                _instance = null;
+                hasBeenCreated = false;
+            }
+        }
+
         protected virtual void Init() { }
     }
 }

@@ -1,16 +1,11 @@
+using Assets.Scripts.GodFights;
 using UnityEngine;
 
 public class CreditSceneController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void ReturnToMainMenu()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Destroy(FightSequenceManager.Instance.gameObject);
+        Destroy(DialogueManager.Instance.gameObject);
     }
 }
