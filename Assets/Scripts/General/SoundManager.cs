@@ -23,7 +23,9 @@ namespace Assets.Scripts.General
 
         private AudioSource[] _musicSources = new AudioSource[2];
         private int _activeMusicSource = 0;
-        private readonly float _musicFadeDuration = 1f;
+
+        [SerializeField]
+        private float _musicFadeDuration = 2.0f;
 
         [SerializeField]
         private List<SFXEntry> _sfxEntries = new List<SFXEntry>();
