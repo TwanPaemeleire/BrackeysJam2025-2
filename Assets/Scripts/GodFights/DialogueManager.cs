@@ -12,7 +12,7 @@ namespace Assets.Scripts.GodFights
     public class DialogueManager : MonoSingleton<DialogueManager>
     {
         // Place for canvas variables
-        [SerializeField] private GameObject _dialogueAssetParent;
+        [SerializeField] private FadeInUIHandler _dialogueAssetParent;
         [SerializeField] private Image _portrait;
         [SerializeField] private TextMeshProUGUI _characterName;
         [SerializeField] private TextMeshProUGUI _mainText;
@@ -68,10 +68,8 @@ namespace Assets.Scripts.GodFights
 
             _dialogueLineIndex = 0;
 
-            Time.timeScale = 0f;
-
             _playerInput.SwitchCurrentActionMap("Dialogue");
-            _dialogueAssetParent.SetActive(true);
+            _dialogueAssetParent.StartFadingIn();
             _currentDialogue = _dialogueMap[dialogueId];
 
             SetDialogueLineData();
@@ -94,7 +92,7 @@ namespace Assets.Scripts.GodFights
         {
             Time.timeScale = 1f;
 
-            _dialogueAssetParent.SetActive(false);
+            _dialogueAssetParent.StartFadingOut();
             _playerInput.SwitchCurrentActionMap("Gameplay");
             DialogueEndedEvent?.Invoke();
         }

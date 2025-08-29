@@ -2712,8 +2712,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2036756955
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3056,8 +3056,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2036756955
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4547,8 +4547,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1434984597
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2106962461, guid: c186c8562cfe9bc4eb1e3efbc1d48c42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5426,6 +5426,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1840764647}
+  - component: {fileID: 1840764649}
+  - component: {fileID: 1840764648}
   m_Layer: 5
   m_Name: Dialogues
   m_TagString: Untagged
@@ -5456,6 +5458,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1840764648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840764646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a8abe70341fb14a8cc6060dd971a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FadeInUIHandler
+  _canvasGroup: {fileID: 1840764649}
+  _fadeInTime: 0.5
+--- !u!225 &1840764649
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840764646}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1954731976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,7 +6057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57dc61f0e5f8fe1429aa6ff254c3d7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.DialogueManager
-  _dialogueAssetParent: {fileID: 1840764646}
+  _dialogueAssetParent: {fileID: 1840764648}
   _portrait: {fileID: 762596066}
   _characterName: {fileID: 1162228812}
   _mainText: {fileID: 337092260}
