@@ -66,6 +66,8 @@ namespace Assets.Scripts.GodFights
                 return;
             }
 
+            _dialogueLineIndex = 0;
+
             Time.timeScale = 0f;
 
             _playerInput.SwitchCurrentActionMap("Dialogue");

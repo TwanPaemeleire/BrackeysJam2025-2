@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecec16b8ee942e4eb0d813ea7ecc6c1, type: 3}
+  m_Name: MoonGoddessLoverFightIntro
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
+  dialogueID: MoonGoddessLoverFightIntro
+  lines:
+  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+    characterName: Moon
+    text: This is so cooked, my love
+  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+    characterName: Moon
+    text: This is your last trial
+  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+    characterName: Moon
+    text: If the peaceful life is what we want... face me like a warrior!

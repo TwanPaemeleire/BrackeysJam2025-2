@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecec16b8ee942e4eb0d813ea7ecc6c1, type: 3}
+  m_Name: MoonGoddessLoverOutro
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
+  dialogueID: MoonGoddessLoverOutro
+  lines:
+  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+    characterName: Moon
+    text: Incredible... Your powers have doubled since the last time we met.
+  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+    characterName: Moon
+    text: I have been looking forward to this.
+  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+    characterName: Moon
+    text: So much for a diplomatic solution. Now let's get out of here.

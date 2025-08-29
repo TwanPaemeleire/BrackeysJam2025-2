@@ -20,12 +20,12 @@ namespace Assets.Scripts.DialogueMisc
 
         private void OnDisable()
         {
-            FightSequenceManager.Instance.OnAllGodsDefeated.RemoveListener(AchieveVictory);
+            //FightSequenceManager.Instance.OnAllGodsDefeated.RemoveListener(AchieveVictory);
         }
 
         private void FaceTheLover()
         {
-            var clip = Resources.Load<AudioClip>($"Music/DecisionTheme");
+            var clip = Resources.Load<AudioClip>($"Music/DecisionSceneTheme");
 
             if (clip != null)
             {

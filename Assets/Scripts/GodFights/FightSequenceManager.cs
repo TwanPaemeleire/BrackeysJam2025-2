@@ -29,6 +29,7 @@ namespace Assets.Scripts.GodFights
         int _currentGodFightIdx = 0;
 
         private bool _readyToFight = false;
+        private bool _arenaReached = false;
 
         public GodType Lover { get { return _lover; } }
 
@@ -59,15 +60,31 @@ namespace Assets.Scripts.GodFights
 
         private void OnDisable()
         {
-            DialogueManager.Instance.DialogueEndedEvent.RemoveListener(OnDialogueFinished);
+            //DialogueManager.Instance.DialogueEndedEvent.RemoveListener(OnDialogueFinished);
         }
 
 
         public void StartCurrentFightGodDialogue()
         {
-            DialogueManager.Instance.StartDialogue($"{_allGods[_currentGodFightIdx].Fight.GodType.ToString() + "FightIntro"}");
+            var currentGodType = _allGods[_currentGodFightIdx].Fight.GodType;
+
+            if (currentGodType != Lover)
+            {
+                SoundManager.Instance.PlayMusic("AmbientTheme");
+                DialogueManager.Instance.StartDialogue($"{currentGodType.ToString() + "FightIntro"}");
+            }
+            else
+            {
+                SoundManager.Instance.PlayMusic("DecisionSceneTheme");
+                DialogueManager.Instance.StartDialogue($"{currentGodType.ToString() + "LoverFightIntro"}");
+            }
 
             _readyToFight = true;
+
+            if (!_arenaReached)
+            {
+                _arenaReached = true;
+            }
         }
         
 
@@ -79,13 +96,16 @@ namespace Assets.Scripts.GodFights
                 {
                     EndingAchieved?.Invoke();
                 }
+                else if (_arenaReached)
+                {
+                    StartCurrentFightGodDialogue();
+                }
+
                 return;
             }
 
             if (_currentGodFightIdx >= _allGods.Count)
             {
-                OnAllGodsDefeated.Invoke();
-                _readyToFight = false;
                 return;
             }
 
@@ -115,10 +135,37 @@ namespace Assets.Scripts.GodFights
             _currentFightGod.OnDeath.RemoveListener(OnCurrentGodDefeatedInternal);
             _allGods[_currentGodFightIdx].Fight.gameObject.SetActive(false);
             _allGods[_currentGodFightIdx].ThroneObject.SetActive(true);
+
+            var defeatedGodType = _allGods[_currentGodFightIdx].Fight.GodType;
+
             ++_currentGodFightIdx;
             OnCurrentGodDefeated.Invoke();
             _HUD.StartFadingOut();
-            OnDialogueFinished(); // TEMP
+
+            if (_currentGodFightIdx >= _allGods.Count)
+            {
+                OnAllGodsDefeated.Invoke();
+                _readyToFight = false;
+                return;
+            }
+
+            StartDefeatedGodDialogue(defeatedGodType);
+        }
+
+        private void StartDefeatedGodDialogue(GodType defeatedGod)
+        {
+            DialogueManager.Instance.StartDialogue($"{defeatedGod + "FightOutro"}");
+
+            if (defeatedGod != Lover)
+            {
+                SoundManager.Instance.PlayMusic("AmbientTheme");
+            }
+            else
+            {
+                SoundManager.Instance.PlayMusic("DecisionSceneTheme");
+            }
+
+            _readyToFight = false;
         }
 
         private void RandomizeGodOrder()

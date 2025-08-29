@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ecec16b8ee942e4eb0d813ea7ecc6c1, type: 3}
+  m_Name: SunGodLoverFightIntro
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
+  dialogueID: SunGodLoverFightIntro
+  lines:
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Goooood. Gooooooooood!
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Now.. to the last trial. Fight me!
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Fight me like your life depends on it!
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Dew it!

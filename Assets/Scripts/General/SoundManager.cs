@@ -71,7 +71,7 @@ namespace Assets.Scripts.General
         {
             var sceneName = scene.name;
 
-            if (sceneName == "GameplayScene")
+            if (sceneName == "GameplayScene" || sceneName == "CreditScene")
             {
                 return;
             }
@@ -122,6 +122,7 @@ namespace Assets.Scripts.General
 
             if (clip != null)
             {
+                Debug.Log("Playing theme: " + musicName);
                 StartCoroutine(CrossFadeMusic(clip));
             }
             else
@@ -143,7 +144,7 @@ namespace Assets.Scripts.General
             var timer = 0f;
             while (timer < _musicFadeDuration)
             {
-                timer += Time.deltaTime;
+                timer += Time.unscaledDeltaTime;
                 var t = Mathf.Clamp01(timer / _musicFadeDuration);
                 from.volume = Mathf.Lerp(0.15f, 0.0f, t);
                 to.volume = Mathf.Lerp(0.0f, 0.15f, t);
