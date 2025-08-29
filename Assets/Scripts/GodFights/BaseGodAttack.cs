@@ -8,8 +8,8 @@ namespace Assets.Scripts.GodFights
     [System.Serializable]
     public abstract class BaseGodAttack : MonoBehaviour
     {
-        private GenericGodFight _god;
-        public GenericGodFight God { get { return _god; } set { _god = value; } }
+        private BaseGodFight _god;
+        public BaseGodFight God { get { return _god; } set { _god = value; } }
 
         private Dictionary<string, Action> _animationActions = new Dictionary<string, Action>();
 

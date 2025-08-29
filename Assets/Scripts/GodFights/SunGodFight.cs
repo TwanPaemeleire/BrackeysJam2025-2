@@ -22,7 +22,7 @@ namespace Assets.Scripts.GodFights
         public float MaxDistanceToExecute;
     }
 
-    public class GenericGodFight : BaseGodFight
+    public class SunGodFight : BaseGodFight
     {
         [SerializeField] private List<PhaseData> _phasesData;
         [SerializeField] private float _idleTimeAfterAttack = 1.0f;
@@ -33,9 +33,6 @@ namespace Assets.Scripts.GodFights
         private int _currentAttackIndex = -1;
         private int _currentPhaseIndex = 0;
         private Coroutine _trackingCoroutine;
-        private float _currentDirectionMultiplier = 1.0f;
-
-        public float CurrentDirectionMultiplier { get { return _currentDirectionMultiplier; } }
 
         public override void StartBossFight()
         {
@@ -179,8 +176,8 @@ namespace Assets.Scripts.GodFights
             float elapsedTime = 0f;
             Vector3 initialForward = transform.forward;
             float distanceToPlayer = FightSequenceManager.Instance.PlayerObject.transform.position.x - transform.position.x;
-            _currentDirectionMultiplier = ((distanceToPlayer > 0.0f) ? 1.0f : -1.0f);
-            transform.localScale = new Vector3(_currentDirectionMultiplier, 1.0f, 1.0f);
+            CurrentDirectionMultiplier = ((distanceToPlayer > 0.0f) ? 1.0f : -1.0f);
+            transform.localScale = new Vector3(CurrentDirectionMultiplier, 1.0f, 1.0f);
             if (Mathf.Abs(distanceToPlayer) < 0.5f)
             {
                 StartNextAttack();
