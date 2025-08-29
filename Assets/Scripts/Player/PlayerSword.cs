@@ -18,6 +18,7 @@ namespace Assets.Scripts.Player
 
         [Header("SFX")]
         [SerializeField] private AudioClip _parrySound;
+        [SerializeField] private AudioSource _swingAudioSource;
 
         private bool _canParry = true;
         private bool _isParrying = false;
@@ -152,6 +153,11 @@ namespace Assets.Scripts.Player
         {
             yield return new WaitForSeconds(_attackDelay);
             _canAttack = true;
+        }
+
+        public void OnSwordSwing()
+        {
+            _swingAudioSource.Play();
         }
     }
 }

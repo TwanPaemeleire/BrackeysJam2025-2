@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using Assets.Scripts.SharedLogic;
 using System.Collections;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private Color _damageFlashColor = Color.red;
         [SerializeField] private Color _healFlashColor = Color.limeGreen;
         [SerializeField] private float _invincibleTimeAfterHit = 0.3f;
+        [SerializeField] private AudioClip _hitAudioClip;
 
         private float _currentHealth;
         private Color _originalColor;
@@ -55,6 +57,7 @@ namespace Assets.Scripts.Player
             if(_isInvincible) return false;
             _currentHealth -= damage;
             _gradualHealthChanger.SetTargetHealth(_currentHealth);
+            SoundManager.Instance.PlaySFX(_hitAudioClip, 0.25f);
 
             if (_currentHealth <= 0.0f)
             {

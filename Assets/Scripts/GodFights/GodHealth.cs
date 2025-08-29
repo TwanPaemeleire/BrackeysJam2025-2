@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using Assets.Scripts.SharedLogic;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private float _flashDuration = 0.1f;
         [SerializeField] private Color _damageFlashColor = Color.red;
         [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private AudioClip _hitAudioClip;
 
         private float _currentHealth;
         private int _currentPhase = 0;
@@ -62,6 +64,7 @@ namespace Assets.Scripts.GodFights
             if(_isDead) return;
             _currentHealth -= damage;
             FlashSprite(_damageFlashColor);
+            SoundManager.Instance.PlaySFX(_hitAudioClip, 0.25f);
             if (_currentHealth <= 0) // God has died
             {
                 _healthBarUI.SnapToAmount(_currentHealth);
