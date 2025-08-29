@@ -5461,9 +5461,13 @@ MonoBehaviour:
       m_Calls: []
   OnAllGodsDefeated:
     m_PersistentCalls:
+      m_Calls: []
+  EndingAchieved:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 977674221}
-        m_TargetAssemblyTypeName: FinalSequenceController, Assembly-CSharp
+        m_TargetAssemblyTypeName: Assets.Scripts.General.FinalSequenceController,
+          Assembly-CSharp
         m_MethodName: StartFinalSequence
         m_Mode: 1
         m_Arguments:

@@ -28,11 +28,16 @@ namespace Assets.Scripts.GodFights
         private GenericGodFight _currentFightGod;
         int _currentGodFightIdx = 0;
 
+        private bool _readyToFight = false;
+
+        public GodType Lover { get { return _lover; } }
+
         public GameObject PlayerObject { get { return _playerObject; } }
 
         public UnityEvent OnCurrentGodDefeated = new UnityEvent();
         public UnityEvent OnCurrentGodFightStarted = new UnityEvent();
         public UnityEvent OnAllGodsDefeated = new UnityEvent();
+        public UnityEvent EndingAchieved = new UnityEvent();
 
         protected override void Init()
         {
@@ -61,17 +66,34 @@ namespace Assets.Scripts.GodFights
         public void StartCurrentFightGodDialogue()
         {
             DialogueManager.Instance.StartDialogue($"{_allGods[_currentGodFightIdx].Fight.GodType.ToString() + "FightIntro"}");
+
+            _readyToFight = true;
         }
         
 
         public void OnDialogueFinished()
         {
-            if(_currentGodFightIdx >= _allGods.Count)
+            if(!_readyToFight)
             {
-                OnAllGodsDefeated.Invoke();
+                if (_currentGodFightIdx >= _allGods.Count)
+                {
+                    EndingAchieved?.Invoke();
+                }
                 return;
             }
 
+            if (_currentGodFightIdx >= _allGods.Count)
+            {
+                OnAllGodsDefeated.Invoke();
+                _readyToFight = false;
+                return;
+            }
+
+            StartNextGodFight();
+        }
+
+        private void StartNextGodFight()
+        {
             _currentFightGod = _allGods[_currentGodFightIdx].Fight;
             _currentFightGod.OnDeath.AddListener(OnCurrentGodDefeatedInternal);
             _allGods[_currentGodFightIdx].Fight.gameObject.SetActive(true);

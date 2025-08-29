@@ -60,6 +60,12 @@ namespace Assets.Scripts.GodFights
 
         public void StartDialogue(string dialogueId)
         {
+            if (!_dialogueMap.ContainsKey(dialogueId))
+            {
+                Debug.LogWarning("There is no dialogue called: " + dialogueId);
+                return;
+            }
+
             Time.timeScale = 0f;
 
             _playerInput.SwitchCurrentActionMap("Dialogue");
