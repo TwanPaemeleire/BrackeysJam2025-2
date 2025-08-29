@@ -4377,6 +4377,7 @@ MonoBehaviour:
   _rollCooldown: 1
   _rollTime: 0.5
   _rollSpeed: 5
+  _timeBeforeRollEndTrigger: 0.45
   _groundLayerMask:
     serializedVersion: 2
     m_Bits: 256

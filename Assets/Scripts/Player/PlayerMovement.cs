@@ -17,6 +17,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _rollCooldown = 1.0f;
         [SerializeField] private float _rollTime = 0.5f;
         [SerializeField] private float _rollSpeed = 5.0f;
+        [SerializeField] private float _timeBeforeRollEndTrigger = 0.2f;
         [SerializeField] private LayerMask _groundLayerMask;
 
         [Header("Sounds")]
@@ -201,10 +202,16 @@ namespace Assets.Scripts.Player
         private IEnumerator RollCoroutine(float rollDirectionMultiplier)
         {
             float elapsed = 0f;
+            bool hasStartedEndAnim = false;
             while (elapsed < _rollTime)
             {
                 _rigidbody.linearVelocityX = rollDirectionMultiplier * _rollSpeed;
                 elapsed += Time.fixedDeltaTime;
+                if(!hasStartedEndAnim && elapsed > _timeBeforeRollEndTrigger)
+                {
+                    hasStartedEndAnim = true;
+                    _animator.SetTrigger("RollEnd");
+                }
                 yield return new WaitForFixedUpdate();
             }
             EndRoll();
