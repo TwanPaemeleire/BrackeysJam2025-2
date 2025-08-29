@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: d134a66ba85b1db4fb95751e656f66fe
+guid: a78f12e2674ae5042add0cf3be155d4e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1493521518575053662
-    second: PlayerFinalRun_0
+      213: 681727936585613924
+    second: PlayerFinalRoll_0
   - first:
-      213: 7097533536309331655
-    second: PlayerFinalRun_1
+      213: 1123155199282475100
+    second: PlayerFinalRoll_1
   - first:
-      213: 3528559967556891399
-    second: PlayerFinalRun_2
+      213: 3607243713524299398
+    second: PlayerFinalRoll_2
   - first:
-      213: -2898655892948516166
-    second: PlayerFinalRun_3
+      213: -8765984897799459506
+    second: PlayerFinalRoll_3
   - first:
-      213: -5410711429463341374
-    second: PlayerFinalRun_4
+      213: -8061418907361331616
+    second: PlayerFinalRoll_4
   - first:
-      213: -3493286490321918918
-    second: PlayerFinalRun_5
+      213: -2115596111586237250
+    second: PlayerFinalRoll_5
   - first:
-      213: 8278164148000944915
-    second: PlayerFinalRun_6
-  - first:
-      213: 6370973211802758916
-    second: PlayerFinalRun_7
+      213: -122991404961800562
+    second: PlayerFinalRoll_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,8 +92,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,177 +131,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerFinalRun_0
+      name: PlayerRoll_0
       rect:
         serializedVersion: 2
-        x: 37
+        x: 0
         y: 0
-        width: 43
-        height: 55
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e5b611b78ed0ab410800000000000000
-      internalID: 1493521518575053662
+      spriteID: 954736bebe1828c47a878f372934c647
+      internalID: 1345965551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalRun_1
+      name: PlayerRoll_1
       rect:
         serializedVersion: 2
-        x: 165
-        y: 2
-        width: 43
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c6c32d95218f7260800000000000000
-      internalID: 7097533536309331655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFinalRun_2
-      rect:
-        serializedVersion: 2
-        x: 293
+        x: 128
         y: 0
-        width: 43
-        height: 52
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 70374ea6896f7f030800000000000000
-      internalID: 3528559967556891399
+      spriteID: de47ed4dbca88b54ca6a1d03caf0e882
+      internalID: 61401554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalRun_3
+      name: PlayerRoll_2
       rect:
         serializedVersion: 2
-        x: 425
+        x: 256
         y: 0
-        width: 37
-        height: 52
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab206b6b2d7e5c7d0800000000000000
-      internalID: -2898655892948516166
+      spriteID: 2dda2ef82f705e24cbe32ed98698dcd4
+      internalID: 732307356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalRun_4
+      name: PlayerRoll_3
       rect:
         serializedVersion: 2
-        x: 557
+        x: 384
         y: 0
-        width: 34
-        height: 53
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2c601b04f9a49e4b0800000000000000
-      internalID: -5410711429463341374
+      spriteID: 1132ff148b7cf174eac8034ac9749752
+      internalID: -1791471265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalRun_5
+      name: PlayerRoll_4
       rect:
         serializedVersion: 2
-        x: 682
-        y: 3
-        width: 38
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a34e0bdf17a558fc0800000000000000
-      internalID: -3493286490321918918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerFinalRun_6
-      rect:
-        serializedVersion: 2
-        x: 806
+        x: 512
         y: 0
-        width: 42
-        height: 52
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 31378f9de62f1e270800000000000000
-      internalID: 8278164148000944915
+      spriteID: a7fd10f5d5877504e84023ef36693460
+      internalID: -665638358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalRun_7
+      name: PlayerRoll_5
       rect:
         serializedVersion: 2
-        x: 932
+        x: 640
         y: 0
-        width: 42
-        height: 53
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 40f680b916e3a6850800000000000000
-      internalID: 6370973211802758916
+      spriteID: 917c095a7fea89742a57e08735c24504
+      internalID: -59649189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRoll_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bb0320df23d7841acf4623b0323dbf
+      internalID: 569009938
       vertices: []
       indices: 
       edges: []
@@ -313,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9cc628f32c8ce354cad5d84335c9c2e9
     internalID: 0
     vertices: []
     indices: 
@@ -321,16 +296,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      PlayerFinalRun_0: 1493521518575053662
-      PlayerFinalRun_1: 7097533536309331655
-      PlayerFinalRun_2: 3528559967556891399
-      PlayerFinalRun_3: -2898655892948516166
-      PlayerFinalRun_4: -5410711429463341374
-      PlayerFinalRun_5: -3493286490321918918
-      PlayerFinalRun_6: 8278164148000944915
-      PlayerFinalRun_7: 6370973211802758916
+      PlayerRoll_0: 1345965551
+      PlayerRoll_1: 61401554
+      PlayerRoll_2: 732307356
+      PlayerRoll_3: -1791471265
+      PlayerRoll_4: -665638358
+      PlayerRoll_5: -59649189
+      PlayerRoll_6: 569009938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

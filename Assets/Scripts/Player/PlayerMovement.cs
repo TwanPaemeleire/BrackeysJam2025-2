@@ -78,7 +78,7 @@ namespace Assets.Scripts.Player
             {
                 _rigidbody.linearVelocityX = _inputMoveDirection.x * _movementSpeed;
             }
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 2.0f, _groundLayerMask);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, _boxBottomDistanceFromTransform + 1.1f, _groundLayerMask);
             
             if(hit.collider == null)
             {
@@ -92,6 +92,10 @@ namespace Assets.Scripts.Player
             {
                 
                 _animator.SetTrigger("JumpGroundReached");
+                _isGrounded = false;
+            }
+            else
+            {
                 _isGrounded = false;
             }
 

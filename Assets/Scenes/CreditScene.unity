@@ -787,7 +787,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Graphics
+  m_text: 'Programming
 
 '
   m_isRightToLeft: 0

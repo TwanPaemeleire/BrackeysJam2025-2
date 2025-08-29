@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,8 +89,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureFormat: 4
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerFinalJump_0
+      name: PlayerJump_0
       rect:
         serializedVersion: 2
-        x: 50
+        x: 0
         y: 0
-        width: 39
-        height: 43
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8671f521d33e4c240800000000000000
-      internalID: 4811220153379264360
+      spriteID: 3c780bded5bfff54ab62f690797d63da
+      internalID: 358606655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalJump_1
+      name: PlayerJump_1
       rect:
         serializedVersion: 2
-        x: 178
+        x: 128
         y: 0
-        width: 39
-        height: 38
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0b203dfa3f96a2a20800000000000000
-      internalID: 3038357393962631856
+      spriteID: 48e171f81ea47d6449487a4137ece15f
+      internalID: -55979918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalJump_2
+      name: PlayerJump_2
       rect:
         serializedVersion: 2
-        x: 306
+        x: 256
         y: 0
-        width: 30
-        height: 53
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57bd3631d5bee59e0800000000000000
-      internalID: -1630607230071743627
+      spriteID: ce4d96f069975c045acb86fc2fe4993d
+      internalID: -707909015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalJump_3
+      name: PlayerJump_3
       rect:
         serializedVersion: 2
-        x: 434
+        x: 384
         y: 0
-        width: 30
-        height: 59
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48cf2ed79b6dc26d0800000000000000
-      internalID: -3013797958448382844
+      spriteID: ae79a0c6d3cd6d84aa1283a3e16505d4
+      internalID: -485144389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalJump_4
+      name: PlayerJump_4
       rect:
         serializedVersion: 2
-        x: 565
+        x: 512
         y: 0
-        width: 39
-        height: 43
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a89846697d0c38010800000000000000
-      internalID: 1190006758729615754
+      spriteID: 49e62b1f8df5e5a42bad2f3844967a31
+      internalID: 1061810114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerFinalJump_5
+      name: PlayerJump_5
       rect:
         serializedVersion: 2
-        x: 693
+        x: 640
         y: 0
-        width: 39
-        height: 42
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b3eb0c39ffaf67400800000000000000
-      internalID: 321720399006055995
+      spriteID: 7788fb85fbcad7a49bc4f4632130fa04
+      internalID: -1806610453
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d542f538f31e7ae4a9327a38892f996f
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      PlayerFinalJump_0: 4811220153379264360
-      PlayerFinalJump_1: 3038357393962631856
-      PlayerFinalJump_2: -1630607230071743627
-      PlayerFinalJump_3: -3013797958448382844
-      PlayerFinalJump_4: 1190006758729615754
-      PlayerFinalJump_5: 321720399006055995
+      PlayerJump_0: 358606655
+      PlayerJump_1: -55979918
+      PlayerJump_2: -707909015
+      PlayerJump_3: -485144389
+      PlayerJump_4: 1061810114
+      PlayerJump_5: -1806610453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
