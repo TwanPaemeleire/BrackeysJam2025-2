@@ -2653,7 +2653,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.GenericGodFight
   _godType: 0
-  _soundtrack: {fileID: 0}
+  _health: {fileID: 879593390}
+  _animator: {fileID: 879593393}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _phasesData:
   - Attacks:
     - Attack: {fileID: 1689289113}
@@ -2664,10 +2668,6 @@ MonoBehaviour:
   _idleTimeAfterAttack: 1
   _speedToTrackPlayer: 1
   _minimumTimeToTrackPlayer: 1
-  _health: {fileID: 879593390}
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!212 &879593392
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3133,7 +3133,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.GenericGodFight
   _godType: 1
-  _soundtrack: {fileID: 0}
+  _health: {fileID: 912160853}
+  _animator: {fileID: 912160852}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _phasesData:
   - Attacks:
     - Attack: {fileID: 1828813816}
@@ -3144,10 +3148,6 @@ MonoBehaviour:
   _idleTimeAfterAttack: 1
   _speedToTrackPlayer: 1
   _minimumTimeToTrackPlayer: 1
-  _health: {fileID: 912160853}
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &912160855
 Transform:
   m_ObjectHideFlags: 0

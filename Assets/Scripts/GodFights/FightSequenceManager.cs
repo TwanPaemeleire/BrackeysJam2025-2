@@ -11,7 +11,7 @@ namespace Assets.Scripts.GodFights
     [System.Serializable]
     public class GodInfo
     {
-        public GenericGodFight Fight;
+        public BaseGodFight Fight;
         public GameObject ThroneObject;
     }
 
@@ -25,7 +25,7 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private FadeInUIHandler _defeatedUI;
         [SerializeField] private FadeInUIHandler _HUD;
         [SerializeField] private GameObject _blurObject;
-        private GenericGodFight _currentFightGod;
+        private BaseGodFight _currentFightGod;
         int _currentGodFightIdx = 0;
 
         private bool _readyToFight = false;

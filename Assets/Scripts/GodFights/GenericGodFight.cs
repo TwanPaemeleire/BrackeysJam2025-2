@@ -22,34 +22,24 @@ namespace Assets.Scripts.GodFights
         public float MaxDistanceToExecute;
     }
 
-    public class GenericGodFight : MonoBehaviour
-    { 
-        [SerializeField] private GodType _godType;
-        [SerializeField] private AudioClip _soundtrack;
+    public class GenericGodFight : BaseGodFight
+    {
         [SerializeField] private List<PhaseData> _phasesData;
         [SerializeField] private float _idleTimeAfterAttack = 1.0f;
         [SerializeField] private float _speedToTrackPlayer = 1.0f;
         [SerializeField] private float _minimumTimeToTrackPlayer = 1.0f;
-        [SerializeField] private GodHealth _health;
 
         private BaseGodAttack _currentAttack;
         private int _currentAttackIndex = -1;
         private int _currentPhaseIndex = 0;
-        private Animator _animator;
         private Coroutine _trackingCoroutine;
         private float _currentDirectionMultiplier = 1.0f;
 
         public float CurrentDirectionMultiplier { get { return _currentDirectionMultiplier; } }
-        public GodType GodType { get { return _godType; } }
-        public Animator Animator { get { return _animator; } }
 
-        public UnityEvent OnDeath = new UnityEvent();
-
-        public void StartBossFight()
+        public override void StartBossFight()
         {
-            _animator = GetComponent<Animator>();
-            _health.OnDeath.AddListener(OnDeathInternal);
-            _health.Initialize();
+            base.StartBossFight();
 
             foreach (var phaseAttacks in _phasesData)
             {
@@ -59,13 +49,12 @@ namespace Assets.Scripts.GodFights
                     weightedAttack.Attack.God = this;
                 }
             }
-            // Set boss track to start playing
             CalculateWeights();
-            _animator.SetTrigger("Idle");
+            Animator.SetTrigger("Idle");
             _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
         }
 
-        public void RestartBossFight()
+        public override void RestartBossFight()
         {
             StopAllCoroutines();
             if (_currentAttack != null)
@@ -76,8 +65,8 @@ namespace Assets.Scripts.GodFights
             _currentAttack = null;
             _currentAttackIndex = -1;
             _currentPhaseIndex = 0;
-            _health.ResetHealth();
-            _animator.SetTrigger("Idle");
+            Health.ResetHealth();
+            Animator.SetTrigger("Idle");
             _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
         }
 
@@ -125,7 +114,7 @@ namespace Assets.Scripts.GodFights
             StartCoroutine(AfterAttackCoroutine());
         }
 
-        private void OnDeathInternal()
+        protected override void OnDeathInternal()
         {
             if (_currentAttack != null)
             {
@@ -180,7 +169,7 @@ namespace Assets.Scripts.GodFights
 
         private IEnumerator AfterAttackCoroutine()
         {
-            _animator.SetTrigger("Idle");
+            Animator.SetTrigger("Idle");
             yield return new WaitForSeconds(_idleTimeAfterAttack);
             _trackingCoroutine = StartCoroutine(TrackPlayerCoroutine());
         }
@@ -199,7 +188,7 @@ namespace Assets.Scripts.GodFights
             }
             else
             {
-                _animator.SetTrigger("Move");
+                Animator.SetTrigger("Move");
                 bool startedNextAttackEarly = false;
                 while (elapsedTime < _minimumTimeToTrackPlayer)
                 {
