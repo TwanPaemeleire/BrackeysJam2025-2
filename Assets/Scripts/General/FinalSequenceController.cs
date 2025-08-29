@@ -13,27 +13,28 @@ public class FinalSequenceController : MonoBehaviour
 
     private bool _hasFinished = false;
     private GameObject _player;
-    private GameObject _lover;
+    private GodInfo _lover;
 
     public UnityEvent OnFinalSequenceFinished = new UnityEvent();
     private void Start()
     {
         _player = FightSequenceManager.Instance.PlayerObject;
-        _lover = FightSequenceManager.Instance.GetLoverObject();
+        _lover = FightSequenceManager.Instance.GetLoverInfo();
     }
     public void StartFinalSequence()
     {
+        _lover.ThroneObject.SetActive(false);
         _player.transform.localScale = Vector3.one;
         _player.GetComponent<PlayerInput>().DeactivateInput();
         _player.GetComponent<Animator>().SetTrigger("Moving");
         _player.transform.position = _startPos.position;
         Vector3 loverPos = _startPos.position;
         loverPos.x += _offsetBetweenPlayerAndLover;
-        loverPos.y = _lover.transform.position.y;
-        _lover.transform.position = loverPos;
-        _lover.transform.localScale = Vector3.one;
-        _lover.SetActive(true);
-        _lover.GetComponent<Animator>().SetTrigger("Move");
+        loverPos.y = _lover.Fight.transform.position.y;
+        _lover.Fight.transform.position = loverPos;
+        _lover.Fight.transform.localScale = Vector3.one;
+        _lover.Fight.gameObject.SetActive(true);
+        _lover.Fight.GetComponent<Animator>().SetTrigger("Move");
         StartCoroutine(WalkAway());
     }
 
@@ -49,8 +50,8 @@ public class FinalSequenceController : MonoBehaviour
             newPos.x += movement;
             _player.transform.position = newPos;
             newPos.x += _offsetBetweenPlayerAndLover;
-            newPos.y = _lover.transform.position.y;
-            _lover.transform.position= newPos;
+            newPos.y = _lover.Fight.transform.position.y;
+            _lover.Fight.transform.position= newPos;
             if(!_hasFinished && (endPos - _player.transform.position.x) < _distanceFromEdgeToTriggerFade)
             {
                 _hasFinished = true;

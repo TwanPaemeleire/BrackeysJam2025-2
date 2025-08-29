@@ -151,13 +151,13 @@ namespace Assets.Scripts.GodFights
             _defeatedUI.StartFadingOut();
         }
 
-        public GameObject GetLoverObject()
+        public GodInfo GetLoverInfo()
         {
             foreach(var god in _allGods)
             {
                 if(god.Fight.GodType == _lover)
                 {
-                    return god.Fight.gameObject;
+                    return god;
                 }
             }
             return null;
