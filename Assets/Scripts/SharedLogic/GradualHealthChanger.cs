@@ -15,7 +15,7 @@ namespace Assets.Scripts.SharedLogic
         {
             _maxHealth = maxHealth;
             _currentTargetHealth = maxHealth;
-            SetTargetHealth(maxHealth);
+            SnapToAmount(maxHealth);
         }
 
         public void SetTargetHealth(float targetHealth)

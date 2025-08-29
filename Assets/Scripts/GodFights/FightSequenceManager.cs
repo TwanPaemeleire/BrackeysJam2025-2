@@ -21,7 +21,8 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private GodType _lover;
         [SerializeField] private GameObject _playerObject;
         [SerializeField] private Transform _playerRespawnPoint;
-        [SerializeField] private GameObject _defeatedUI;
+        [SerializeField] private FadeInUIHandler _defeatedUI;
+        [SerializeField] private FadeInUIHandler _HUD;
         [SerializeField] private GameObject _blurObject;
         private GenericGodFight _currentFightGod;
         int _currentGodFightIdx = 0;
@@ -82,6 +83,8 @@ namespace Assets.Scripts.GodFights
 
             _currentFightGod.StartBossFight();
             OnCurrentGodFightStarted.Invoke();
+
+            _HUD.StartFadingIn();
         }
 
         private void OnCurrentGodDefeatedInternal()
@@ -91,6 +94,7 @@ namespace Assets.Scripts.GodFights
             _allGods[_currentGodFightIdx].ThroneObject.SetActive(true);
             ++_currentGodFightIdx;
             OnCurrentGodDefeated.Invoke();
+            _HUD.StartFadingOut();
             OnDialogueFinished(); // TEMP
         }
 
@@ -122,11 +126,14 @@ namespace Assets.Scripts.GodFights
         {
             _blurObject.SetActive(true);
             _playerObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
-            _defeatedUI.SetActive(true);
+            _defeatedUI.StartFadingIn();
+            _HUD.StartFadingOut();
         }
 
         public void RetryBossFight()
         {
+            _HUD.StartFadingIn();
+
             // Reset player
             _playerObject.transform.position = _playerRespawnPoint.position;
             _playerObject.GetComponent<PlayerHealth>().ResetHealth();
@@ -141,7 +148,7 @@ namespace Assets.Scripts.GodFights
             _currentFightGod.RestartBossFight();
 
             _blurObject.SetActive(false);
-            _defeatedUI.SetActive(false);
+            _defeatedUI.StartFadingOut();
         }
 
         public GameObject GetLoverObject()
