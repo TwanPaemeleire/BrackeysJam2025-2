@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using Assets.Scripts.General;
 using UnityEngine.Events;
 using Assets.Scripts.Player;
@@ -153,14 +154,7 @@ namespace Assets.Scripts.GodFights
 
         public GodInfo GetLoverInfo()
         {
-            foreach(var god in _allGods)
-            {
-                if(god.Fight.GodType == _lover)
-                {
-                    return god;
-                }
-            }
-            return null;
+            return _allGods.FirstOrDefault(god => god.Fight.GodType == _lover);
         }
     }
 }
