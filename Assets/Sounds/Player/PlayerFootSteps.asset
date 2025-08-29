@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8827708599909805229
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerFootStep5_{-8827708599909805229}
+  m_AudioClip: {fileID: 8300000, guid: a28cade3c5cb87c428025af5efcde3e7, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1362696692575449182
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerFootStep4_{-1362696692575449182}
+  m_AudioClip: {fileID: 8300000, guid: c7428600243411e489784e23e8a3f839, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
 --- !u!1233149941 &1033055268015197811
 AudioContainerElement:
   m_ObjectHideFlags: 1
@@ -39,6 +59,8 @@ AudioRandomContainer:
   - {fileID: 1033055268015197811}
   - {fileID: 4435846971877744035}
   - {fileID: 7690929432480306575}
+  - {fileID: -1362696692575449182}
+  - {fileID: -8827708599909805229}
   m_AvoidRepeatingLast: 1
   m_PlaybackMode: 2
   m_TriggerMode: 0
