@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: e0ba2ec0395fc0845af93b07b216076c
+guid: f3223f1c54195dd4d9a6c84da323df58
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5239050605419326085
-    second: MoonGoddessDialogue_0
+      213: -4449339950864588949
+    second: MoonGoddessDialogue 1_0
   - first:
-      213: -4769604728508286503
-    second: MoonGoddessDialogue_1
+      213: 6443223385808592722
+    second: MoonGoddessDialogue 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -116,10 +116,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoonGoddessDialogue_0
+      name: MoonGoddessDialogue 1_0
       rect:
         serializedVersion: 2
-        x: 158
+        x: 328
         y: 0
         width: 2514
         height: 3527
@@ -131,17 +131,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b759fa76b372b47b0800000000000000
-      internalID: -5239050605419326085
+      spriteID: b6f13c763e4c042c0800000000000000
+      internalID: -4449339950864588949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoonGoddessDialogue_1
+      name: MoonGoddessDialogue 1_1
       rect:
         serializedVersion: 2
-        x: 823
+        x: 921
         y: 3175
         width: 1256
         height: 825
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d97d3615c5fecdb0800000000000000
-      internalID: -4769604728508286503
+      spriteID: 25f5c9f188dea6950800000000000000
+      internalID: 6443223385808592722
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MoonGoddessDialogue_0: -5239050605419326085
-      MoonGoddessDialogue_1: -4769604728508286503
+      MoonGoddessDialogue 1_0: -4449339950864588949
+      MoonGoddessDialogue 1_1: 6443223385808592722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

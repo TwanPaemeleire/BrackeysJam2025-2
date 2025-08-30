@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
   dialogueID: MoonGoddessLoverFightIntro
   lines:
-  - characterPortrait: {fileID: 21300000, guid: e0ba2ec0395fc0845af93b07b216076c, type: 3}
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
     text: This is so cooked, my love
-  - characterPortrait: {fileID: 21300000, guid: e0ba2ec0395fc0845af93b07b216076c, type: 3}
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
     text: This is your last trial
-  - characterPortrait: {fileID: 21300000, guid: e0ba2ec0395fc0845af93b07b216076c, type: 3}
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
     text: If the peaceful life is what we want... face me like a warrior!
