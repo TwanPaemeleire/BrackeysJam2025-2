@@ -16,13 +16,27 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: -433924794317225620, guid: 75d8a43804c8cc54cb63c42648db3763, type: 3}
     characterName: Sun
-    text: Behold, you face me, the God of Sun, Scythes, Dashing Looks and Aurafarm!
+    text: So you are that punk that is almost glued to her, huh?
   - characterPortrait: {fileID: -433924794317225620, guid: 75d8a43804c8cc54cb63c42648db3763, type: 3}
     characterName: Sun
-    text: -10000 Aura bro
+    text: 'I mean, I get that. But thinking you are a match for the gods? '
   - characterPortrait: {fileID: -433924794317225620, guid: 75d8a43804c8cc54cb63c42648db3763, type: 3}
     characterName: Sun
-    text: L rizz
-  - characterPortrait: {fileID: -433924794317225620, guid: 75d8a43804c8cc54cb63c42648db3763, type: 3}
+    text: Pha! Double the pride, double the fall. All I can say.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: God or not. My wish is to be with her.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: If you are the obstacle, then I will face you. The Moon is without a doubt
+      worth it.
+  - characterPortrait: {fileID: 64977685203528265, guid: 3ff59e55c15c38349bebd01a210818e9, type: 3}
     characterName: Sun
-    text: -10000 Social credit
+    text: Oh by the stars... Well. If that's your wish.
+  - characterPortrait: {fileID: 64977685203528265, guid: 3ff59e55c15c38349bebd01a210818e9, type: 3}
+    characterName: Sun
+    text: Even if it ends before you can blink... Challenging a god is still something
+      I can respect.
+  - characterPortrait: {fileID: 64977685203528265, guid: 3ff59e55c15c38349bebd01a210818e9, type: 3}
+    characterName: Sun
+    text: Show me everything you've got!

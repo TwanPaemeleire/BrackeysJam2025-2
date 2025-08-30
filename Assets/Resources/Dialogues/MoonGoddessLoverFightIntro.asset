@@ -16,10 +16,35 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: This is so cooked, my love
+    text: Hi again, my love...
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: 'I.. I don''t understand. '
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: This is your last trial
+    text: The rules dictate that the mortal challenger must face all the gods to
+      ascend godhood.
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: If the peaceful life is what we want... face me like a warrior!
+    text: That means, you have to face me too, whether you want it or not.
+  - characterPortrait: {fileID: -1765039968, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: Is there really no other way? I do not want... to fight you, for God's
+      sake.
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: If the peaceful life with me is what you want.. for God's sake you must
+      fight.
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: Do not worry. I believe you can show enough to justify the approval in
+      no time.
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: Come. This is your final challenge.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: ...
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: Then so be it.

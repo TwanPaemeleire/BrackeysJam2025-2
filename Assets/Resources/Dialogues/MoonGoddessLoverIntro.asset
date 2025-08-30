@@ -16,16 +16,32 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: Hey there, my love
+    text: I feel... so serene, when I see you.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: Hi, my love.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: Are you alright?
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: All the other gods are severely against us being together...
+    text: No.. No I am not. You know well that romance between a mortal and a god
+      is a taboo.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: I know. You have warned me before. But my resolve stays strong.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: If a mortal can prove themselves before the gods, they can ascend to godhood.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: This is precisely what I am doing. For us.
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: So uncivilized.
+    text: I know. And you are well informed that the risk is great.
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: But fighting Gods is your specialty, isn't it?
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
-    text: Do what you must!
+    text: Keep your senses sharp, my love. I will await you there.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: See you soon.

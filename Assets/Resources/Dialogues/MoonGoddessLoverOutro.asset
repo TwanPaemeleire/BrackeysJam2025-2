@@ -16,10 +16,28 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: Incredible... Your powers have doubled since the last time we met.
+    text: You have showcased your skills well, my love.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: Is it.. is it over?
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: I have been looking forward to this.
+    text: Yes.. it is.
+  - characterPortrait: {fileID: 5236516270932942657, guid: d2ab951dd89820b478d6340859c94f27, type: 3}
+    characterName: Sun
+    text: Yippieeeee! New God incoming!
+  - characterPortrait: {fileID: 5236516270932942657, guid: d2ab951dd89820b478d6340859c94f27, type: 3}
+    characterName: Sun
+    text: You will be paying for the celebration, right?
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: ...
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: So much for a diplomatic solution. Now let's get out of here.
+    text: ...
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: How about we go to a quieter place and spend some peaceful time together?
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: I have no objections to that.

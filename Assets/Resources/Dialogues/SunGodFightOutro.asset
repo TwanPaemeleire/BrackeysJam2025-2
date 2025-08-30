@@ -14,15 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
   dialogueID: SunGodFightOutro
   lines:
+  - characterPortrait: {fileID: 5236516270932942657, guid: d2ab951dd89820b478d6340859c94f27, type: 3}
+    characterName: Sun
+    text: HA! Now that's a fight!
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Ouch
+    text: 'Did not think you will be able to even scratch me! '
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: Hm... so do you yield?
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Alright alright
+    text: Hmmmmmmmmmmmmm... Naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah.
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: W Rizz bro. Chill
+    text: But your relationship gets my vote of approval. That's all you need from
+      me, right?
+  - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: 'You have my gratitude. '
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: I do not see other gods however. Does that mean I only needed to get approval
+      from you?
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: I am off to space. Bye
+    text: Didn't you learn the rules? You have to prove yourself before ALL the gods.
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: I am not the only god here, am I?
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: What?
