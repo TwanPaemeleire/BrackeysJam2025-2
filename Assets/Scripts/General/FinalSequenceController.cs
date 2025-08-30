@@ -17,6 +17,7 @@ namespace Assets.Scripts.General
         private GameObject _player;
         private GodInfo _lover;
 
+        public UnityEvent OnFinalSequenceBegin = new UnityEvent();
         public UnityEvent OnFinalSequenceFinished = new UnityEvent();
 
         private void Start()
@@ -27,6 +28,7 @@ namespace Assets.Scripts.General
 
         public void StartFinalSequence()
         {
+            OnFinalSequenceBegin.Invoke();
             _lover.ThroneObject.SetActive(false);
             _player.transform.localScale = Vector3.one;
             _player.GetComponent<PlayerInput>().DeactivateInput();
