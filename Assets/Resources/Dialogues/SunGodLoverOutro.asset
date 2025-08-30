@@ -16,14 +16,32 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Another happy landing!
+    text: LET'S GOOOOOOO! Good job! Damn, you fought like a beast!
+  - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: Jeez.. this was tense. You did not hold back or what?
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Haha.. what a fight. But now.. it's over. We are free to do whatever we
-      want
+    text: Why would I?
+  - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: ...
+  - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: 'Bruh. But alright. Was fun for sure. '
+  - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: So now what, I get to become a God?
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
+    text: Corrrrrect. Not only you are now my equal, but you also get to rule THE
+      WORLD!
+  - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
     text: Why do I feel you're going to be the death of me?
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: Do not underestimate the responsibility that you get with the ascension.
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Nvm! This is where the fun begins!
+    text: Yeah yeah, nevermind! Let's go! This is where the fun begins!

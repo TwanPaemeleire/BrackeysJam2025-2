@@ -16,13 +16,42 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Love knows no bounds...
-  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
-    characterName: Sun
-    text: But fighting all the other gods for my hand?
+    text: Well well well...
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
     text: You are a bold one!
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Go on! I await you there!
+    text: Shining as always, my star. And not even fearing what comes next?
+  - characterPortrait: {fileID: -805301395, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: I did find the armor and the sword, but why am I wearing that?
+  - characterPortrait: {fileID: -805301395, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: And what do you mean not fearing what comes next? Huh?
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Ahhhh right. So, by rules, a mortal and a god cannot be in a relationship.
+  - characterPortrait: {fileID: -805301395, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: what.
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Hoooold your horses. While that is true, you can challenge the gods to
+      become one yourself.
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: That way you get to keep the relationship. And immortality. Sounds cool
+      right?
+  - characterPortrait: {fileID: -805301395, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: So I fight.. GODS. To become one. So we can keep dating?
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: Yep.
+  - characterPortrait: {fileID: -805301395, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
+    characterName: Player
+    text: Alright. Sounds legit.
+  - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
+    characterName: Sun
+    text: I knew you would agree! See you there!

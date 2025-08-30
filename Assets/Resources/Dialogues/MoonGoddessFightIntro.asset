@@ -16,10 +16,24 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: I am moo mOoo mOO Moo
+    text: It is so surreal to see...
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: n
+    text: A mortal risks their life in pursuit of love for a God. This is.. something
+      new.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: Never did that before. But oh well.
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: Die
+    text: ...You are a bit careless, don't you think?
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: What can I say? He is worth trying. And if it doesn't work out... I will
+      still get to enjoy the fight.
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: I can see why you liked each other in the first place.
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: Then fight me, mortal, and earn your right to be among us!

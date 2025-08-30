@@ -16,13 +16,23 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Goooood. Gooooooooood!
+    text: That's right, my star! You get to fight me!
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: OH HEEEEEEELL NAH!
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Now.. to the last trial. Fight me!
+    text: Aw cmooooon. It's gonna be fiiiiine. In any case, you can't really back
+      down now, can you?
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: For the love of God, can we not?
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Fight me like your life depends on it!
+    text: For the love of God we absolutely should!
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: I will remember this. And I won't forgive you if you kill me.
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Dew it!
+    text: Now that's the spirit!

@@ -16,10 +16,24 @@ MonoBehaviour:
   lines:
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: You have proved your point... Tsk... You are too dangerous to be kept alive!
+    text: That's enough.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: 'Huh.. that wasn''t that bad. '
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: This wasn't the last of me...
+    text: Ah you poor, sweet summer child. This was just a preparation.
   - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
     characterName: Moon
-    text: You will yet know of my UNLIMITED POWER!
+    text: I had no intention of ending your path so early. But knowing who you chose
+      as the love of your life...
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: What are you saying? I don't get it.
+  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Moon
+    text: To achieve godhood you must face all the gods and earn their approval.
+      That includes the one you love.
+  - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
+    characterName: Player
+    text: You are saying...
