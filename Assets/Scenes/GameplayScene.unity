@@ -4543,7 +4543,7 @@ Transform:
   m_GameObject: {fileID: 977674220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.04, y: 1.35, z: 0}
+  m_LocalPosition: {x: 21.04, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13606,6 +13606,8 @@ MonoBehaviour:
       m_Calls: []
   _projectilePrefab: {fileID: 1289479476877891417, guid: e0320a453cce35b46ae99db1aa7a2ec6, type: 3}
   _attackDuration: 4.5
+  _minShootDelay: 0
+  _maxShootDelay: 0
   _shootPoint: {fileID: 1472386920}
   _centerPosition: {fileID: 1424755097}
 --- !u!1660057539 &9223372036854775807

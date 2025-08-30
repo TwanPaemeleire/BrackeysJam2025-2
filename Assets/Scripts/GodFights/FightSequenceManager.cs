@@ -126,6 +126,8 @@ namespace Assets.Scripts.GodFights
 
             SoundManager.Instance.PlayMusic(_currentFightGod.GodType.ToString() + "Theme");
 
+            _playerObject.transform.position = _playerRespawnPoint.position;
+
             _currentFightGod.StartBossFight();
             OnCurrentGodFightStarted.Invoke();
 

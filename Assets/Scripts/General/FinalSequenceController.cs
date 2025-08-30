@@ -1,5 +1,6 @@
 using System.Collections;
 using Assets.Scripts.GodFights;
+using Assets.Scripts.Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -31,6 +32,8 @@ namespace Assets.Scripts.General
             OnFinalSequenceBegin.Invoke();
             _lover.ThroneObject.SetActive(false);
             _player.transform.localScale = Vector3.one;
+            _player.GetComponent<PlayerMovement>().enabled = false;
+            _player.GetComponent<PlayerSword>().enabled = false;
             _player.GetComponent<PlayerInput>().DeactivateInput();
             _player.GetComponent<Animator>().SetTrigger("Moving");
             _player.transform.position = _startPos.position;
