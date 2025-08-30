@@ -15,10 +15,16 @@ namespace Assets.Scripts.UI
         [SerializeField] private Color _hoveredNameColor;
         [SerializeField] private TextMeshProUGUI _nameText;
 
+        private Vector3 _originalScale;
         private Coroutine _scaleCoroutine;
         private bool _isSelected = false;
 
         public GodType GodType { get { return _godType; } }
+
+        private void Awake()
+        {
+            _originalScale = transform.localScale;
+        }
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -38,7 +44,7 @@ namespace Assets.Scripts.UI
         public void OnPointerExit(PointerEventData eventData)
         {
             if(_isSelected) return;
-            StartScaleCoroutine(Vector3.one);
+            StartScaleCoroutine(_originalScale);
             _nameText.color = Color.white;
         }
 
@@ -83,7 +89,7 @@ namespace Assets.Scripts.UI
         {
             _nameText.color = Color.white;
             if (_isSelected) return;
-            StartScaleCoroutine(Vector3.one);
+            StartScaleCoroutine(_originalScale);
         }
 
         public void OnSubmit(BaseEventData eventData)
