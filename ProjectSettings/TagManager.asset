@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1234081221
+    locked: 0
+  - name: Arena
+    uniqueID: 4129074789
+    locked: 0
   - name: God
     uniqueID: 2258210341
     locked: 0
