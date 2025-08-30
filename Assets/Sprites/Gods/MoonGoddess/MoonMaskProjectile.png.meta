@@ -1,25 +1,37 @@
 fileFormatVersion: 2
-guid: 14a8508beaa5ce74584b924bed8540ed
+guid: a9182f5bcaae93743a2fad76ee1b5fcc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7687531328801480868
-    second: MoonGoddessIdle_0
+      213: -5017688403547887734
+    second: MoonMaskProjectile_0
   - first:
-      213: 4974249854737246097
-    second: MoonGoddessIdle_1
+      213: -2216817830189426922
+    second: MoonMaskProjectile_1
   - first:
-      213: 9094332640329838272
-    second: MoonGoddessIdle_2
+      213: 4850326166189731696
+    second: MoonMaskProjectile_2
   - first:
-      213: 7386117414112587741
-    second: MoonGoddessIdle_3
+      213: -3757036350559089955
+    second: MoonMaskProjectile_3
   - first:
-      213: 4366930328359724368
-    second: MoonGoddessIdle_4
+      213: -1422232173603797470
+    second: MoonMaskProjectile_4
   - first:
-      213: -3959693103053464826
-    second: MoonGoddessIdle_5
+      213: -6770640739586029283
+    second: MoonMaskProjectile_5
+  - first:
+      213: -6321065988969145113
+    second: MoonMaskProjectile_6
+  - first:
+      213: -2567833876505667980
+    second: MoonMaskProjectile_7
+  - first:
+      213: 8413895155505666757
+    second: MoonMaskProjectile_8
+  - first:
+      213: -7517272761822926985
+    second: MoonMaskProjectile_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,13 +140,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoonGoddessIdle_0
+      name: MoonMaskProjectile_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a876ee85bf69d5ab0800000000000000
+      internalID: -5017688403547887734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonMaskProjectile_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6179ecbbde74c31e0800000000000000
+      internalID: -2216817830189426922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonMaskProjectile_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f658433f1df4340800000000000000
+      internalID: 4850326166189731696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonMaskProjectile_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda02b448535cdbc0800000000000000
+      internalID: -3757036350559089955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MoonMaskProjectile_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a026e463099faa60800000000000000
-      internalID: 7687531328801480868
+      spriteID: 226c6389f57334ce0800000000000000
+      internalID: -1422232173603797470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoonGoddessIdle_1
+      name: MoonMaskProjectile_5
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 197e6af53e5180540800000000000000
-      internalID: 4974249854737246097
+      spriteID: d19cf27ae1ad902a0800000000000000
+      internalID: -6770640739586029283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoonGoddessIdle_2
+      name: MoonMaskProjectile_6
       rect:
         serializedVersion: 2
-        x: 256
+        x: 64
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +287,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cea9104a5f853e70800000000000000
-      internalID: 9094332640329838272
+      spriteID: 7ecd0b539ff0748a0800000000000000
+      internalID: -6321065988969145113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoonGoddessIdle_3
+      name: MoonMaskProjectile_7
       rect:
         serializedVersion: 2
-        x: 384
+        x: 96
         y: 0
-        width: 128
-        height: 128
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,52 +309,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddfe181a7a2c08660800000000000000
-      internalID: 7386117414112587741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoonGoddessIdle_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 055e2c42ff37a9c30800000000000000
-      internalID: 4366930328359724368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoonGoddessIdle_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60b1fe42a185c09c0800000000000000
-      internalID: -3959693103053464826
+      spriteID: 4765aacb1b83d5cd0800000000000000
+      internalID: -2567833876505667980
       vertices: []
       indices: 
       edges: []
@@ -263,7 +319,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5af9adda1bac9944488dfdd7cae938c3
+    spriteID: 50212af90982aa14a9e1dae4164146bc
     internalID: 0
     vertices: []
     indices: 
@@ -273,14 +329,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MoonGoddessIdle_0: 7687531328801480868
-      MoonGoddessIdle_1: 4974249854737246097
-      MoonGoddessIdle_2: 9094332640329838272
-      MoonGoddessIdle_3: 7386117414112587741
-      MoonGoddessIdle_4: 4366930328359724368
-      MoonGoddessIdle_5: -3959693103053464826
+      MoonMaskProjectile_0: -5017688403547887734
+      MoonMaskProjectile_1: -2216817830189426922
+      MoonMaskProjectile_2: 4850326166189731696
+      MoonMaskProjectile_3: -3757036350559089955
+      MoonMaskProjectile_4: -1422232173603797470
+      MoonMaskProjectile_5: -6770640739586029283
+      MoonMaskProjectile_6: -6321065988969145113
+      MoonMaskProjectile_7: -2567833876505667980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

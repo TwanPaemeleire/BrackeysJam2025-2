@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 916298cac69eebd45b4269b96072d237
+guid: 5216075475f272f4b9c1a99ef91245ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4370087634206724450
-    second: MoonGoddessWalk_0
+      213: -7333395743047762451
+    second: MoonMaskMoveLeft_0
   - first:
-      213: 9187534238599267694
-    second: MoonGoddessWalk_1
+      213: 3913203519442017348
+    second: MoonMaskMoveLeft_1
   - first:
-      213: 2184529316850594991
-    second: MoonGoddessWalk_2
+      213: -4368310161633141709
+    second: MoonMaskMoveLeft_2
   - first:
-      213: 4240098213221607964
-    second: MoonGoddessWalk_3
+      213: -7706069369061948050
+    second: MoonMaskMoveLeft_3
   - first:
-      213: -3210124956545290618
-    second: MoonGoddessWalk_4
+      213: 114279426328624610
+    second: MoonMaskMoveLeft_4
   - first:
-      213: 3688184410048804654
-    second: MoonGoddessWalk_5
-  - first:
-      213: 3999365782087927774
-    second: MoonGoddessWalk_6
-  - first:
-      213: -1228721568876173594
-    second: MoonGoddessWalk_7
-  - first:
-      213: 2396055371009634614
-    second: MoonGoddessWalk_8
+      213: 5475103697111529245
+    second: MoonMaskMoveLeft_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -137,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoonGoddessWalk_0
+      name: MoonMaskMove_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,16 +141,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2611832bc8ba5ac30800000000000000
-      internalID: 4370087634206724450
+      spriteID: 6638bfce791f6a14388c462963b84886
+      internalID: 1784785688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MoonGoddessWalk_1
+      name: MoonMaskMove_1
       rect:
         serializedVersion: 2
         x: 128
@@ -172,54 +163,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e65c27d56bda08f70800000000000000
-      internalID: 9187534238599267694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoonGoddessWalk_2
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa47e4ce6d1015e10800000000000000
-      internalID: 2184529316850594991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoonGoddessWalk_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1aa7d32cdad7da30800000000000000
-      internalID: 4240098213221607964
+      spriteID: d3fb47fb14b3ba9498c8b63a3c158800
+      internalID: -1937724674
       vertices: []
       indices: 
       edges: []
@@ -228,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fa84cdd00fa70bc499854d30ae0d6742
+    spriteID: e5981d3be9cead04eba47b3d54c4a114
     internalID: 0
     vertices: []
     indices: 
@@ -238,12 +185,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MoonGoddessWalk_0: 4370087634206724450
-      MoonGoddessWalk_1: 9187534238599267694
-      MoonGoddessWalk_2: 2184529316850594991
-      MoonGoddessWalk_3: 4240098213221607964
+      MoonMaskMove_0: 1784785688
+      MoonMaskMove_1: -1937724674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,34 @@
 using UnityEngine;
 
-public class MoonGoddessFight : BaseGodFight
+namespace Assets.Scripts.GodFights
 {
-    public override void StartBossFight()
+    public class MoonGoddessFight : BaseGodFight
     {
-        base.StartBossFight();
-    }
+        [SerializeField]
+        private GameObject _floatingAvatarObject;
 
-    public override void RestartBossFight()
-    {
-        throw new System.NotImplementedException();
-    }
+        public override void StartBossFight()
+        {
+            base.StartBossFight();
 
-    protected override void OnDeathInternal()
-    {
-        throw new System.NotImplementedException();
+            _floatingAvatarObject.SetActive(true);
+
+            Animator.SetTrigger("Spawn");
+        }
+
+        public override void RestartBossFight()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void OnDeathInternal()
+        {
+            OnDeath.Invoke();
+        }
+
+        public void OnSpawnFinished()
+        {
+            Animator.SetTrigger("Move");    
+        }
     }
 }
