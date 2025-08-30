@@ -193,6 +193,7 @@ namespace Assets.Scripts.GodFights
 
             if (transform.position.y <= -_groundOffset)
             {
+                Camera.main.GetComponent<CameraShake>().Shake(0.1f, 0.2f);
                 _state = BossState.Recover;
                 Animator.SetTrigger("Charge");
             }

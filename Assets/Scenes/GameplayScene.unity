@@ -1941,6 +1941,7 @@ GameObject:
   - component: {fileID: 499016850}
   - component: {fileID: 499016853}
   - component: {fileID: 499016854}
+  - component: {fileID: 499016855}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2080,6 +2081,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraToArenaMover
   _targetTransform: {fileID: 1260813923}
   _timeToReachTarget: 1
+--- !u!114 &499016855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499016849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73561c54cbe409a4e9d429f5417b9ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.General.CameraShake
 --- !u!1 &508551965
 GameObject:
   m_ObjectHideFlags: 0
