@@ -28,6 +28,7 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private float _idleTimeAfterAttack = 1.0f;
         [SerializeField] private float _speedToTrackPlayer = 1.0f;
         [SerializeField] private float _minimumTimeToTrackPlayer = 1.0f;
+        [SerializeField] private AudioSource _footStepAudioSource;
 
         private BaseGodAttack _currentAttack;
         private int _currentAttackIndex = -1;
@@ -205,6 +206,11 @@ namespace Assets.Scripts.GodFights
                 if(!startedNextAttackEarly) StartNextAttack();
             }
             _trackingCoroutine = null;
+        }
+
+        public void OnFootStepEvent()
+        {
+            _footStepAudioSource.Play();
         }
     }
 }

@@ -17,9 +17,11 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private TextMeshProUGUI _characterName;
         [SerializeField] private TextMeshProUGUI _mainText;
 
-        
         [SerializeField] private InputActionReference _advanceAction;
         [SerializeField] private PlayerInput _playerInput;
+
+        [SerializeField] private AudioClip _advanceAudioClip;
+        [SerializeField] private float _advanceAudioClipVolume;
 
         private Dictionary<string, DialogueData> _dialogueMap;
 
@@ -84,7 +86,7 @@ namespace Assets.Scripts.GodFights
                 FinishDialogue();
                 return;
             }
-
+            SoundManager.Instance.PlaySFX(_advanceAudioClip, _advanceAudioClipVolume);
             SetDialogueLineData();
         }
 

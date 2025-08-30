@@ -8,7 +8,6 @@ public abstract class BaseGodFight : MonoBehaviour
     [SerializeField] private GodType _godType;
     [SerializeField] private GodHealth _health;
     [SerializeField] private Animator _animator;
-    [SerializeField] private AudioSource _footStepAudioSource;
 
     private float _currentDirectionMultiplier = 1.0f;
 
@@ -26,9 +25,4 @@ public abstract class BaseGodFight : MonoBehaviour
     }
     public abstract void RestartBossFight();
     protected abstract void OnDeathInternal();
-
-    public void OnFootStepEvent()
-    {
-        _footStepAudioSource.Play();
-    }
 }

@@ -12879,6 +12879,8 @@ MonoBehaviour:
   _mainText: {fileID: 337092260}
   _advanceAction: {fileID: -1020986678508307310, guid: 2d2b435292c8a8249a4d9bd03b426ea3, type: 3}
   _playerInput: {fileID: 1498985799}
+  _advanceAudioClip: {fileID: 8300000, guid: a87da1c9b0334e047807ce41aae5c67e, type: 3}
+  _advanceAudioClipVolume: 0.05
   DialogueEndedEvent:
     m_PersistentCalls:
       m_Calls: []
