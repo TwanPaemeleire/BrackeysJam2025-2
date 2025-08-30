@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 3ff59e55c15c38349bebd01a210818e9
+guid: 4266dbd51976e664690683b82ad71038
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2545285783560495359
-    second: SunGodScytheSpin_0
+      213: 7393186907378577443
+    second: SunGodThrone_0
   - first:
-      213: 8492182782309485839
-    second: SunGodScytheSpin_1
+      213: 5745117014755439765
+    second: SunGodThrone_1
   - first:
-      213: -8663618110686861036
-    second: SunGodScytheSpin_2
+      213: 543496466756011314
+    second: SunGodThrone_2
   - first:
-      213: 303105468241804090
-    second: SunGodScytheSpin_3
+      213: -547910675587727775
+    second: SunGodThrone_3
   - first:
-      213: -4474237682630992249
-    second: SunGodScytheSpin_4
+      213: 7919663720205933365
+    second: SunGodThrone_4
   - first:
-      213: 64977685203528265
-    second: SunGodScytheSpin_5
-  - first:
-      213: 2129270854691096204
-    second: SunGodScytheSpin_6
+      213: 1618517368132281501
+    second: SunGodThrone_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -131,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SunGodScytheSpin_0
+      name: SunGodThrone_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 128
-        height: 128
+        width: 53
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff0a9f44feba25320800000000000000
-      internalID: 2545285783560495359
+      spriteID: 3207e5c4250e99660800000000000000
+      internalID: 7393186907378577443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodScytheSpin_1
+      name: SunGodThrone_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
+        x: 19
+        y: 69
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0dce3b3f3b4ad570800000000000000
-      internalID: 8492182782309485839
+      spriteID: 594fc896c71cabf40800000000000000
+      internalID: 5745117014755439765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodScytheSpin_2
+      name: SunGodThrone_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 128
+        x: 22
+        y: 71
+        width: 7
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4196edaea35a4c780800000000000000
-      internalID: -8663618110686861036
+      spriteID: 2350cad2823ea8700800000000000000
+      internalID: 543496466756011314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodScytheSpin_3
+      name: SunGodThrone_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
+        x: 28
+        y: 71
+        width: 7
+        height: 15
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a3bf70441d8d43400800000000000000
-      internalID: 303105468241804090
+      spriteID: 16ef2fcb42e6568f0800000000000000
+      internalID: -547910675587727775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodScytheSpin_4
+      name: SunGodThrone_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
+        x: 34
+        y: 71
+        width: 7
+        height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78edc1e788058e1c0800000000000000
-      internalID: -4474237682630992249
+      spriteID: 53b5c6f713c48ed60800000000000000
+      internalID: 7919663720205933365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodScytheSpin_5
+      name: SunGodThrone_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
+        x: 38
+        y: 69
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94a22e44cd8d6e000800000000000000
-      internalID: 64977685203528265
+      spriteID: d94235698f0267610800000000000000
+      internalID: 1618517368132281501
       vertices: []
       indices: 
       edges: []
@@ -266,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef9ed688866015d4eb8a39d2ff7bf6ba
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -274,16 +271,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      SunGodScytheSpin_0: 2545285783560495359
-      SunGodScytheSpin_1: 8492182782309485839
-      SunGodScytheSpin_2: -8663618110686861036
-      SunGodScytheSpin_3: 303105468241804090
-      SunGodScytheSpin_4: -4474237682630992249
-      SunGodScytheSpin_5: 64977685203528265
+      SunGodThrone_0: 7393186907378577443
+      SunGodThrone_1: 5745117014755439765
+      SunGodThrone_2: 543496466756011314
+      SunGodThrone_3: -547910675587727775
+      SunGodThrone_4: 7919663720205933365
+      SunGodThrone_5: 1618517368132281501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

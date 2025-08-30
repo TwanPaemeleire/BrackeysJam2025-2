@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: d2ab951dd89820b478d6340859c94f27
+guid: c7bcdd9d3c41ba74aa0da14099e7eab6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -433924794317225620
-    second: SunGodWalk_0
+      213: -9166273653038814705
+    second: SunGodSlash_0
   - first:
-      213: -4340216385575024955
-    second: SunGodWalk_1
+      213: 3489875950320717462
+    second: SunGodSlash_1
   - first:
-      213: 1677476101232199869
-    second: SunGodWalk_2
+      213: 7352307069314928986
+    second: SunGodSlash_2
   - first:
-      213: -4286770847148438534
-    second: SunGodWalk_3
+      213: 4059931246359904865
+    second: SunGodSlash_3
   - first:
-      213: -5885082090411272574
-    second: SunGodWalk_4
+      213: 7169024604685976288
+    second: SunGodSlash_4
   - first:
-      213: 5258334671784580963
-    second: SunGodWalk_5
+      213: 5979890614450893596
+    second: SunGodSlash_5
   - first:
-      213: 5236516270932942657
-    second: SunGodWalk_6
+      213: -183981195551993483
+    second: SunGodSlash_6
   - first:
-      213: 2030580843215028969
-    second: SunGodWalk_7
+      213: -8825613592729183185
+    second: SunGodSlash_7
+  - first:
+      213: -3588196482844791442
+    second: SunGodSlash_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +96,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 0
@@ -134,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SunGodWalk_0
+      name: SunGodSlash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,42 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c61cc77d2b36af9f0800000000000000
-      internalID: -433924794317225620
+      spriteID: f0a69947daadac080800000000000000
+      internalID: -9166273653038814705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodWalk_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c68879513474c3c0800000000000000
-      internalID: -4340216385575024955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodWalk_2
+      name: SunGodSlash_1
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,42 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db8072d50a7974710800000000000000
-      internalID: 1677476101232199869
+      spriteID: 69e8b09cfa78e6030800000000000000
+      internalID: 3489875950320717462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodWalk_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afb873670a45284c0800000000000000
-      internalID: -4286770847148438534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodWalk_4
+      name: SunGodSlash_2
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,42 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 286d50fe40df35ea0800000000000000
-      internalID: -5885082090411272574
+      spriteID: a511c1a4354a80660800000000000000
+      internalID: 7352307069314928986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodWalk_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 36717dd268b59f840800000000000000
-      internalID: 5258334671784580963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodWalk_6
+      name: SunGodSlash_3
       rect:
         serializedVersion: 2
         x: 768
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14fd28dddc7dba840800000000000000
-      internalID: 5236516270932942657
+      spriteID: 1628ac745f5c75830800000000000000
+      internalID: 4059931246359904865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodWalk_7
+      name: SunGodSlash_4
       rect:
         serializedVersion: 2
-        x: 896
+        x: 1024
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +240,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e28b87b4821e2c10800000000000000
-      internalID: 2030580843215028969
+      spriteID: 0e2c75415ed7d7360800000000000000
+      internalID: 7169024604685976288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodSlash_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13b90eb4d6dcf250800000000000000
+      internalID: 5979890614450893596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodSlash_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57195c1d31e527df0800000000000000
+      internalID: -183981195551993483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodSlash_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c9480923f158580800000000000000
+      internalID: -8825613592729183185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodSlash_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6deab75f4a243ec0800000000000000
+      internalID: -3588196482844791442
       vertices: []
       indices: 
       edges: []
@@ -313,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7126fbf69411d78409c85512540f4aa3
+    spriteID: 3726e7208837f8341a4d5b40a4d6061a
     internalID: 0
     vertices: []
     indices: 
@@ -323,16 +348,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SunGodWalk_0: -433924794317225620
-      SunGodWalk_1: -4340216385575024955
-      SunGodWalk_2: 1677476101232199869
-      SunGodWalk_3: -4286770847148438534
-      SunGodWalk_4: -5885082090411272574
-      SunGodWalk_5: 5258334671784580963
-      SunGodWalk_6: 5236516270932942657
-      SunGodWalk_7: 2030580843215028969
+      SunGodSlash_0: -9166273653038814705
+      SunGodSlash_1: 3489875950320717462
+      SunGodSlash_2: 7352307069314928986
+      SunGodSlash_3: 4059931246359904865
+      SunGodSlash_4: 7169024604685976288
+      SunGodSlash_5: 5979890614450893596
+      SunGodSlash_6: -183981195551993483
+      SunGodSlash_7: -8825613592729183185
+      SunGodSlash_8: -3588196482844791442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

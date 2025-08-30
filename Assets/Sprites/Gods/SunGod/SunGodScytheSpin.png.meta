@@ -1,37 +1,28 @@
 fileFormatVersion: 2
-guid: b293024647077eb47a2912a839b0b91a
+guid: 3ff59e55c15c38349bebd01a210818e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3376456802811138409
-    second: SunGodThrowingScythe_0
+      213: 2545285783560495359
+    second: SunGodScytheSpin_0
   - first:
-      213: -4479177883142049533
-    second: SunGodThrowingScythe_1
+      213: 8492182782309485839
+    second: SunGodScytheSpin_1
   - first:
-      213: -257920925774657594
-    second: SunGodThrowingScythe_2
+      213: -8663618110686861036
+    second: SunGodScytheSpin_2
   - first:
-      213: -7469990864934163513
-    second: SunGodThrowingScythe_3
+      213: 303105468241804090
+    second: SunGodScytheSpin_3
   - first:
-      213: -4913714360948634668
-    second: SunGodThrowingScythe_4
+      213: -4474237682630992249
+    second: SunGodScytheSpin_4
   - first:
-      213: 6975460333120683664
-    second: SunGodThrowingScythe_5
+      213: 64977685203528265
+    second: SunGodScytheSpin_5
   - first:
-      213: -3384056614257961654
-    second: SunGodThrowingScythe_6
-  - first:
-      213: -6313182633413067080
-    second: SunGodThrowingScythe_7
-  - first:
-      213: -8101843062454754591
-    second: SunGodThrowingScythe_8
-  - first:
-      213: 8349274177859698128
-    second: SunGodThrowingScythe_9
+      213: 2129270854691096204
+    second: SunGodScytheSpin_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,7 +90,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 0
@@ -140,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SunGodThrowingScythe_0
+      name: SunGodScytheSpin_0
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 961520ba2959bde20800000000000000
-      internalID: 3376456802811138409
+      spriteID: ff0a9f44feba25320800000000000000
+      internalID: 2545285783560495359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodThrowingScythe_1
+      name: SunGodScytheSpin_1
       rect:
         serializedVersion: 2
         x: 256
@@ -177,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 301388d6273c6d1c0800000000000000
-      internalID: -4479177883142049533
+      spriteID: f0dce3b3f3b4ad570800000000000000
+      internalID: 8492182782309485839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodThrowingScythe_2
+      name: SunGodScytheSpin_2
       rect:
         serializedVersion: 2
         x: 512
@@ -199,14 +190,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c7cf07d84eab6cf0800000000000000
-      internalID: -257920925774657594
+      spriteID: 4196edaea35a4c780800000000000000
+      internalID: -8663618110686861036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodThrowingScythe_3
+      name: SunGodScytheSpin_3
       rect:
         serializedVersion: 2
         x: 768
@@ -221,14 +212,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7cbaf24d2e2455890800000000000000
-      internalID: -7469990864934163513
+      spriteID: a3bf70441d8d43400800000000000000
+      internalID: 303105468241804090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodThrowingScythe_4
+      name: SunGodScytheSpin_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -243,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4dbcbeb92dafecbb0800000000000000
-      internalID: -4913714360948634668
+      spriteID: 78edc1e788058e1c0800000000000000
+      internalID: -4474237682630992249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SunGodThrowingScythe_5
+      name: SunGodScytheSpin_5
       rect:
         serializedVersion: 2
         x: 1280
@@ -265,96 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09e7c742730ddc060800000000000000
-      internalID: 6975460333120683664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodThrowingScythe_6
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a45d757507a6901d0800000000000000
-      internalID: -3384056614257961654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodThrowingScythe_7
-      rect:
-        serializedVersion: 2
-        x: 1792
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8bebf35f7d11368a0800000000000000
-      internalID: -6313182633413067080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodThrowingScythe_8
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e2eb6cf8a8709f80800000000000000
-      internalID: -8101843062454754591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodThrowingScythe_9
-      rect:
-        serializedVersion: 2
-        x: 2304
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dd3bafd0a49ed370800000000000000
-      internalID: 8349274177859698128
+      spriteID: 94a22e44cd8d6e000800000000000000
+      internalID: 64977685203528265
       vertices: []
       indices: 
       edges: []
@@ -363,7 +266,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f4581fc1fcf6d848b8584d7ade289ba
+    spriteID: ef9ed688866015d4eb8a39d2ff7bf6ba
     internalID: 0
     vertices: []
     indices: 
@@ -373,18 +276,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      SunGodThrowingScythe_0: 3376456802811138409
-      SunGodThrowingScythe_1: -4479177883142049533
-      SunGodThrowingScythe_2: -257920925774657594
-      SunGodThrowingScythe_3: -7469990864934163513
-      SunGodThrowingScythe_4: -4913714360948634668
-      SunGodThrowingScythe_5: 6975460333120683664
-      SunGodThrowingScythe_6: -3384056614257961654
-      SunGodThrowingScythe_7: -6313182633413067080
-      SunGodThrowingScythe_8: -8101843062454754591
-      SunGodThrowingScythe_9: 8349274177859698128
+      SunGodScytheSpin_0: 2545285783560495359
+      SunGodScytheSpin_1: 8492182782309485839
+      SunGodScytheSpin_2: -8663618110686861036
+      SunGodScytheSpin_3: 303105468241804090
+      SunGodScytheSpin_4: -4474237682630992249
+      SunGodScytheSpin_5: 64977685203528265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

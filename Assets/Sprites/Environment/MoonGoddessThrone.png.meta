@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d18ad0a7c1578ad4f9976b002266650a
+guid: 7e3637397705eab4181dd9520a35289c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4266140295836340401
-    second: SunGodThrownScythe_0
-  - first:
-      213: 1486328773800656792
-    second: SunGodThrownScythe_1
+      213: -5949752724043456411
+    second: MoonGoddessThrone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -116,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SunGodThrownScythe_0
+      name: MoonGoddessThrone_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 96
+        x: 46
+        y: 11
+        width: 37
+        height: 75
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b01e4ffeff543b30800000000000000
-      internalID: 4266140295836340401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SunGodThrownScythe_1
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89f74d5152080a410800000000000000
-      internalID: 1486328773800656792
+      spriteID: 5602afdab6b3e6da0800000000000000
+      internalID: -5949752724043456411
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6a9fa980d38853f4ca9320d11b3beb0f
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -171,12 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      SunGodThrownScythe_0: 4266140295836340401
-      SunGodThrownScythe_1: 1486328773800656792
+      MoonGoddessThrone_0: -5949752724043456411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

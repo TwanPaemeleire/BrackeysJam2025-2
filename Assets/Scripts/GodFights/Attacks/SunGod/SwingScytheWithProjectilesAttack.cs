@@ -27,6 +27,7 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
         {
             God.GetComponent<Animator>().SetTrigger("SpinScythe");
             StartCoroutine(ShootingCoroutine());
+            Invoke(nameof(FinishAttack), _attackDuration);
         }
 
         public override void StopAttack()
@@ -54,6 +55,12 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
                 _canShoot = true;
                 randomDelay = Random.Range(_minShootDelay, _maxShootDelay); ;
             }
+        }
+
+        private void FinishAttack()
+        {
+            StopAllCoroutines();
+            OnAttackFinished.Invoke();
         }
     }
 }
