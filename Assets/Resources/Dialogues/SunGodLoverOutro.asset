@@ -34,7 +34,7 @@ MonoBehaviour:
     text: So now what, I get to become a God?
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: Corrrrrect. Not only you are now my equal, but you also get to rule THE
+    text: Corrrrrect. You are now not only my equal, but you also get to rule THE
       WORLD!
   - characterPortrait: {fileID: -1544928349, guid: d134a66ba85b1db4fb95751e656f66fe, type: 3}
     characterName: Player
