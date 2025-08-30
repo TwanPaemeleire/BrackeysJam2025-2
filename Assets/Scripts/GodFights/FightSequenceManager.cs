@@ -75,7 +75,7 @@ namespace Assets.Scripts.GodFights
             }
             else
             {
-                SoundManager.Instance.PlayMusic("DecisionSceneTheme");
+                SoundManager.Instance.PlayMusic("LoverTheme");
                 DialogueManager.Instance.StartDialogue($"{currentGodType.ToString() + "LoverFightIntro"}");
             }
 
