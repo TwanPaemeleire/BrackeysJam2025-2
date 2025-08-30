@@ -25,9 +25,9 @@ namespace Assets.Scripts.GodFights.Attacks.MoonGoddess
 
         private void Start()
         {
-            var playerPos = FightSequenceManager.Instance.PlayerObject.transform.position;
-            playerPos.y -= 1.0f;
-            _directionToPlayer = (playerPos - transform.position).normalized;
+            var sword = FightSequenceManager.Instance.PlayerObject.GetComponent<PlayerSword>();
+
+            _directionToPlayer = (sword.PlayerCenterPoint.position - transform.position).normalized;
 
             var angle = Mathf.Atan2(_directionToPlayer.y, _directionToPlayer.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle + 90.0f);

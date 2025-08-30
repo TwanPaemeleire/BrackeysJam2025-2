@@ -15,18 +15,17 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private float _radiusX = 6.0f;
         [SerializeField] private float _radiusY = 2.0f;
         [SerializeField] private float _speed = 0.5f;
-
         private float _angle;
 
-        private float _smashTimer = 4.0f;
         [SerializeField] private float _smashCooldown = 4.0f;
         [SerializeField] private float _hoverHeight = 5.0f;
         [SerializeField] private float _smashSpeed = 20.0f;
         [SerializeField] private float _recoverTime = 3.0f;
         [SerializeField] private float _returnSpeed = 5.0f;
+        private float _smashTimer = 0.0f;
 
         private float _recoveryTimer = 0.0f;
-
+        private const float _groundOffset = 2.0f;
 
         [SerializeField] private GameObject _projectilePrefab;
 
@@ -58,7 +57,15 @@ namespace Assets.Scripts.GodFights
 
         public override void RestartBossFight()
         {
-            throw new System.NotImplementedException();
+            StopAllCoroutines();
+
+            Health.ResetHealth();
+            _state = BossState.EllipseMove;
+            _angle = 0.0f;
+            _smashTimer = 0.0f;
+            _recoveryTimer = 0.0f;
+
+            Animator.SetTrigger("Spawn");
         }
 
         protected override void OnDeathInternal()
@@ -83,11 +90,11 @@ namespace Assets.Scripts.GodFights
                 {
                     case BossState.EllipseMove:
                         DoEllipseMovement();
-                        _smashTimer -= Time.deltaTime;
+                        _smashTimer += Time.deltaTime;
 
-                        if (_smashTimer <= 0f)
+                        if (_smashTimer >= _smashCooldown)
                         {
-                            _smashTimer = _smashCooldown;
+                            _smashTimer = 0.0f;
                             StopCoroutine(nameof(StartShooting));
                             InitiateSmash();
                         }
@@ -184,7 +191,7 @@ namespace Assets.Scripts.GodFights
         {
             transform.position += Vector3.down * _smashSpeed * Time.deltaTime;
 
-            if (transform.position.y <= -2.0f)
+            if (transform.position.y <= -_groundOffset)
             {
                 _state = BossState.Recover;
                 Animator.SetTrigger("Charge");
