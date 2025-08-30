@@ -42,9 +42,6 @@ namespace Assets.Scripts.GodFights
         private Transform _shootSlotTransform;
 
         [SerializeField]
-        private AudioClip _auraAudioClip;
-
-        [SerializeField]
         private AudioClip _pounceAudioClip;
 
         private enum BossState
@@ -67,8 +64,6 @@ namespace Assets.Scripts.GodFights
             _floatingAvatarObject.SetActive(true);
 
             Animator.SetTrigger("Spawn");
-
-            SoundManager.Instance.PlaySFX(_auraAudioClip, 0.3f);
         }
 
         public override void RestartBossFight()

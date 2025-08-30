@@ -1,3 +1,4 @@
+using System.Collections;
 using Assets.Dialogues;
 using Assets.Scripts.General;
 using System.Collections.Generic;
@@ -32,6 +33,9 @@ namespace Assets.Scripts.GodFights
 
         public UnityEvent DialogueEndedEvent = new UnityEvent();
 
+        [SerializeField] private float _delay = 0.04f;
+        private bool _isTyping = false;
+
         private void Awake()
         {
             _dialogueMap = new();
@@ -59,7 +63,17 @@ namespace Assets.Scripts.GodFights
 
         private void OnAdvance(InputAction.CallbackContext ctx)
         {
-            AdvanceDialogue();
+            if (_isTyping)
+            {
+                StopAllCoroutines();
+                var currentLine = _currentDialogue.lines[_dialogueLineIndex];
+                _mainText.text = currentLine.text;
+                _isTyping = false;
+            }
+            else
+            {
+                AdvanceDialogue();
+            }
         }
 
         public void StartDialogue(string dialogueId)
@@ -111,7 +125,21 @@ namespace Assets.Scripts.GodFights
 
             _portrait.sprite = currentLine.characterPortrait;
             _characterName.text = currentLine.characterName;
-            _mainText.text = currentLine.text;
+            StartCoroutine(TypeText(currentLine.text));
+        }
+
+        private IEnumerator TypeText(string fullText)
+        {
+            _isTyping = true;
+
+            _mainText.text = "";
+            foreach (char c in fullText)
+            {
+                _mainText.text += c;
+                yield return new WaitForSeconds(_delay);
+            }
+
+            _isTyping = false;
         }
     }
 }
