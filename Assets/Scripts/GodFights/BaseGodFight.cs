@@ -23,6 +23,7 @@ namespace Assets.Scripts.GodFights
         {
             _health.Initialize();
             _health.OnDeath.AddListener(OnDeathInternal);
+            _health.HealthBarUI.transform.parent.gameObject.SetActive(true);
         }
         public abstract void RestartBossFight();
         protected abstract void OnDeathInternal();

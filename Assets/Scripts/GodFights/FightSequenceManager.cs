@@ -114,7 +114,9 @@ namespace Assets.Scripts.GodFights
 
         private void StartNextGodFight()
         {
+            if(_currentFightGod) _currentFightGod.Health.HealthBarUI.transform.parent.gameObject.SetActive(false);
             _currentFightGod = _allGods[_currentGodFightIdx].Fight;
+            _currentFightGod.Health.HealthBarUI.transform.parent.gameObject.SetActive(true);
             _currentFightGod.OnDeath.AddListener(OnCurrentGodDefeatedInternal);
             _allGods[_currentGodFightIdx].Fight.gameObject.SetActive(true);
             Vector3 godSpawnPos = _currentFightGod.transform.position;

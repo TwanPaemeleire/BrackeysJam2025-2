@@ -26,6 +26,8 @@ namespace Assets.Scripts.GodFights
         private Color _originalColor;
         private Coroutine _flashCoroutine;
 
+        public GradualHealthChanger HealthBarUI { get { return _healthBarUI; } }
+
         public UnityEvent OnDamageTaken = new UnityEvent();
         public UnityEvent OnPhaseChange = new UnityEvent();
         public UnityEvent OnDeath = new UnityEvent();
