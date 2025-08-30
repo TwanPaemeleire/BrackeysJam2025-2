@@ -34,6 +34,13 @@ namespace Assets.Scripts.GodFights
 
         private float _recoveryTimer = 0.0f;
 
+
+        [SerializeField] 
+        private GameObject _projectilePrefab;
+
+        [SerializeField]
+        private Transform _shootSlotTransform;
+
         private enum BossState
         {
             EllipseMove,
@@ -56,7 +63,7 @@ namespace Assets.Scripts.GodFights
             Animator.SetTrigger("Spawn");
 
             StartCoroutine(nameof(ProcessMovement));
-            //StartCoroutine(nameof(StartShooting));
+            StartCoroutine(nameof(StartShooting));
         }
 
         public override void RestartBossFight()
@@ -88,6 +95,7 @@ namespace Assets.Scripts.GodFights
                         if (_smashTimer <= 0f)
                         {
                             _smashTimer = _smashCooldown;
+                            StopCoroutine(nameof(StartShooting));
                             InitiateSmash();
                         }
                         break;
@@ -144,14 +152,14 @@ namespace Assets.Scripts.GodFights
         {
             while (true)
             {
-                yield return new WaitForSeconds(Random.Range(2f, 5f));
+                yield return new WaitForSeconds(Random.Range(0.5f, 1.25f));
                 ShootProjectile();
             }
         }
 
         private void ShootProjectile()
         {
-
+            Instantiate(_projectilePrefab, _shootSlotTransform.position, Quaternion.identity);
         }
 
         private void InitiateSmash()
@@ -209,6 +217,7 @@ namespace Assets.Scripts.GodFights
             if (Vector3.Distance(transform.position, _returnPoint) < 0.1f)
             {
                 _state = BossState.EllipseMove;
+                StartCoroutine(nameof(StartShooting));
             }
         }
     }

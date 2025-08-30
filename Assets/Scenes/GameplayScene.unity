@@ -1300,7 +1300,7 @@ GameObject:
   - component: {fileID: 469163937}
   m_Layer: 8
   m_Name: GroundCollider
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3600,7 +3600,8 @@ Transform:
   m_LocalPosition: {x: 5.01, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1287724360}
   m_Father: {fileID: 973074648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &912160856
@@ -3631,6 +3632,8 @@ MonoBehaviour:
   _smashSpeed: 20
   _recoverTime: 2
   _returnSpeed: 5
+  _projectilePrefab: {fileID: 454140870229429252, guid: 73714124d72eb7a448e3ec3d0fa3c450, type: 3}
+  _shootSlotTransform: {fileID: 1287724360}
 --- !u!1 &916620242
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,6 +5264,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1287724359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1287724360}
+  m_Layer: 7
+  m_Name: ShootSlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1287724360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287724359}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 912160855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351038299
 GameObject:
   m_ObjectHideFlags: 0
