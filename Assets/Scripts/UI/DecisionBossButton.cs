@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Assets.Scripts.GodFights;
 using TMPro;
+using Assets.Scripts.General;
 
 namespace Assets.Scripts.UI
 {
@@ -14,6 +15,11 @@ namespace Assets.Scripts.UI
         [SerializeField] private float _timeToReachTargetScale = 0.5f;
         [SerializeField] private Color _hoveredNameColor;
         [SerializeField] private TextMeshProUGUI _nameText;
+
+        [Header("SFX")]
+        [SerializeField] private AudioClip _hoveredAudioClip;
+        [SerializeField] private AudioClip _clickedAudioClip;
+        [SerializeField] private float _AudioClipsVolume;
 
         private Vector3 _originalScale;
         private Coroutine _scaleCoroutine;
@@ -31,10 +37,12 @@ namespace Assets.Scripts.UI
             if(_isSelected) return;
             _isSelected = true;
             _loverSelectionStorer.SelectNewLover(this);
+            SoundManager.Instance.PlaySFX(_clickedAudioClip, _AudioClipsVolume);
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+            SoundManager.Instance.PlaySFX(_hoveredAudioClip, _AudioClipsVolume);
             if(_isSelected) return;
             StartScaleCoroutine(_maxScale);
             EventSystem.current.SetSelectedGameObject(gameObject);
@@ -60,7 +68,7 @@ namespace Assets.Scripts.UI
         public void OnDeselected()
         {
             _isSelected = false;
-            StartScaleCoroutine(Vector3.one);
+            StartScaleCoroutine(_originalScale);
         }
 
         private IEnumerator ChangeButtonScale(Vector3 targetScale)
@@ -71,7 +79,7 @@ namespace Assets.Scripts.UI
             while(elapsedTime < _timeToReachTargetScale)
             {
                 float newScale = Mathf.SmoothStep(initialScale.x, targetScale.x, elapsedTime / _timeToReachTargetScale);
-                transform.localScale = new Vector3(newScale, newScale, 1.0f);
+                transform.localScale = new Vector3(newScale, newScale, newScale);
                 elapsedTime += Time.unscaledDeltaTime;
                 yield return null;
             }
@@ -83,6 +91,7 @@ namespace Assets.Scripts.UI
             _nameText.color = _hoveredNameColor;
             if (_isSelected) return;
             StartScaleCoroutine(_maxScale);
+            SoundManager.Instance.PlaySFX(_hoveredAudioClip, _AudioClipsVolume);
         }
 
         public void OnDeselect(BaseEventData eventData)
@@ -97,6 +106,7 @@ namespace Assets.Scripts.UI
             if (_isSelected) return;
             _isSelected = true;
             _loverSelectionStorer.SelectNewLover(this);
+            SoundManager.Instance.PlaySFX(_clickedAudioClip, _AudioClipsVolume);
         }
     }
 }
