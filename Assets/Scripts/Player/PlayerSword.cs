@@ -15,6 +15,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _parryDelay = 1.0f;
         [SerializeField] private float _parryWindow = 0.3f;
         [SerializeField] private float _moveDelayAfterParry = 0.1f;
+        [SerializeField] private Transform _playerCenterPoint;
 
         [Header("SFX")]
         [SerializeField] private AudioClip _parrySound;
@@ -35,6 +36,7 @@ namespace Assets.Scripts.Player
         private Animator _animator;
 
         public bool IsParrying { get { return _isParrying; } }
+        public Transform PlayerCenterPoint { get { return _playerCenterPoint; } }
 
         public UnityEvent OnParryStart = new UnityEvent();
         public UnityEvent OnSuccesfullParry = new UnityEvent();

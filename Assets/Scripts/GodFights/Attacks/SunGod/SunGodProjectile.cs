@@ -26,6 +26,13 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
             _godPointToAimAtIfParried = godPointToAimAt;
             float angle = Mathf.Atan2(_shootDirection.y, _shootDirection.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+            FightSequenceManager.Instance.OnCurrentGodDefeated.AddListener(GodDefeated);
+        }
+
+        private void GodDefeated()
+        {
+            Destroy(gameObject);
         }
 
         private void Update()
@@ -69,7 +76,10 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
                     transform.rotation = Quaternion.Euler(0f, 0f, angle);
                 }
             }
-            // Check for ground collision here after work in game scene is done and pushed, on ground collision, destroy
+            else if(collision.CompareTag("Ground"))
+            {
+                Destroy(gameObject);
+            }
         }
 
         private void OnBecameInvisible()
