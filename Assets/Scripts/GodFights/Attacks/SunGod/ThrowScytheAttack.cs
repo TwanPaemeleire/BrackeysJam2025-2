@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using Assets.Scripts.GodFights;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
     {
         [SerializeField] private GameObject _scythePrefab;
         [SerializeField] private Transform _scytheSpawnPoint;
+        [SerializeField] private AudioClip _scytheThrowAudioClip;
+        [SerializeField] private float _scytheThrowAudioVolume;
         private GameObject _scythe;
 
         public override void InitializeAttack()
@@ -25,6 +28,7 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
 
         public override void StartAttack()
         {
+            SoundManager.Instance.PlaySFX(_scytheThrowAudioClip, _scytheThrowAudioVolume);
             God.Animator.SetTrigger("ThrowScythe");
         }
 

@@ -22,6 +22,7 @@ namespace Assets.Scripts.Player
 
         [Header("Sounds")]
         [SerializeField] private AudioClip _rollSound;
+        [SerializeField] private float _rollSoundVolume;
         [SerializeField] private AudioSource _footStepAudioSource;
 
         private Vector2 _inputMoveDirection;
@@ -175,7 +176,7 @@ namespace Assets.Scripts.Player
                 _isRolling = true;
                 _canMove = false;
                 _canRoll = false;
-                SoundManager.Instance.PlaySFX(_rollSound, 0.25f);
+                SoundManager.Instance.PlaySFX(_rollSound, _rollSoundVolume);
                 float rollDirection = transform.localScale.x < 0.0f ? -1f : 1f;
                 _rigidbody.linearVelocityX = rollDirection * _rollSpeed;
                 _animator.SetTrigger("Roll");

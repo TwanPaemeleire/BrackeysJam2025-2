@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,6 +13,11 @@ namespace Assets.Scripts.UI
         [SerializeField] private Sprite _default;
         [SerializeField] private Sprite _hovered;
         [SerializeField] private Sprite _pressed;
+
+        [Header("SFX")]
+        [SerializeField] private AudioClip _hoveredAudioClip;
+        [SerializeField] private AudioClip _clickedAudioClip;
+        [SerializeField] private float _AudioClipsVolume;
 
         private bool _hasMadeSelection = false;
         private Image _buttonImage;
@@ -36,6 +42,7 @@ namespace Assets.Scripts.UI
             _buttonImage.sprite = _hovered;
             StartScaleCoroutine(_maxScale);
             EventSystem.current.SetSelectedGameObject(gameObject);
+            SoundManager.Instance.PlaySFX(_hoveredAudioClip, _AudioClipsVolume);
         }
 
         public void OnPointerExit(PointerEventData eventData)
@@ -77,6 +84,7 @@ namespace Assets.Scripts.UI
         public void OnPointerClick(PointerEventData eventData)
         {
             _hasMadeSelection = true;
+            SoundManager.Instance.PlaySFX(_clickedAudioClip, _AudioClipsVolume);
         }
 
         public void OnSelect(BaseEventData eventData)
@@ -84,6 +92,7 @@ namespace Assets.Scripts.UI
             if (_hasMadeSelection) return;
             _buttonImage.sprite = _hovered;
             StartScaleCoroutine(_maxScale);
+            SoundManager.Instance.PlaySFX(_hoveredAudioClip, _AudioClipsVolume);
         }
 
         public void OnDeselect(BaseEventData eventData)
@@ -96,6 +105,7 @@ namespace Assets.Scripts.UI
         public void OnSubmit(BaseEventData eventData)
         {
             _hasMadeSelection = true;
+            SoundManager.Instance.PlaySFX(_clickedAudioClip, _AudioClipsVolume);
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Assets.Scripts.Player
 
         [Header("SFX")]
         [SerializeField] private AudioClip _parrySound;
+        [SerializeField] private float _parrySoundVolume;
         [SerializeField] private AudioSource _swingAudioSource;
 
         private bool _canParry = true;
@@ -121,7 +122,7 @@ namespace Assets.Scripts.Player
 
         public void OnSuccesfullParryExecuted()
         {
-            SoundManager.Instance.PlaySFX(_parrySound, 0.25f);
+            SoundManager.Instance.PlaySFX(_parrySound, _parrySoundVolume);
             StopCoroutine(_parryCoroutine);
             _parryCoroutine = null;
             OnSuccesfullParry.Invoke();
