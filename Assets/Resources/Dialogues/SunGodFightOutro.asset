@@ -19,7 +19,7 @@ MonoBehaviour:
     text: HA! Now that's a fight!
   - characterPortrait: {fileID: 4112243662179089537, guid: 19f67bca10d0f9347aa750c2a6395104, type: 3}
     characterName: Sun
-    text: 'Did not think you will be able to even scratch me! '
+    text: 'I did not think you would be able to even scratch me! '
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
     characterName: Player
     text: Hm... so do you yield?
