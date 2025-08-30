@@ -1,7 +1,6 @@
 using System.Collections;
 using Assets.Scripts.General;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace Assets.Scripts.GodFights
 {

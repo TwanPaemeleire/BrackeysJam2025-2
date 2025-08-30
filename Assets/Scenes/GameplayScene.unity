@@ -2545,8 +2545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -628, y: -204.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -535.7, y: -65.8}
+  m_SizeDelta: {x: 335.29, y: 521.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762596066
 MonoBehaviour:
@@ -12923,6 +12923,7 @@ MonoBehaviour:
   _portrait: {fileID: 762596066}
   _characterName: {fileID: 1162228812}
   _mainText: {fileID: 337092260}
+  _blurCanvas: {fileID: 1979633314}
   _advanceAction: {fileID: -1020986678508307310, guid: 2d2b435292c8a8249a4d9bd03b426ea3, type: 3}
   _playerInput: {fileID: 1498985799}
   _advanceAudioClip: {fileID: 0}

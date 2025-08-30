@@ -162,7 +162,7 @@ namespace Assets.Scripts.GodFights
             }
             else
             {
-                SoundManager.Instance.PlayMusic("DecisionSceneTheme");
+                SoundManager.Instance.PlayMusic("LoverTheme");
             }
 
             _readyToFight = false;

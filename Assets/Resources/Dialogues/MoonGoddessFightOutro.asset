@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
   dialogueID: MoonGoddessFightOutro
   lines:
-  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+  - characterPortrait: {fileID: 21300000, guid: e0ba2ec0395fc0845af93b07b216076c, type: 3}
     characterName: Moon
     text: You have proved your point... Tsk... You are too dangerous to be kept alive!
-  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+  - characterPortrait: {fileID: 21300000, guid: e0ba2ec0395fc0845af93b07b216076c, type: 3}
     characterName: Moon
     text: This wasn't the last of me...
-  - characterPortrait: {fileID: 7687531328801480868, guid: 14a8508beaa5ce74584b924bed8540ed, type: 3}
+  - characterPortrait: {fileID: 21300000, guid: e0ba2ec0395fc0845af93b07b216076c, type: 3}
     characterName: Moon
     text: You will yet know of my UNLIMITED POWER!

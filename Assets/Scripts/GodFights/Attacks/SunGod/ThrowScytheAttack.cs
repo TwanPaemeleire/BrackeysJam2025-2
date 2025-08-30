@@ -1,5 +1,4 @@
 using Assets.Scripts.General;
-using Assets.Scripts.GodFights;
 using UnityEngine;
 
 namespace Assets.Scripts.GodFights.Attacks.SunGod

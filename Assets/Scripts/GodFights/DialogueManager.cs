@@ -17,6 +17,8 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private TextMeshProUGUI _characterName;
         [SerializeField] private TextMeshProUGUI _mainText;
 
+        [SerializeField] private GameObject _blurCanvas;
+
         [SerializeField] private InputActionReference _advanceAction;
         [SerializeField] private PlayerInput _playerInput;
 
@@ -68,6 +70,8 @@ namespace Assets.Scripts.GodFights
                 return;
             }
 
+            _blurCanvas.SetActive(true);
+
             _dialogueLineIndex = 0;
 
             _playerInput.SwitchCurrentActionMap("Dialogue");
@@ -93,6 +97,8 @@ namespace Assets.Scripts.GodFights
         private void FinishDialogue()
         {
             Time.timeScale = 1f;
+
+            _blurCanvas.SetActive(false);
 
             _dialogueAssetParent.StartFadingOut();
             _playerInput.SwitchCurrentActionMap("Gameplay");

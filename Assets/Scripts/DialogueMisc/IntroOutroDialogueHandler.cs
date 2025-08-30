@@ -25,7 +25,7 @@ namespace Assets.Scripts.DialogueMisc
 
         private void FaceTheLover()
         {
-            var clip = Resources.Load<AudioClip>($"Music/DecisionSceneTheme");
+            var clip = Resources.Load<AudioClip>($"Music/LoverTheme");
 
             if (clip != null)
             {
