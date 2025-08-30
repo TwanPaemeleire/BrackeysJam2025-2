@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-5985305416990054855
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SunGodFootStep4_{-5985305416990054855}
+  m_AudioClip: {fileID: 8300000, guid: 1667b7b3f3f443143b2c7c6196a488e8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4489385098074712622
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SunGodFootStep2_{-4489385098074712622}
+  m_AudioClip: {fileID: 8300000, guid: bf3360305b5a4b84aa770920cb38086d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4072758947220960722
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SunGodFootStep3_{-4072758947220960722}
+  m_AudioClip: {fileID: 8300000, guid: b416867ce586fd7468bcce0d35102aa4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1185445477960055881
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SunGodFootStep1_{1185445477960055881}
+  m_AudioClip: {fileID: 8300000, guid: ed1856b60621fc043880f45fdee0818e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3010713469068892078
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SunGodFootStep5_{3010713469068892078}
+  m_AudioClip: {fileID: 8300000, guid: 91447bbecb9b71341bd100fc875b078a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
 AudioRandomContainer:
   m_ObjectHideFlags: 0
@@ -15,10 +65,15 @@ AudioRandomContainer:
   m_PitchRandomizationRange: {x: 0, y: 0}
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
-  m_Elements: []
-  m_AvoidRepeatingLast: 0
-  m_PlaybackMode: 0
-  m_TriggerMode: 1
+  m_Elements:
+  - {fileID: 1185445477960055881}
+  - {fileID: -4489385098074712622}
+  - {fileID: -4072758947220960722}
+  - {fileID: -5985305416990054855}
+  - {fileID: 3010713469068892078}
+  m_AvoidRepeatingLast: 3
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
   m_AutomaticTriggerMode: 1
   m_LoopMode: 2
   m_VolumeRandomizationEnabled: 0
