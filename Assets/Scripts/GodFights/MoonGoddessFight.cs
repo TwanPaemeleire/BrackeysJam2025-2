@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace Assets.Scripts.GodFights
 {
@@ -19,6 +20,33 @@ namespace Assets.Scripts.GodFights
 
         private float _angle;
 
+        private float _smashTimer = 4.0f;
+        [SerializeField] 
+        private float _smashCooldown = 4.0f;
+        [SerializeField] 
+        private float _hoverHeight = 5.0f;
+        [SerializeField] 
+        private float _smashSpeed = 20.0f;
+        [SerializeField]
+        private float _recoverTime = 3.0f;
+        [SerializeField] 
+        private float _returnSpeed = 5.0f;
+
+        private float _recoveryTimer = 0.0f;
+
+        private enum BossState
+        {
+            EllipseMove,
+            SmashPrepare,
+            SmashAttack,
+            Recover,
+            Return
+        }
+
+        private BossState _state = BossState.EllipseMove;
+
+        private Vector3 _returnPoint;
+
         public override void StartBossFight()
         {
             base.StartBossFight();
@@ -27,8 +55,8 @@ namespace Assets.Scripts.GodFights
 
             Animator.SetTrigger("Spawn");
 
-            StartCoroutine(nameof(StartEllipseMovement));
-            StartCoroutine(nameof(StartShooting));
+            StartCoroutine(nameof(ProcessMovement));
+            //StartCoroutine(nameof(StartShooting));
         }
 
         public override void RestartBossFight()
@@ -47,36 +75,69 @@ namespace Assets.Scripts.GodFights
             Animator.SetTrigger("Move");    
         }
 
-        private IEnumerator StartEllipseMovement()
+        private IEnumerator ProcessMovement()
         {
             while (true)
             {
-                _angle += Time.deltaTime * _speed;
-
-                var x = Mathf.Cos(_angle) * _radiusX;
-                var y = Mathf.Sin(_angle) * _radiusY;
-
-                var pos = _floatingAvatarObject.transform.position;
-                var newPos = _centerPoint.position + new Vector3(x, y, 0);
-
-                var dir = newPos - pos;
-
-                if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+                switch (_state)
                 {
-                    if (dir.x > 0)
-                    {
-                        transform.localScale = new Vector3(1, 1, 1);
-                    }
-                    else if (dir.x < 0)
-                    {
-                        transform.localScale = new Vector3(-1, 1, 1);
-                    }
-                }
+                    case BossState.EllipseMove:
+                        DoEllipseMovement();
+                        _smashTimer -= Time.deltaTime;
 
-                transform.position = newPos;
+                        if (_smashTimer <= 0f)
+                        {
+                            _smashTimer = _smashCooldown;
+                            InitiateSmash();
+                        }
+                        break;
+
+                    case BossState.SmashPrepare:
+                        FollowPlayerHorizontally();
+                        break;
+
+                    case BossState.SmashAttack:
+                        SmashDown();
+                        break;
+
+                    case BossState.Recover:
+                        Recover();
+                        break;
+
+                    case BossState.Return:
+                        ReturnToEllipse();
+                        break;
+                }
 
                 yield return null;
             }
+        }
+
+        private void DoEllipseMovement()
+        {
+            _angle += Time.deltaTime * _speed;
+
+            var x = Mathf.Cos(_angle) * _radiusX;
+            var y = Mathf.Sin(_angle) * _radiusY;
+
+            var pos = _floatingAvatarObject.transform.position;
+            var newPos = _centerPoint.position + new Vector3(x, y, 0);
+
+            var dir = newPos - pos;
+
+            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.y))
+            {
+                if (dir.x > 0)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                }
+                else if (dir.x < 0)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
+            }
+
+            transform.position = newPos;
         }
 
         private IEnumerator StartShooting()
@@ -91,6 +152,64 @@ namespace Assets.Scripts.GodFights
         private void ShootProjectile()
         {
 
+        }
+
+        private void InitiateSmash()
+        {
+            _state = BossState.SmashPrepare;
+            Animator.SetTrigger("Charge");
+            _returnPoint = transform.position;
+        }
+
+        private void FollowPlayerHorizontally()
+        {
+            var player = FightSequenceManager.Instance.PlayerObject.transform;
+
+            var targetPos = new Vector3(player.position.x, player.position.y + _hoverHeight, 0);
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, _returnSpeed * Time.deltaTime);
+
+            if (!(Vector3.Distance(transform.position, targetPos) < 0.1f))
+            {
+                return;
+            }
+
+            Animator.SetTrigger("Smash");
+            _state = BossState.SmashAttack;
+        }
+
+        private void SmashDown()
+        {
+            transform.position += Vector3.down * _smashSpeed * Time.deltaTime;
+
+            if (transform.position.y <= -2.0f)
+            {
+                _state = BossState.Recover;
+                Animator.SetTrigger("Charge");
+            }
+        }
+
+        private void Recover()
+        {
+            _recoveryTimer += Time.deltaTime;
+
+            if (!(_recoveryTimer >= _recoverTime))
+            {
+                return;
+            }
+
+            _recoveryTimer = 0;
+            _state = BossState.Return;
+            Animator.SetTrigger("Move");
+        }
+
+        private void ReturnToEllipse()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, _returnPoint, _returnSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, _returnPoint) < 0.1f)
+            {
+                _state = BossState.EllipseMove;
+            }
         }
     }
 }
