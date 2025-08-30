@@ -1,48 +1,38 @@
-using System.Collections;
 using Assets.Scripts.General;
+using Assets.Scripts.Player;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts.GodFights
 {
     public class MoonGoddessFight : BaseGodFight
     {
-        [SerializeField]
-        private GameObject _floatingAvatarObject;
+        [SerializeField] private GameObject _floatingAvatarObject;
 
-        [SerializeField] 
-        private Transform _centerPoint;
-        [SerializeField] 
-        private float _radiusX = 6.0f;      
-        [SerializeField] 
-        private float _radiusY = 2.0f;      
-        [SerializeField] 
-        private float _speed = 0.5f;
+        [SerializeField] private float _damage = 1.0f;
+
+        [SerializeField] private Transform _centerPoint;
+        [SerializeField] private float _radiusX = 6.0f;
+        [SerializeField] private float _radiusY = 2.0f;
+        [SerializeField] private float _speed = 0.5f;
 
         private float _angle;
 
         private float _smashTimer = 4.0f;
-        [SerializeField] 
-        private float _smashCooldown = 4.0f;
-        [SerializeField] 
-        private float _hoverHeight = 5.0f;
-        [SerializeField] 
-        private float _smashSpeed = 20.0f;
-        [SerializeField]
-        private float _recoverTime = 3.0f;
-        [SerializeField] 
-        private float _returnSpeed = 5.0f;
+        [SerializeField] private float _smashCooldown = 4.0f;
+        [SerializeField] private float _hoverHeight = 5.0f;
+        [SerializeField] private float _smashSpeed = 20.0f;
+        [SerializeField] private float _recoverTime = 3.0f;
+        [SerializeField] private float _returnSpeed = 5.0f;
 
         private float _recoveryTimer = 0.0f;
 
 
-        [SerializeField] 
-        private GameObject _projectilePrefab;
+        [SerializeField] private GameObject _projectilePrefab;
 
-        [SerializeField]
-        private Transform _shootSlotTransform;
+        [SerializeField] private Transform _shootSlotTransform;
 
-        [SerializeField]
-        private AudioClip _pounceAudioClip;
+        [SerializeField] private AudioClip _pounceAudioClip;
 
         private enum BossState
         {
@@ -101,6 +91,7 @@ namespace Assets.Scripts.GodFights
                             StopCoroutine(nameof(StartShooting));
                             InitiateSmash();
                         }
+
                         break;
 
                     case BossState.SmashPrepare:
@@ -224,5 +215,19 @@ namespace Assets.Scripts.GodFights
                 StartCoroutine(nameof(StartShooting));
             }
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (_state == BossState.SmashAttack)
+            {
+                var health = collision.gameObject.GetComponent<PlayerHealth>();
+
+                if (health)
+                {
+                    health.TakeDamage(_damage);
+                }
+            }
+        }
+
     }
 }
