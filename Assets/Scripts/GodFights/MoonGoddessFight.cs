@@ -1,4 +1,5 @@
 using System.Collections;
+using Assets.Scripts.General;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
@@ -41,6 +42,12 @@ namespace Assets.Scripts.GodFights
         [SerializeField]
         private Transform _shootSlotTransform;
 
+        [SerializeField]
+        private AudioClip _auraAudioClip;
+
+        [SerializeField]
+        private AudioClip _pounceAudioClip;
+
         private enum BossState
         {
             EllipseMove,
@@ -62,8 +69,7 @@ namespace Assets.Scripts.GodFights
 
             Animator.SetTrigger("Spawn");
 
-            StartCoroutine(nameof(ProcessMovement));
-            StartCoroutine(nameof(StartShooting));
+            SoundManager.Instance.PlaySFX(_auraAudioClip, 0.3f);
         }
 
         public override void RestartBossFight()
@@ -79,7 +85,10 @@ namespace Assets.Scripts.GodFights
 
         public void OnSpawnFinished()
         {
-            Animator.SetTrigger("Move");    
+            Animator.SetTrigger("Move");
+
+            StartCoroutine(nameof(ProcessMovement));
+            StartCoroutine(nameof(StartShooting));
         }
 
         private IEnumerator ProcessMovement()
@@ -183,6 +192,7 @@ namespace Assets.Scripts.GodFights
 
             Animator.SetTrigger("Smash");
             _state = BossState.SmashAttack;
+            SoundManager.Instance.PlaySFX(_pounceAudioClip, 0.4f);
         }
 
         private void SmashDown()

@@ -176,3 +176,4 @@ MonoBehaviour:
   _projectileSpeed: 4
   _projectileDamage: 1
   _animator: {fileID: 661024613332361327}
+  _shootAudioClip: {fileID: 8300000, guid: 608f96cde0c09ee4686fdca5ad3fcdee, type: 3}

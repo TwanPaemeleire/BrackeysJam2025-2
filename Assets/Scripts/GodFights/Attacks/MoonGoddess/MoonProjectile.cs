@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using Assets.Scripts.Player;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ namespace Assets.Scripts.GodFights.Attacks.MoonGoddess
         private float _projectileDamage;
         [SerializeField]
         private Animator _animator;
+
+        [SerializeField]
+        private AudioClip _shootAudioClip;
 
         private Vector3 _directionToPlayer;
 
@@ -27,6 +31,8 @@ namespace Assets.Scripts.GodFights.Attacks.MoonGoddess
 
             var angle = Mathf.Atan2(_directionToPlayer.y, _directionToPlayer.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle + 90.0f);
+
+            SoundManager.Instance.PlaySFX(_shootAudioClip, 0.3f);
         }
 
         private void Update()

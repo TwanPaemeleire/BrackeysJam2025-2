@@ -3634,6 +3634,8 @@ MonoBehaviour:
   _returnSpeed: 5
   _projectilePrefab: {fileID: 454140870229429252, guid: 73714124d72eb7a448e3ec3d0fa3c450, type: 3}
   _shootSlotTransform: {fileID: 1287724360}
+  _auraAudioClip: {fileID: 8300000, guid: fccb12dd16d7ca248940af49602d7b80, type: 3}
+  _pounceAudioClip: {fileID: 8300000, guid: fbb786ff9aca2df45b2fd60970c04f3d, type: 3}
 --- !u!1 &916620242
 GameObject:
   m_ObjectHideFlags: 0
