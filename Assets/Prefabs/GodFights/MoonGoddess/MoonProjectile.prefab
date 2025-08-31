@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 533968315922315479}
   - component: {fileID: 5037782166014392506}
   - component: {fileID: 178186421850034499}
+  - component: {fileID: 84303126752352562}
   m_Layer: 0
   m_Name: MoonProjectile
   m_TagString: Untagged
@@ -177,3 +178,33 @@ MonoBehaviour:
   _projectileDamage: 1
   _animator: {fileID: 661024613332361327}
   _shootAudioClip: {fileID: 8300000, guid: 608f96cde0c09ee4686fdca5ad3fcdee, type: 3}
+  _groundHitAudioClip: {fileID: 8300000, guid: c3587e706c00dda4cb1acd26f2d7de57, type: 3}
+  _shootAudioClipVolume: 0.05
+  _groundHitAudioClipVolume: 0.1
+--- !u!50 &84303126752352562
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454140870229429252}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
