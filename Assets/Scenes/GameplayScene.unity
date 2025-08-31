@@ -3845,7 +3845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &879593389
 Transform:
   m_ObjectHideFlags: 0
@@ -3914,16 +3914,16 @@ MonoBehaviour:
   - Attacks:
     - Attack: {fileID: 1689289113}
       Weight: 20
-      MinDistanceToExecute: 2.5
+      MinDistanceToExecute: 4
       MaxDistanceToExecute: 8
     - Attack: {fileID: 2103548821}
       Weight: 20
       MinDistanceToExecute: 1.5
-      MaxDistanceToExecute: 4.5
+      MaxDistanceToExecute: 7
     - Attack: {fileID: 1070368182}
       Weight: 200
       MinDistanceToExecute: 0
-      MaxDistanceToExecute: 2
+      MaxDistanceToExecute: 3
     WeightSum: 0
   _idleTimeAfterAttack: 1
   _speedToTrackPlayer: 1

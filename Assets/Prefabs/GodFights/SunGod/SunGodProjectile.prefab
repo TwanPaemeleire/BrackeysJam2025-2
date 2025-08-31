@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d3dd2f3e6d15842bcd8dfe485ac6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.Attacks.SunGod.SunGodProjectile
-  _speed: 2
+  _speed: 4
   _damage: 1
   _speedIfParried: 8
   _damageIfParried: 2

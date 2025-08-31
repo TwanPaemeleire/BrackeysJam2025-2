@@ -162,5 +162,12 @@ namespace Assets.Scripts.Player
         {
             _swingAudioSource.Play();
         }
+
+        public void GrantCanParry()
+        {
+            if(_parryCoroutine != null) StopCoroutine(_parryCoroutine);
+            _parryCoroutine = null;
+            _canParry = true;
+        }
     }
 }
