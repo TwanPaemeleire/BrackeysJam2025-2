@@ -26,6 +26,8 @@ namespace Assets.Scripts.GodFights
         [SerializeField] private AudioClip _advanceAudioClip;
         [SerializeField] private float _advanceAudioClipVolume;
 
+        [SerializeField] private AudioSource _speakingAudioSource;
+
         private Dictionary<string, DialogueData> _dialogueMap;
 
         private DialogueData _currentDialogue;
@@ -69,9 +71,11 @@ namespace Assets.Scripts.GodFights
                 var currentLine = _currentDialogue.lines[_dialogueLineIndex];
                 _mainText.text = currentLine.text;
                 _isTyping = false;
+                _speakingAudioSource.Stop();
             }
             else
             {
+                SoundManager.Instance.PlaySFX(_advanceAudioClip, _advanceAudioClipVolume);
                 AdvanceDialogue();
             }
         }
@@ -132,6 +136,7 @@ namespace Assets.Scripts.GodFights
         {
             _isTyping = true;
 
+            _speakingAudioSource.Play();
             _mainText.text = "";
             foreach (char c in fullText)
             {
@@ -140,6 +145,7 @@ namespace Assets.Scripts.GodFights
             }
 
             _isTyping = false;
+            _speakingAudioSource.Stop();
         }
     }
 }
