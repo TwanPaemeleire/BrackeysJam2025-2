@@ -13,8 +13,7 @@ namespace Assets.Scripts.UI
         [SerializeField] private GodType _godType;
         [SerializeField] private Vector3 _maxScale = new Vector3(1.2f, 1.2f, 1.2f);
         [SerializeField] private float _timeToReachTargetScale = 0.5f;
-        [SerializeField] private Color _hoveredNameColor;
-        [SerializeField] private TextMeshProUGUI _nameText;
+        [SerializeField] private Color _hoveredColor;
 
         [Header("SFX")]
         [SerializeField] private AudioClip _hoveredAudioClip;
@@ -46,14 +45,14 @@ namespace Assets.Scripts.UI
             if(_isSelected) return;
             StartScaleCoroutine(_maxScale);
             EventSystem.current.SetSelectedGameObject(gameObject);
-            _nameText.color = _hoveredNameColor;
+            //_nameText.color = _hoveredNameColor;
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
             if(_isSelected) return;
             StartScaleCoroutine(_originalScale);
-            _nameText.color = Color.white;
+            //_nameText.color = Color.white;
         }
 
         void StartScaleCoroutine(Vector3 targetScale)
@@ -88,7 +87,7 @@ namespace Assets.Scripts.UI
 
         public void OnSelect(BaseEventData eventData)
         {
-            _nameText.color = _hoveredNameColor;
+            //_nameText.color = _hoveredNameColor;
             if (_isSelected) return;
             StartScaleCoroutine(_maxScale);
             SoundManager.Instance.PlaySFX(_hoveredAudioClip, _AudioClipsVolume);
@@ -96,7 +95,7 @@ namespace Assets.Scripts.UI
 
         public void OnDeselect(BaseEventData eventData)
         {
-            _nameText.color = Color.white;
+            //_nameText.color = Color.white;
             if (_isSelected) return;
             StartScaleCoroutine(_originalScale);
         }
