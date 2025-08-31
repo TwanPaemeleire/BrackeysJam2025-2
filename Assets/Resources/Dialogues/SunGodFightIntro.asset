@@ -20,7 +20,7 @@ MonoBehaviour:
   - characterPortrait: {fileID: 21300000, guid: f6108cd31ffa6a1449af93fa1646ba04, type: 3}
     characterName: Solareo
     text: 'I mean, I get that. But thinking you are a match for the gods? '
-  - characterPortrait: {fileID: -433924794317225620, guid: 75d8a43804c8cc54cb63c42648db3763, type: 3}
+  - characterPortrait: {fileID: 21300000, guid: f6108cd31ffa6a1449af93fa1646ba04, type: 3}
     characterName: Sun
     text: Pha! Double the pride, double the fall. All I can say.
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
@@ -33,7 +33,7 @@ MonoBehaviour:
   - characterPortrait: {fileID: 21300000, guid: f6108cd31ffa6a1449af93fa1646ba04, type: 3}
     characterName: Solareo
     text: Oh by the stars... Well. If that's your wish.
-  - characterPortrait: {fileID: 21300000, guid: 0d0ab914cf773b54984f717e25bdbc52, type: 3}
+  - characterPortrait: {fileID: 21300000, guid: f6108cd31ffa6a1449af93fa1646ba04, type: 3}
     characterName: Solareo
     text: Even if it ends before you can blink... Challenging a god is still something
       I can respect.
