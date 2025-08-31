@@ -1,43 +1,28 @@
 fileFormatVersion: 2
-guid: 24af0e3e70c747b4c9521888496ab9b5
+guid: f8e697e800127364080afd744c96843d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8172658381093635161
-    second: ArenaSheet_0
+      213: 2545285783560495359
+    second: SunGodScytheSpin_0
   - first:
-      213: -619578409482999865
-    second: ArenaSheet_1
+      213: 8492182782309485839
+    second: SunGodScytheSpin_1
   - first:
-      213: 7877136061823607683
-    second: ArenaSheet_2
+      213: -8663618110686861036
+    second: SunGodScytheSpin_2
   - first:
-      213: 5413403409425818920
-    second: ArenaSheet_3
+      213: 303105468241804090
+    second: SunGodScytheSpin_3
   - first:
-      213: -7191951375131145919
-    second: ArenaSheet_4
+      213: -4474237682630992249
+    second: SunGodScytheSpin_4
   - first:
-      213: 5637464042645890194
-    second: ArenaSheet_5
+      213: 64977685203528265
+    second: SunGodScytheSpin_5
   - first:
-      213: 8236114374970712581
-    second: ArenaSheet_6
-  - first:
-      213: 5320077881544534914
-    second: ArenaSheet_7
-  - first:
-      213: 2875650253387992212
-    second: ArenaSheet_8
-  - first:
-      213: -3574969777870065341
-    second: ArenaSheet_9
-  - first:
-      213: -1342455777848930808
-    second: ArenaSheet_10
-  - first:
-      213: 2687226202117941892
-    second: ArenaSheet_11
+      213: 2129270854691096204
+    second: SunGodScytheSpin_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,7 +90,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 0
@@ -146,145 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArenaSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1920
-        width: 576
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95484bb3f7d1b6170800000000000000
-      internalID: 8172658381093635161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArenaSheet_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1600
-        width: 576
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c7a34028b0d667f0800000000000000
-      internalID: -619578409482999865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArenaSheet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1280
-        width: 576
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3836a6c6385315d60800000000000000
-      internalID: 7877136061823607683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArenaSheet_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 960
-        width: 576
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 825e6bc28b5402b40800000000000000
-      internalID: 5413403409425818920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArenaSheet_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 640
-        width: 576
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1490d63345e013c90800000000000000
-      internalID: -7191951375131145919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArenaSheet_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 320
-        width: 576
-        height: 320
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29422ff9dab4c3e40800000000000000
-      internalID: 5637464042645890194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArenaSheet_6
+      name: SunGodScytheSpin_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 576
-        height: 320
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,8 +146,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5022e91236e8c4270800000000000000
-      internalID: 8236114374970712581
+      spriteID: ff0a9f44feba25320800000000000000
+      internalID: 2545285783560495359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodScytheSpin_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 224
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dce3b3f3b4ad570800000000000000
+      internalID: 8492182782309485839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodScytheSpin_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 224
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4196edaea35a4c780800000000000000
+      internalID: -8663618110686861036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodScytheSpin_3
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 224
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3bf70441d8d43400800000000000000
+      internalID: 303105468241804090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodScytheSpin_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 224
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78edc1e788058e1c0800000000000000
+      internalID: -4474237682630992249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SunGodScytheSpin_5
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 224
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a22e44cd8d6e000800000000000000
+      internalID: 64977685203528265
       vertices: []
       indices: 
       edges: []
@@ -303,7 +266,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: beffdcb697d42684d9d663230e645123
+    spriteID: 317d79bc50dd98f48ac89d0a36d72992
     internalID: 0
     vertices: []
     indices: 
@@ -313,15 +276,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":7.0},"gridSpriteSize":{"x":576.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":224.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ArenaSheet_0: 8172658381093635161
-      ArenaSheet_1: -619578409482999865
-      ArenaSheet_2: 7877136061823607683
-      ArenaSheet_3: 5413403409425818920
-      ArenaSheet_4: -7191951375131145919
-      ArenaSheet_5: 5637464042645890194
-      ArenaSheet_6: 8236114374970712581
+      SunGodScytheSpin_0: 2545285783560495359
+      SunGodScytheSpin_1: 8492182782309485839
+      SunGodScytheSpin_2: -8663618110686861036
+      SunGodScytheSpin_3: 303105468241804090
+      SunGodScytheSpin_4: -4474237682630992249
+      SunGodScytheSpin_5: 64977685203528265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
