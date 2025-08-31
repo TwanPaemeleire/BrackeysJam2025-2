@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 81f0c5aaaa380534a8ce9d755a35721b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7058125026979688906
+    second: ControlsKeyBoard_0
+  - first:
+      213: 6183998348007136910
+    second: ControlsKeyBoard_1
+  - first:
+      213: -8460853934997105664
+    second: ControlsKeyBoard_2
+  - first:
+      213: 7319342687102599396
+    second: ControlsKeyBoard_3
+  - first:
+      213: -3626701832108787844
+    second: ControlsKeyBoard_4
+  - first:
+      213: -6868529484344663372
+    second: ControlsKeyBoard_5
+  - first:
+      213: 4566080979642675324
+    second: ControlsKeyBoard_6
+  - first:
+      213: 994921255525427806
+    second: ControlsKeyBoard_7
+  - first:
+      213: -4880386829790373227
+    second: ControlsKeyBoard_8
+  - first:
+      213: 4697935055543736796
+    second: ControlsKeyBoard_9
+  - first:
+      213: 168035820335411158
+    second: ControlsKeyBoard_10
+  - first:
+      213: 2032848486008306832
+    second: ControlsKeyBoard_11
+  - first:
+      213: 5019882674871731866
+    second: ControlsKeyBoard_12
+  - first:
+      213: -2829124650294488453
+    second: ControlsKeyBoard_13
+  - first:
+      213: -1539564062098785358
+    second: ControlsKeyBoard_14
+  - first:
+      213: 5652119802809746355
+    second: ControlsKeyBoard_15
+  - first:
+      213: -4376739057860316632
+    second: ControlsKeyBoard_16
+  - first:
+      213: -7627759947794422510
+    second: ControlsKeyBoard_17
+  - first:
+      213: -5408349761070571016
+    second: ControlsKeyBoard_18
+  - first:
+      213: -8985942485220164272
+    second: ControlsKeyBoard_19
+  - first:
+      213: 6076801855289468728
+    second: ControlsKeyBoard_20
+  - first:
+      213: 7666650789060776486
+    second: ControlsKeyBoard_21
+  - first:
+      213: 3246578676998875829
+    second: ControlsKeyBoard_22
+  - first:
+      213: 4411150520430169513
+    second: ControlsKeyBoard_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ControlsKeyBoard_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ec49afea08c0e90800000000000000
+      internalID: -7058125026979688906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 88
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e5198bbb9f1d550800000000000000
+      internalID: 6183998348007136910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 68
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00418047c22059a80800000000000000
+      internalID: -8460853934997105664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 68
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e08a16f467839560800000000000000
+      internalID: 7319342687102599396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 65
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77b5e616ed5badc0800000000000000
+      internalID: -3626701832108787844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 59
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2e65433d41ea0a0800000000000000
+      internalID: -6868529484344663372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 59
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70f447757afd5f30800000000000000
+      internalID: 4566080979642675324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 59
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a241f4c9baecd00800000000000000
+      internalID: 994921255525427806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_8
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 59
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a99d32902654cb0800000000000000
+      internalID: -4880386829790373227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 59
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd91a83da0b623140800000000000000
+      internalID: 4697935055543736796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_10
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 59
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df22a430bbf45200800000000000000
+      internalID: 168035820335411158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 59
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c37b27de0263c10800000000000000
+      internalID: 2032848486008306832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_12
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 55
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a960ed142b43aa540800000000000000
+      internalID: 5019882674871731866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 55
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7255e1be1eecb8d0800000000000000
+      internalID: -2829124650294488453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_14
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 55
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbf4a974ae52aae0800000000000000
+      internalID: -1539564062098785358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 55
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b30d62b30d507e40800000000000000
+      internalID: 5652119802809746355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 44
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82278ad0403b243c0800000000000000
+      internalID: -4376739057860316632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 15
+        width: 65
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215e2c7bdb0c42690800000000000000
+      internalID: -7627759947794422510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_18
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 8
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1e1560c8ea1f4b0800000000000000
+      internalID: -5408349761070571016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_19
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 33
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d7c545be48b4380800000000000000
+      internalID: -8985942485220164272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_20
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 33
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837a6f25713255450800000000000000
+      internalID: 6076801855289468728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_21
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6229fe2e54a656a60800000000000000
+      internalID: 7666650789060776486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_22
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba20e90b1a2e0d20800000000000000
+      internalID: 3246578676998875829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsKeyBoard_23
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad050de60e873d30800000000000000
+      internalID: 4411150520430169513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ControlsKeyBoard_0: -7058125026979688906
+      ControlsKeyBoard_1: 6183998348007136910
+      ControlsKeyBoard_10: 168035820335411158
+      ControlsKeyBoard_11: 2032848486008306832
+      ControlsKeyBoard_12: 5019882674871731866
+      ControlsKeyBoard_13: -2829124650294488453
+      ControlsKeyBoard_14: -1539564062098785358
+      ControlsKeyBoard_15: 5652119802809746355
+      ControlsKeyBoard_16: -4376739057860316632
+      ControlsKeyBoard_17: -7627759947794422510
+      ControlsKeyBoard_18: -5408349761070571016
+      ControlsKeyBoard_19: -8985942485220164272
+      ControlsKeyBoard_2: -8460853934997105664
+      ControlsKeyBoard_20: 6076801855289468728
+      ControlsKeyBoard_21: 7666650789060776486
+      ControlsKeyBoard_22: 3246578676998875829
+      ControlsKeyBoard_23: 4411150520430169513
+      ControlsKeyBoard_3: 7319342687102599396
+      ControlsKeyBoard_4: -3626701832108787844
+      ControlsKeyBoard_5: -6868529484344663372
+      ControlsKeyBoard_6: 4566080979642675324
+      ControlsKeyBoard_7: 994921255525427806
+      ControlsKeyBoard_8: -4880386829790373227
+      ControlsKeyBoard_9: 4697935055543736796
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
