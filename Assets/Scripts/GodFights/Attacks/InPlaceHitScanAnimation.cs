@@ -1,3 +1,4 @@
+using Assets.Scripts.General;
 using Assets.Scripts.SharedLogic;
 using UnityEngine;
 
@@ -8,10 +9,13 @@ namespace Assets.Scripts.GodFights.Attacks
         [SerializeField] private string _animationTriggerName = "TestAttack";
         [SerializeField] private float _damage = 1.0f;
         [SerializeField] private HitScanObject _hitScanObject;
+        [SerializeField] private AudioClip _audioClip;
+        [SerializeField] private float _volume;
         public override void InitializeAttack()
         {
             RegisterAction(nameof(DoHitScan), DoHitScan);
             RegisterAction(nameof(AnimationFinished), AnimationFinished);
+            RegisterAction(nameof(PlaySound), PlaySound);
         }
 
         public override void StartAttack()
@@ -33,6 +37,11 @@ namespace Assets.Scripts.GodFights.Attacks
         public void AnimationFinished()
         {
             OnAttackFinished.Invoke();
+        }
+
+        public void PlaySound()
+        {
+            SoundManager.Instance.PlaySFX(_audioClip, _volume);
         }
     }
 }

@@ -14,12 +14,15 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
         [SerializeField] private Transform _shootPoint;
         [SerializeField] private Transform _centerPosition;
 
+        [SerializeField] private AudioSource _slashSoundEffect;
+
         private bool _canShoot = false;
 
         private Transform _playerCenterTransform;
         public override void InitializeAttack()
         {
             RegisterAction(nameof(ShootProjectile), ShootProjectile);
+            RegisterAction(nameof(OnRotationDone), OnRotationDone);
             _playerCenterTransform = FightSequenceManager.Instance.PlayerObject.GetComponent<PlayerSword>().PlayerCenterPoint;
         }
 
@@ -61,6 +64,11 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
         {
             StopAllCoroutines();
             OnAttackFinished.Invoke();
+        }
+
+        private void OnRotationDone()
+        {
+            _slashSoundEffect.Play();
         }
     }
 }
