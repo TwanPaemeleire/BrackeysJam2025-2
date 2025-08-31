@@ -27,6 +27,7 @@ namespace Assets.Scripts.Player
         private Coroutine _flashCoroutine;
 
         public bool IsInvincible { set { _isInvincible = value; } }
+        public GradualHealthChanger GradualHealthChanger { get { return _gradualHealthChanger; } }
 
         public UnityEvent OnHit = new UnityEvent();
         public UnityEvent OnDeath = new UnityEvent();

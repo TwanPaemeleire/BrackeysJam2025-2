@@ -133,6 +133,9 @@ namespace Assets.Scripts.GodFights
             OnCurrentGodFightStarted.Invoke();
 
             _HUD.StartFadingIn();
+            PlayerHealth health = _playerObject.GetComponent<PlayerHealth>();
+            health.GradualHealthChanger.transform.parent.gameObject.SetActive(true);
+            health.ResetHealth();
         }
 
         private void OnCurrentGodDefeatedInternal()
