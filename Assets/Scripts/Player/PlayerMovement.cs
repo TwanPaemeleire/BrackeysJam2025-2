@@ -24,6 +24,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private AudioClip _rollSound;
         [SerializeField] private float _rollSoundVolume;
         [SerializeField] private AudioSource _footStepAudioSource;
+        [SerializeField] private AudioSource _jumpAudioSource;
 
         private Vector2 _inputMoveDirection;
         private Vector2 _previousInputMoveDirection;
@@ -152,6 +153,7 @@ namespace Assets.Scripts.Player
                     _canDoubleJump = true;
                     _isJumping = true;
                     _isFalling = false;
+                    _jumpAudioSource.Play();
                     _animator.SetTrigger("JumpUp");
                     OnJumpBegin?.Invoke();
                 }
@@ -161,6 +163,7 @@ namespace Assets.Scripts.Player
                     _rigidbody.AddForce(transform.up * _doubleJumpForce, ForceMode2D.Impulse);
                     _canDoubleJump = false;
                     _isFalling = false;
+                    _jumpAudioSource.Play();
                     _animator.SetTrigger("JumpUp");
                     OnDoubleJumpBegin?.Invoke();
                 }
