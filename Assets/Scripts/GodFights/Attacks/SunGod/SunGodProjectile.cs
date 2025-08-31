@@ -74,6 +74,8 @@ namespace Assets.Scripts.GodFights.Attacks.SunGod
                     _directionToGod = (_godPointToAimAtIfParried.position - transform.position).normalized;
                     float angle = Mathf.Atan2(_directionToGod.y, _directionToGod.x) * Mathf.Rad2Deg;
                     transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                    _speed = _speedIfParried;
+                    _damage = _damageIfParried;
                 }
             }
             else if(collision.CompareTag("Ground"))
