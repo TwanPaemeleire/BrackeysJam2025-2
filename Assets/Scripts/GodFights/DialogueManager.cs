@@ -127,8 +127,20 @@ namespace Assets.Scripts.GodFights
         {
             var currentLine = _currentDialogue.lines[_dialogueLineIndex];
 
-            _portrait.sprite = currentLine.characterPortrait;
-            _characterName.text = currentLine.characterName;
+            if (currentLine.characterPortrait)
+            {
+                Color color = _portrait.color;
+                color.a = 255.0f;
+                _portrait.color = color;
+                _portrait.sprite = currentLine.characterPortrait;
+            }
+            else
+            {
+                Color color = _portrait.color;
+                color.a = 0.0f;
+                _portrait.color = color;
+            }
+                _characterName.text = currentLine.characterName;
             StartCoroutine(TypeText(currentLine.text));
         }
 

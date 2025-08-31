@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
   dialogueID: MoonGoddessFightIntro
   lines:
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: It is so surreal to see...
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: A mortal risks their life in pursuit of love for a God. This is.. something
       new.
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
-    characterName: Player
+    characterName: You
     text: Never did that before. But oh well.
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: ...You are a bit careless, don't you think?
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
-    characterName: Player
+    characterName: You
     text: What can I say? He is worth trying. And if it doesn't work out... I will
       still get to enjoy the fight.
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: I can see why you liked each other in the first place.
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: Then fight me, mortal, and earn your right to be among us!

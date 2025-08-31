@@ -14,30 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Dialogues.DialogueData
   dialogueID: MoonGoddessLoverOutro
   lines:
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: You have showcased your skills well, my love.
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
-    characterName: Player
+    characterName: You
     text: Is it.. is it over?
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: Yes.. it is.
-  - characterPortrait: {fileID: 5236516270932942657, guid: d2ab951dd89820b478d6340859c94f27, type: 3}
-    characterName: Sun
+  - characterPortrait: {fileID: 21300000, guid: f6108cd31ffa6a1449af93fa1646ba04, type: 3}
+    characterName: Solareo
     text: Let's goooooo! New God incoming!
-  - characterPortrait: {fileID: 5236516270932942657, guid: d2ab951dd89820b478d6340859c94f27, type: 3}
-    characterName: Sun
+  - characterPortrait: {fileID: 21300000, guid: f6108cd31ffa6a1449af93fa1646ba04, type: 3}
+    characterName: Solareo
     text: You will be paying for the celebration, right?
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
-    characterName: Player
+    characterName: You
     text: ...
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: ...
   - characterPortrait: {fileID: -1990136133, guid: dc015c996038e4643a10c66b8cfce0a2, type: 3}
-    characterName: Player
+    characterName: You
     text: How about we go to a quieter place and spend some peaceful time together?
-  - characterPortrait: {fileID: -4449339950864588949, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
-    characterName: Moon
+  - characterPortrait: {fileID: 21300000, guid: f3223f1c54195dd4d9a6c84da323df58, type: 3}
+    characterName: Neruna
     text: I have no objections to that.
