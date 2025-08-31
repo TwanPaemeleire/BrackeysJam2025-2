@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7caa2e73f031244c8472043ccacc615
+guid: 46a4024e0bbd6f34eb5ad9068e8c3e7a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -133,8 +133,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: SunGodIdle_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: SunGodIdle_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: SunGodIdle_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 672
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: SunGodIdle_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 896
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: SunGodIdle_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1120
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a18126c01c07432479c4419e2feec415
+    spriteID: a995ac958c5a61d42a8a7d5ab8aa4238
     internalID: 0
     vertices: []
     indices: 
@@ -273,7 +273,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":224.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SunGodIdle_0: 4112243662179089537
       SunGodIdle_1: -2110206121190885140

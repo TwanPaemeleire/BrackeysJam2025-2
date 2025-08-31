@@ -39,11 +39,22 @@ namespace Assets.Scripts.General
             _player.transform.position = _startPos.position;
             Vector3 loverPos = _startPos.position;
             loverPos.x += _offsetBetweenPlayerAndLover;
-            loverPos.y = _lover.Fight.transform.position.y;
-            _lover.Fight.transform.position = loverPos;
-            _lover.Fight.transform.localScale = Vector3.one;
-            _lover.Fight.gameObject.SetActive(true);
-            _lover.Fight.GetComponent<Animator>().SetTrigger("Move");
+            if(_lover.FinalSequenceObject!= null)
+            {
+                loverPos.y = -0.5f;
+                _lover.FinalSequenceObject.transform.position = loverPos;
+                _lover.FinalSequenceObject.transform.localScale = Vector3.one;
+                _lover.FinalSequenceObject.gameObject.SetActive(true);
+                _lover.Fight.gameObject.SetActive(false);
+            }
+            else
+            {
+                loverPos.y = _lover.Fight.transform.position.y;
+                _lover.Fight.transform.position = loverPos;
+                _lover.Fight.transform.localScale = Vector3.one;
+                _lover.Fight.gameObject.SetActive(true);
+                _lover.Fight.GetComponent<Animator>().SetTrigger("Move");
+            }    
             StartCoroutine(WalkAway());
         }
 
@@ -59,9 +70,16 @@ namespace Assets.Scripts.General
                 newPos.x += movement;
                 _player.transform.position = newPos;
                 newPos.x += _offsetBetweenPlayerAndLover;
-                newPos.y = _lover.Fight.transform.position.y;
-                _lover.Fight.transform.position= newPos;
-                if(!_hasFinished && (endPos - _player.transform.position.x) < _distanceFromEdgeToTriggerFade)
+                newPos.y = (_lover.FinalSequenceObject != null) ? _lover.FinalSequenceObject.transform.position.y : _lover.Fight.transform.position.y;
+                if(_lover.FinalSequenceObject!=null)
+                {
+                    _lover.FinalSequenceObject.transform.position = newPos;
+                }
+                else
+                {
+                    _lover.Fight.transform.position = newPos;
+                }
+                if (!_hasFinished && (endPos - _player.transform.position.x) < _distanceFromEdgeToTriggerFade)
                 {
                     _hasFinished = true;
                     OnFinalSequenceFinished.Invoke();

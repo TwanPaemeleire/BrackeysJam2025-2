@@ -12,6 +12,7 @@ namespace Assets.Scripts.GodFights
     public class GodInfo
     {
         public BaseGodFight Fight;
+        public GameObject FinalSequenceObject;
         public GameObject ThroneObject;
     }
 

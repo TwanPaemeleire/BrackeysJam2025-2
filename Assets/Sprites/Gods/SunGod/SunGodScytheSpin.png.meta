@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ff59e55c15c38349bebd01a210818e9
+guid: 9fc0cfe980a03f445a9ac1231e0b5402
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -136,8 +136,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: SunGodScytheSpin_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: SunGodScytheSpin_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +200,10 @@ TextureImporter:
       name: SunGodScytheSpin_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 672
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +222,10 @@ TextureImporter:
       name: SunGodScytheSpin_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 896
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: SunGodScytheSpin_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1120
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,7 +266,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef9ed688866015d4eb8a39d2ff7bf6ba
+    spriteID: ed4eb3217cabe0e4f82c071d024bb4e6
     internalID: 0
     vertices: []
     indices: 
@@ -276,7 +276,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":224.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SunGodScytheSpin_0: 2545285783560495359
       SunGodScytheSpin_1: 8492182782309485839

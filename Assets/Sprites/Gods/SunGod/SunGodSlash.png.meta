@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c7bcdd9d3c41ba74aa0da14099e7eab6
+guid: 9f1abbb53d80c984aa767d4a38bac0ff
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: -3588196482844791442
     second: SunGodSlash_8
+  - first:
+      213: 1965713514679156733
+    second: SunGodSlash_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +99,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 0
@@ -142,8 +145,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +165,10 @@ TextureImporter:
       name: SunGodSlash_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +187,10 @@ TextureImporter:
       name: SunGodSlash_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +209,10 @@ TextureImporter:
       name: SunGodSlash_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 672
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +231,10 @@ TextureImporter:
       name: SunGodSlash_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 896
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +253,10 @@ TextureImporter:
       name: SunGodSlash_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1120
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +275,10 @@ TextureImporter:
       name: SunGodSlash_6
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1353
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +297,10 @@ TextureImporter:
       name: SunGodSlash_7
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1568
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +319,10 @@ TextureImporter:
       name: SunGodSlash_8
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1792
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,7 +341,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3726e7208837f8341a4d5b40a4d6061a
+    spriteID: d74575ec85e2791499f3cea789ff20dc
     internalID: 0
     vertices: []
     indices: 
@@ -348,7 +351,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":224.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SunGodSlash_0: -9166273653038814705
       SunGodSlash_1: 3489875950320717462

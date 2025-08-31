@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d2ab951dd89820b478d6340859c94f27
+guid: 99134fb02f3c43a49ad65fc59a1d874a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -139,7 +139,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -159,9 +159,9 @@ TextureImporter:
       name: SunGodWalk_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 224
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -181,9 +181,9 @@ TextureImporter:
       name: SunGodWalk_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 448
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -203,9 +203,9 @@ TextureImporter:
       name: SunGodWalk_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 672
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -225,9 +225,9 @@ TextureImporter:
       name: SunGodWalk_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -247,9 +247,9 @@ TextureImporter:
       name: SunGodWalk_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1120
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -269,9 +269,9 @@ TextureImporter:
       name: SunGodWalk_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1344
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -291,9 +291,9 @@ TextureImporter:
       name: SunGodWalk_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 1568
         y: 0
-        width: 128
+        width: 224
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7126fbf69411d78409c85512540f4aa3
+    spriteID: 97b4cdc3d596a644fa2572254a9a21f4
     internalID: 0
     vertices: []
     indices: 
@@ -323,7 +323,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":224.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SunGodWalk_0: -433924794317225620
       SunGodWalk_1: -4340216385575024955

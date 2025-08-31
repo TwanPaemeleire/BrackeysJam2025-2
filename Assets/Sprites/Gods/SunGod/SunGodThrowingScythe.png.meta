@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b293024647077eb47a2912a839b0b91a
+guid: 00a3b647fe6b8894aba9896b0bfd433e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -145,8 +145,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: SunGodThrowingScythe_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 224
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: SunGodThrowingScythe_2
       rect:
         serializedVersion: 2
-        x: 512
+        x: 448
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: SunGodThrowingScythe_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 672
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: SunGodThrowingScythe_4
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 896
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: SunGodThrowingScythe_5
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1120
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +275,10 @@ TextureImporter:
       name: SunGodThrowingScythe_6
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1344
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: SunGodThrowingScythe_7
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1568
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: SunGodThrowingScythe_8
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1792
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: SunGodThrowingScythe_9
       rect:
         serializedVersion: 2
-        x: 2304
+        x: 2016
         y: 0
-        width: 256
-        height: 256
+        width: 224
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6f4581fc1fcf6d848b8584d7ade289ba
+    spriteID: 6498fbdcf100e6b4194243d7ab568b52
     internalID: 0
     vertices: []
     indices: 
@@ -373,7 +373,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":224.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       SunGodThrowingScythe_0: 3376456802811138409
       SunGodThrowingScythe_1: -4479177883142049533
