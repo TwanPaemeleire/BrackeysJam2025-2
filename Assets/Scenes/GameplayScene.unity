@@ -6831,8 +6831,8 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 1498985795}
   _movementSpeed: 5
   _jumpForce: 5
-  _doubleJumpForce: 2.5
-  _rollCooldown: 1
+  _doubleJumpForce: 3.5
+  _rollCooldown: 0.5
   _rollTime: 0.5
   _rollSpeed: 5
   _timeBeforeRollEndTrigger: 0.45
