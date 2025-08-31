@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.Attacks.SunGod.SunGodProjectile
   _speed: 2
   _damage: 1
-  _speedIfParried: 4
+  _speedIfParried: 8
   _damageIfParried: 2
 --- !u!50 &37637827262339757
 Rigidbody2D:

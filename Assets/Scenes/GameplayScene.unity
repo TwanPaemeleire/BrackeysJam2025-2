@@ -3966,7 +3966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a3140bb5839c54c8a771f81cb133c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.GodHealth
-  _maxHealth: 5
+  _maxHealth: 30
   _phaseTriggerPercentages: []
   _healthBarUI: {fileID: 1620623107}
   _flashDuration: 0.1
@@ -4394,7 +4394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a3140bb5839c54c8a771f81cb133c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.GodFights.GodHealth
-  _maxHealth: 5
+  _maxHealth: 18
   _phaseTriggerPercentages: []
   _healthBarUI: {fileID: 4776160}
   _flashDuration: 0.1
